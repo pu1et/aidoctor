@@ -1,0 +1,7353 @@
+Microsoft Windows [Version 10.0.17763.678]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+
+web server on ... 1337
+(node:8904) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+access for joining account
+id : bb  pw : bb
+{ _id: 5d5e45336a6acd22c8931a4e,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+Save Resolved :  { _id: 5d5e45336a6acd22c8931a4f,
+  id: 'bb',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e45336a6acd22c8931a4d,
+  id: 'bb',
+  pw: 'bb',
+  name: 'b',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e45336a6acd22c8931a4e,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11',
+  __v: 0 }
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) throw err;
+                     ^
+
+Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 19, in <module>
+    disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+C:\Users\AnGeeWon\Desktop\testjs>py --version
+Python 3.7.4
+
+C:\Users\AnGeeWon\Desktop\testjs>
+
+C:\Users\AnGeeWon\Desktop\testjs>python
+Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 20:34:20) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import platform
+>>> print(platform.architecture())
+('64bit', 'WindowsPE')
+>>> exit()
+
+
+web server on ... 1337
+(node:9384) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : bb  pw : bb
+{ _id: 5d5e4666fad3e524a85c3af0,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+this is machile
+Save Resolved :  { _id: 5d5e4667fad3e524a85c3af1,
+  id: 'bb',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e4666fad3e524a85c3af0,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e4666fad3e524a85c3aef,
+  id: 'bb',
+  pw: 'bb',
+  name: 'b',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) throw err;
+                     ^
+
+Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 19, in <module>
+    disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:27048) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : bb  pw : bb
+{ _id: 5d5e4761d4a73669a8104675,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+this is machile
+Save Resolved :  { _id: 5d5e4761d4a73669a8104676,
+  id: 'bb',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e4761d4a73669a8104675,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e4761d4a73669a8104674,
+  id: 'bb',
+  pw: 'bb',
+  name: 'b',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) throw err;
+                     ^
+
+Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 21, in <module>
+    disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:16488) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+access for joining account
+id : bb  pw : bb
+{ _id: 5d5e4cb10033b14068569294,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+Save Resolved :  { _id: 5d5e4cb10033b14068569293,
+  id: 'bb',
+  pw: 'bb',
+  name: 'b',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e4cb10033b14068569295,
+  id: 'bb',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e4cb10033b14068569294,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11',
+  __v: 0 }
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) throw err;
+                     ^
+
+Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 21, in <module>
+    disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:25856) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+access for joining account
+id : bb  pw : bb
+{ _id: 5d5e4d248ea52b65007d7366,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+Save Resolved :  { _id: 5d5e4d248ea52b65007d7366,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e4d248ea52b65007d7365,
+  id: 'bb',
+  pw: 'bb',
+  name: 'b',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e4d248ea52b65007d7367,
+  id: 'bb',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) throw err;
+                     ^
+
+Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 21, in <module>
+    result = loaded_model.predict_proba([[disease_var['age'],disease_var['gender'],disease_var['D_1_1'],disease_var['BO1_1'], disease_var['BS3_1'],disease_var['BS3_2'],disease_var['BH2_61'],disease_var['BE5_1'],disease_var['BD2_1'],disease_var['HE_fh'],disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:27556) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+access for joining account
+id : bb  pw : bb
+{ _id: 5d5e4da8b309d86ba4ca4075,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) throw err;
+                     ^
+
+Error:   File "ml_diseases\disease_result.py", line 20
+    loaded_model = pickle.load(open(diseases_file[0], 'rb'))
+                                                           ^
+IndentationError: unindent does not match any outer indentation level
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+C:\Users\AnGeeWon\Desktop\testjs>
+
+
+web server on ... 1337
+(node:24640) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : bb  pw : bb
+{ _id: 5d5e4dd9380f5c60400171a0,
+  id: 'bb',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+this is machile
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) throw err;
+                     ^
+
+Error:   File "ml_diseases\disease_result.py", line 19
+    print"asdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                                                 ^
+SyntaxError: invalid syntax
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:27724) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+
+
+web server on ... 1337
+(node:26616) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e4e68fc630967f87d6501,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+this is machile
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) throw err;
+                     ^
+
+Error:   File "ml_diseases\disease_result.py", line 17
+    loaded_model = pickle.load(open(diseases_file[0], 'rb'))
+                                                           ^
+IndentationError: unindent does not match any outer indentation level
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:28620) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e4ef164c79b6fcc521672,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+this is machile
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) throw err;
+                     ^
+
+Error:   File "ml_diseases\disease_result.py", line 25
+    result = loaded_model.predict_proba([[disease_var['age'],disease_var['gender'],disease_var['D_1_1'],disease_var['BO1_1'], disease_var['BS3_1'],disease_var['BS3_2'],disease_var['BH2_61'],disease_var['BE5_1'],disease_var['BD2_1'],disease_var['HE_fh'],
+                                                                                                                                                                                                                                                            ^
+IndentationError: unindent does not match any outer indentation level
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:28604) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e4f2ede4f126fbc6cb260,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+Save Resolved :  { _id: 5d5e4f2ede4f126fbc6cb260,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e4f2ede4f126fbc6cb261,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e4f2ede4f126fbc6cb25f,
+  id: 'aa',
+  pw: 'aa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '111',
+  check: '0',
+  __v: 0 }
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) throw err;
+                     ^
+
+Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 18, in <module>
+    result = loaded_model.predict_proba([[disease_var['age'],disease_var['gender'],disease_var['D_1_1'],disease_var['BO1_1'], disease_var['BS3_1'],disease_var['BS3_2'],disease_var['BH2_61'],disease_var['BE5_1'],disease_var['BD2_1'],disease_var['HE_fh'],disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:24012) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e5026b54c615dcc1aee09,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+this is machile
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:254
+            if (err) {throw err; console.log(err.message);}
+                      ^
+
+Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 18, in <module>
+    result = loaded_model.predict_proba([[disease_var['age'],disease_var['gender'],disease_var['D_1_1'],disease_var['BO1_1'], disease_var['BS3_1'],disease_var['BS3_2'],disease_var['BH2_61'],disease_var['BE5_1'],disease_var['BD2_1'],disease_var['HE_fh'],disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:28356) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e5059d725146ec40dc6a9,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+this is machile
+Save Resolved :  { _id: 5d5e5059d725146ec40dc6a8,
+  id: 'aa',
+  pw: 'aa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '111',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e5059d725146ec40dc6aa,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e5059d725146ec40dc6a9,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11',
+  __v: 0 }
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 18, in <module>
+    result = loaded_model.predict_proba([[disease_var['age'],disease_var['gender'],disease_var['D_1_1'],disease_var['BO1_1'], disease_var['BS3_1'],disease_var['BS3_2'],disease_var['BH2_61'],disease_var['BE5_1'],disease_var['BD2_1'],disease_var['HE_fh'],disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+undefined:1
+undefined
+^
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:257:25
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:12856) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : a  pw : 1
+{ _id: 5d5e50bfb7eeed32388d1874,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+Save Resolved :  { _id: 5d5e50bfb7eeed32388d1874,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e50bfb7eeed32388d1875,
+  id: 'a',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e50bfb7eeed32388d1873,
+  id: 'a',
+  pw: '1',
+  name: 'a',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+{ Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 18, in <module>
+    result = loaded_model.predict_proba([[disease_var['age'],disease_var['gender'],disease_var['D_1_1'],disease_var['BO1_1'], disease_var['BS3_1'],disease_var['BS3_2'],disease_var['BH2_61'],disease_var['BE5_1'],disease_var['BD2_1'],disease_var['HE_fh'],disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+  executable: 'py',
+  options: [ '-u' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":"1","gender":"남","HE_fh":"0","HE_HPfh":"0","HE_HLfh":"0","HE_IHDfh":"0","HE_STRfh":"0","HE_HBfh":"0","HE_DMfh":"0","BH2_61":"0","DI1_dg":"0","DI2_dg":"0","DI3_dg":"0","DJ4_dg":"0","DI4_dg":"0","DJ2_dg":"0","DE1_dg":"0","DE1_32":"0","DC1_dg":"0","DC2_dg":"0","DC6_dg":"0","DJ8_dg":"0","DJ6_dg":"0","DK8_dg":"0","DK9_dg":"0","DK4_dg":"0","BO1_1":"1","BP1":"1","D_1_1":"1","BE5_1":"1","BS3_1":"1","DI1_2":"1","DI2_2":"1","EC_wht_23":"1","HE_sput2":"1","BS3_2":"1","Total_slp_wk":"1","Total_slp_wd":"1","BD2_1":"1","bmi":"1","BE3_33":"1"}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined:1
+undefined
+^
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:257:25
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:19188) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : a  pw : 1
+{ _id: 5d5e51a223aa5f4af40c2bcc,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 19, in <module>
+    result = loaded_model.predict_proba([[disease_var['age'],disease_var['gender'],disease_var['D_1_1'],disease_var['BO1_1'], disease_var['BS3_1'],disease_var['BS3_2'],disease_var['BH2_61'],disease_var['BE5_1'],disease_var['BD2_1'],disease_var['HE_fh'],disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+  executable: 'py',
+  options: [ '-u' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":"1","gender":"남","HE_fh":"0","HE_HPfh":"0","HE_HLfh":"0","HE_IHDfh":"0","HE_STRfh":"0","HE_HBfh":"0","HE_DMfh":"0","BH2_61":"0","DI1_dg":"0","DI2_dg":"0","DI3_dg":"0","DJ4_dg":"0","DI4_dg":"0","DJ2_dg":"0","DE1_dg":"0","DE1_32":"0","DC1_dg":"0","DC2_dg":"0","DC6_dg":"0","DJ8_dg":"0","DJ6_dg":"0","DK8_dg":"0","DK9_dg":"0","DK4_dg":"0","BO1_1":"1","BP1":"1","D_1_1":"1","BE5_1":"1","BS3_1":"1","DI1_2":"1","DI2_2":"1","EC_wht_23":"1","HE_sput2":"1","BS3_2":"1","Total_slp_wk":"1","Total_slp_wd":"1","BD2_1":"1","bmi":"1","BE3_33":"1"}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined:1
+undefined
+^
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:257:25
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:28568) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : a  pw : 1
+{ _id: 5d5e51f935c9796f98f0e86c,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+Save Resolved :  { _id: 5d5e51f935c9796f98f0e86b,
+  id: 'a',
+  pw: '1',
+  name: 'a',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e51f935c9796f98f0e86d,
+  id: 'a',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e51f935c9796f98f0e86c,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+{ Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 18, in <module>
+    result = loaded_model.predict_proba([[disease_var['age'],disease_var['gender'],disease_var['D_1_1'],disease_var['BO1_1'], disease_var['BS3_1'],disease_var['BS3_2'],disease_var['BH2_61'],disease_var['BE5_1'],disease_var['BD2_1'],disease_var['HE_fh'],disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+  executable: 'py',
+  options: [ '-u' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":"1","gender":"남","HE_fh":"0","HE_HPfh":"0","HE_HLfh":"0","HE_IHDfh":"0","HE_STRfh":"0","HE_HBfh":"0","HE_DMfh":"0","BH2_61":"0","DI1_dg":"0","DI2_dg":"0","DI3_dg":"0","DJ4_dg":"0","DI4_dg":"0","DJ2_dg":"0","DE1_dg":"0","DE1_32":"0","DC1_dg":"0","DC2_dg":"0","DC6_dg":"0","DJ8_dg":"0","DJ6_dg":"0","DK8_dg":"0","DK9_dg":"0","DK4_dg":"0","BO1_1":"1","BP1":"1","D_1_1":"1","BE5_1":"1","BS3_1":"1","DI1_2":"1","DI2_2":"1","EC_wht_23":"1","HE_sput2":"1","BS3_2":"1","Total_slp_wk":"1","Total_slp_wd":"1","BD2_1":"1","bmi":"1","BE3_33":"1"}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined:1
+undefined
+^
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:257:25
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:367
+        });
+         ^
+
+SyntaxError: Unexpected token )
+    at new Script (vm.js:85:7)
+    at createScript (vm.js:266:10)
+    at Object.runInThisContext (vm.js:314:10)
+    at Module._compile (internal/modules/cjs/loader.js:698:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+    at Module.require (internal/modules/cjs/loader.js:667:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\index.js:14:1)
+    at Module._compile (internal/modules/cjs/loader.js:738:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+
+
+web server on ... 1337
+(node:26644) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : a  pw : 1
+{ _id: 5d5e531686ef556814bbc848,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+Save Resolved :  { _id: 5d5e531686ef556814bbc847,
+  id: 'a',
+  pw: '1',
+  name: 'a',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e531686ef556814bbc848,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+undefined
+undefined:1
+undefined
+^
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:258:25
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:15236) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+access for joining account
+id : a  pw : 1
+{ _id: 5d5e54108dbaf63b845885a5,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+undefined
+undefined:1
+undefined
+^
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:258:25
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:28160) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+access for joining account
+id : a  pw : 1
+{ _id: 5d5e547185e3656e009370d6,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+{ Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\python.exe: can't find '__main__' module in ''
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+  executable: 'py',
+  options: [ '' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":"1","gender":"남","HE_fh":"0","HE_HPfh":"0","HE_HLfh":"0","HE_IHDfh":"0","HE_STRfh":"0","HE_HBfh":"0","HE_DMfh":"0","BH2_61":"0","DI1_dg":"0","DI2_dg":"0","DI3_dg":"0","DJ4_dg":"0","DI4_dg":"0","DJ2_dg":"0","DE1_dg":"0","DE1_32":"0","DC1_dg":"0","DC2_dg":"0","DC6_dg":"0","DJ8_dg":"0","DJ6_dg":"0","DK8_dg":"0","DK9_dg":"0","DK4_dg":"0","BO1_1":"1","BP1":"1","D_1_1":"1","BE5_1":"1","BS3_1":"1","DI1_2":"1","DI2_2":"1","EC_wht_23":"1","HE_sput2":"1","BS3_2":"1","Total_slp_wk":"1","Total_slp_wd":"1","BD2_1":"1","bmi":"1","BE3_33":"1"}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined:1
+undefined
+^
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:257:25
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:17392) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+access for joining account
+id : 1  pw : 1
+{ _id: 5d5e54dfe5bc9843f0cd0561,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+{ Error: json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:260:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+    ----- Python Traceback -----
+    File "ml_diseases\disease_result.py", line 6, in <module>
+      disease_var = json.loads(sys.argv[0])
+    File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 348, in loads
+      return _default_decoder.decode(s)
+    File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 337, in decode
+      obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+    File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 355, in raw_decode
+      raise JSONDecodeError("Expecting value", s, err.value) from None
+  traceback:
+   'Traceback (most recent call last):\r\n  File "ml_diseases\\disease_result.py", line 6, in <module>\r\n    disease_var = json.loads(sys.argv[0])\r\n  File "C:\\Users\\AnGeeWon\\AppData\\Local\\Programs\\Python\\Python37\\lib\\json\\__init__.py", line 348, in loads\r\n    return _default_decoder.decode(s)\r\n  File "C:\\Users\\AnGeeWon\\AppData\\Local\\Programs\\Python\\Python37\\lib\\json\\decoder.py", line 337, in decode\r\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\r\n  File "C:\\Users\\AnGeeWon\\AppData\\Local\\Programs\\Python\\Python37\\lib\\json\\decoder.py", line 355, in raw_decode\r\n    raise JSONDecodeError("Expecting value", s, err.value) from None\r\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\r\n',
+  executable: 'py',
+  options: [ '-u' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":"1","gender":"남","HE_fh":"0","HE_HPfh":"0","HE_HLfh":"0","HE_IHDfh":"0","HE_STRfh":"0","HE_HBfh":"0","HE_DMfh":"0","BH2_61":"0","DI1_dg":"0","DI2_dg":"0","DI3_dg":"0","DJ4_dg":"0","DI4_dg":"0","DJ2_dg":"0","DE1_dg":"0","DE1_32":"0","DC1_dg":"0","DC2_dg":"0","DC6_dg":"0","DJ8_dg":"0","DJ6_dg":"0","DK8_dg":"0","DK9_dg":"0","DK4_dg":"0","BO1_1":"1","BP1":"1","D_1_1":"1","BE5_1":"1","BS3_1":"1","DI1_2":"1","DI2_2":"1","EC_wht_23":"1","HE_sput2":"1","BS3_2":"1","Total_slp_wk":"1","Total_slp_wd":"1","BD2_1":"1","bmi":"1","BE3_33":"1"}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined:1
+undefined
+^
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:257:25
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:28964) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+access for joining account
+id : 1  pw : 1
+{ _id: 5d5e6422c058247124f41ea9,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+{ Error: KeyError: 0
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:260:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+    ----- Python Traceback -----
+    File "ml_diseases\disease_result.py", line 18, in <module>
+      if(disease_flag[0]==1):
+  traceback:
+   'Traceback (most recent call last):\r\n  File "ml_diseases\\disease_result.py", line 18, in <module>\r\n    if(disease_flag[0]==1):\r\nKeyError: 0\r\n',
+  executable: 'py',
+  options: [ '-u' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":"1","gender":"남","HE_fh":"0","HE_HPfh":"0","HE_HLfh":"0","HE_IHDfh":"0","HE_STRfh":"0","HE_HBfh":"0","HE_DMfh":"0","BH2_61":"0","DI1_dg":"0","DI2_dg":"0","DI3_dg":"0","DJ4_dg":"0","DI4_dg":"0","DJ2_dg":"0","DE1_dg":"0","DE1_32":"0","DC1_dg":"0","DC2_dg":"0","DC6_dg":"0","DJ8_dg":"0","DJ6_dg":"0","DK8_dg":"0","DK9_dg":"0","DK4_dg":"0","BO1_1":"1","BP1":"1","D_1_1":"1","BE5_1":"1","BS3_1":"1","DI1_2":"1","DI2_2":"1","EC_wht_23":"1","HE_sput2":"1","BS3_2":"1","Total_slp_wk":"1","Total_slp_wd":"1","BD2_1":"1","bmi":"1","BE3_33":"1"}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:261:29
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+Save Resolved :  { _id: 5d5e6422c058247124f41ea8,
+  id: '1',
+  pw: '1',
+  name: '1',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6422c058247124f41eaa,
+  id: '1',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6422c058247124f41ea9,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+this is machile
+access for joining account
+id : 1  pw : 1
+{ _id: 5d5e64c7c058247124f41eac,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+{ Error: KeyError: 0
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:260:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+    ----- Python Traceback -----
+    File "ml_diseases\disease_result.py", line 16, in <module>
+      if(disease_flag[0]==1):
+  traceback:
+   'Traceback (most recent call last):\r\n  File "ml_diseases\\disease_result.py", line 16, in <module>\r\n    if(disease_flag[0]==1):\r\nKeyError: 0\r\n',
+  executable: 'py',
+  options: [ '-u' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":"1","gender":"남","HE_fh":"0","HE_HPfh":"0","HE_HLfh":"0","HE_IHDfh":"0","HE_STRfh":"0","HE_HBfh":"0","HE_DMfh":"0","BH2_61":"0","DI1_dg":"0","DI2_dg":"0","DI3_dg":"0","DJ4_dg":"0","DI4_dg":"0","DJ2_dg":"0","DE1_dg":"0","DE1_32":"0","DC1_dg":"0","DC2_dg":"0","DC6_dg":"0","DJ8_dg":"0","DJ6_dg":"0","DK8_dg":"0","DK9_dg":"0","DK4_dg":"0","BO1_1":"1","BP1":"1","D_1_1":"1","BE5_1":"1","BS3_1":"1","DI1_2":"1","DI2_2":"1","EC_wht_23":"1","HE_sput2":"1","BS3_2":"1","Total_slp_wk":"1","Total_slp_wd":"1","BD2_1":"1","bmi":"1","BE3_33":"1"}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:261:29
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+Save Resolved :  { _id: 5d5e64c7c058247124f41eab,
+  id: '1',
+  pw: '1',
+  name: '1',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e64c7c058247124f41eac,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e64c7c058247124f41ead,
+  id: '1',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:24832) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : 1  pw : 1
+{ _id: 5d5e657b7092b8610096fbfb,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ Error: KeyError: 0
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:260:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+    ----- Python Traceback -----
+    File "ml_diseases\disease_result.py", line 16, in <module>
+      if(disease_flag[0]==1):
+  traceback:
+   'Traceback (most recent call last):\r\n  File "ml_diseases\\disease_result.py", line 16, in <module>\r\n    if(disease_flag[0]==1):\r\nKeyError: 0\r\n',
+  executable: 'py',
+  options: [ '-u' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":1,"gender":"남","HE_fh":0,"HE_HPfh":0,"HE_HLfh":0,"HE_IHDfh":0,"HE_STRfh":0,"HE_HBfh":0,"HE_DMfh":0,"BH2_61":0,"DI1_dg":0,"DI2_dg":0,"DI3_dg":0,"DJ4_dg":0,"DI4_dg":0,"DJ2_dg":0,"DE1_dg":0,"DE1_32":0,"DC1_dg":0,"DC2_dg":0,"DC6_dg":0,"DJ8_dg":0,"DJ6_dg":0,"DK8_dg":0,"DK9_dg":0,"DK4_dg":0,"BO1_1":1,"BP1":1,"D_1_1":1,"BE5_1":1,"BS3_1":1,"DI1_2":1,"DI2_2":1,"EC_wht_23":1,"HE_sput2":1,"BS3_2":1,"Total_slp_wk":1,"Total_slp_wd":1,"BD2_1":1,"bmi":1,"BE3_33":1}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:262:29
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+Save Resolved :  { _id: 5d5e657b7092b8610096fbfa,
+  id: '1',
+  pw: '1',
+  name: '1',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e657b7092b8610096fbfb,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e657b7092b8610096fbfc,
+  id: '1',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:474
+        });
+         ^
+
+SyntaxError: Unexpected token )
+    at new Script (vm.js:85:7)
+    at createScript (vm.js:266:10)
+    at Object.runInThisContext (vm.js:314:10)
+    at Module._compile (internal/modules/cjs/loader.js:698:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+    at Module.require (internal/modules/cjs/loader.js:667:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\index.js:14:1)
+    at Module._compile (internal/modules/cjs/loader.js:738:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+
+
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:475
+    });
+     ^
+
+SyntaxError: Unexpected token )
+    at new Script (vm.js:85:7)
+    at createScript (vm.js:266:10)
+    at Object.runInThisContext (vm.js:314:10)
+    at Module._compile (internal/modules/cjs/loader.js:698:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+    at Module.require (internal/modules/cjs/loader.js:667:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\index.js:14:1)
+    at Module._compile (internal/modules/cjs/loader.js:738:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+
+
+web server on ... 1337
+(node:29116) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : 1  pw : 1
+{ _id: 5d5e66dffbb4de71bcce05c5,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ age: 1,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+Save Resolved :  { _id: 5d5e66dffbb4de71bcce05c6,
+  id: '1',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e66dffbb4de71bcce05c4,
+  id: '1',
+  pw: '1',
+  name: '1',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e66dffbb4de71bcce05c5,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.04,
+  diabetes: 0.45,
+  Lung_cancer: 0.02,
+  Myocardial_infarction: 0.14,
+  stomach_cancer: 0.03,
+  stroke: 0.14 }
+this is log start
+access for joining account
+id : 1  pw : 1
+{ _id: 5d5e6d6ffbb4de71bcce05c8,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ age: 1,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+Save Resolved :  { _id: 5d5e6d6ffbb4de71bcce05c7,
+  id: '1',
+  pw: '1',
+  name: '1',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6d6ffbb4de71bcce05c9,
+  id: '1',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6d6ffbb4de71bcce05c8,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.04,
+  diabetes: 0.45,
+  Lung_cancer: 0.02,
+  Myocardial_infarction: 0.14,
+  stomach_cancer: 0.03,
+  stroke: 0.14 }
+this is log start
+access for joining account
+id : 1  pw : 1
+{ _id: 5d5e6dcefbb4de71bcce05cb,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ age: 1,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+access for joining account
+id : 1  pw : 1
+{ _id: 5d5e6dcefbb4de71bcce05ce,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ age: 1,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+Save Resolved :  { _id: 5d5e6dcefbb4de71bcce05ca,
+  id: '1',
+  pw: '1',
+  name: '1',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6dcefbb4de71bcce05cb,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.04,
+  diabetes: 0.45,
+  Lung_cancer: 0.02,
+  Myocardial_infarction: 0.14,
+  stomach_cancer: 0.03,
+  stroke: 0.14 }
+this is log start
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.04,
+  diabetes: 0.45,
+  Lung_cancer: 0.02,
+  Myocardial_infarction: 0.14,
+  stomach_cancer: 0.03,
+  stroke: 0.14 }
+this is log start
+Save Resolved :  { _id: 5d5e6dcefbb4de71bcce05cd,
+  id: '1',
+  pw: '1',
+  name: '1',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6dcefbb4de71bcce05cc,
+  id: '1',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6dcefbb4de71bcce05cf,
+  id: '1',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6dcefbb4de71bcce05ce,
+  id: '1',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:16660) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : ff  pw : gg
+{ _id: 5d5e6e2392ea204114c0a74f,
+  id: 'ff',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+machine learning starting...
+{ age: 11,
+  gender: '남',
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 11,
+  HE_sput2: 11,
+  BS3_2: 11,
+  Total_slp_wk: 11,
+  Total_slp_wd: 11,
+  BD2_1: 11,
+  bmi: 11,
+  BE3_33: 11 }
+{ Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 19, in <module>
+    disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+  executable: 'py',
+  options: [ '-u' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":11,"gender":"남","HE_fh":0,"HE_HPfh":0,"HE_HLfh":0,"HE_IHDfh":0,"HE_STRfh":0,"HE_HBfh":0,"HE_DMfh":0,"BH2_61":0,"DI1_dg":0,"DI2_dg":0,"DI3_dg":0,"DJ4_dg":0,"DI4_dg":0,"DJ2_dg":0,"DE1_dg":0,"DE1_32":0,"DC1_dg":0,"DC2_dg":0,"DC6_dg":0,"DJ8_dg":0,"DJ6_dg":0,"DK8_dg":0,"DK9_dg":0,"DK4_dg":0,"BO1_1":1,"BP1":1,"D_1_1":1,"BE5_1":1,"BS3_1":1,"DI1_2":1,"DI2_2":1,"EC_wht_23":11,"HE_sput2":11,"BS3_2":11,"Total_slp_wk":11,"Total_slp_wd":11,"BD2_1":11,"bmi":11,"BE3_33":11}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:264:29
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+Save Resolved :  { _id: 5d5e6e2392ea204114c0a750,
+  id: 'ff',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6e2392ea204114c0a74f,
+  id: 'ff',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6e2392ea204114c0a74e,
+  id: 'ff',
+  pw: 'gg',
+  name: 'ff',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:15684) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+machine learning starting...
+{ age: 11,
+  gender: '남',
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 11,
+  HE_sput2: 11,
+  BS3_2: 11,
+  Total_slp_wk: 11,
+  Total_slp_wd: 11,
+  BD2_1: 11,
+  bmi: 11,
+  BE3_33: 11 }
+access for joining account
+id : ff  pw : gg
+{ _id: 5d5e6e76f3e7543d443613aa,
+  id: 'ff',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+Save Resolved :  { _id: 5d5e6e76f3e7543d443613ab,
+  id: 'ff',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6e76f3e7543d443613a9,
+  id: 'ff',
+  pw: 'gg',
+  name: 'ff',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6e76f3e7543d443613aa,
+  id: 'ff',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11',
+  __v: 0 }
+{ Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 19, in <module>
+    disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+  executable: 'py',
+  options: [ '-u' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":11,"gender":"남","HE_fh":0,"HE_HPfh":0,"HE_HLfh":0,"HE_IHDfh":0,"HE_STRfh":0,"HE_HBfh":0,"HE_DMfh":0,"BH2_61":0,"DI1_dg":0,"DI2_dg":0,"DI3_dg":0,"DJ4_dg":0,"DI4_dg":0,"DJ2_dg":0,"DE1_dg":0,"DE1_32":0,"DC1_dg":0,"DC2_dg":0,"DC6_dg":0,"DJ8_dg":0,"DJ6_dg":0,"DK8_dg":0,"DK9_dg":0,"DK4_dg":0,"BO1_1":1,"BP1":1,"D_1_1":1,"BE5_1":1,"BS3_1":1,"DI1_2":1,"DI2_2":1,"EC_wht_23":11,"HE_sput2":11,"BS3_2":11,"Total_slp_wk":11,"Total_slp_wd":11,"BD2_1":11,"bmi":11,"BE3_33":11}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:264:29
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:7268) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+machine learning starting...
+{ age: 11,
+  gender: '남',
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 11,
+  HE_sput2: 11,
+  BS3_2: 11,
+  Total_slp_wk: 11,
+  Total_slp_wd: 11,
+  BD2_1: 11,
+  bmi: 11,
+  BE3_33: 11 }
+access for joining account
+id : ff  pw : gg
+{ _id: 5d5e6ea51ea3f11c64ace37f,
+  id: 'ff',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11' }
+Save Resolved :  { _id: 5d5e6ea41ea3f11c64ace37e,
+  id: 'ff',
+  pw: 'gg',
+  name: 'ff',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6ea51ea3f11c64ace37f,
+  id: 'ff',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '11',
+  HE_wt: '11',
+  EC_wht_23: '11',
+  HE_sput2: '11',
+  BS3_2: '11',
+  Total_slp_wk: '11',
+  Total_slp_wd: '11',
+  BD2_1: '11',
+  BE3_33: '11',
+  bmi: '11',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6ea51ea3f11c64ace380,
+  id: 'ff',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+{ Error: C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator DecisionTreeClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\base.py:306: UserWarning: Trying to unpickle estimator RandomForestClassifier from version 0.19.1 when using version 0.21.3. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "ml_diseases\disease_result.py", line 19, in <module>
+    disease_var['HE_HBfh'],disease_var['DI1_dg'],disease_var['DI1_2'],disease_var['DI4_dg'],disease_var['DK9_dg'],disease_var['DK4_dg'],disease_var['EC_wht_23'],disease_var['Total_slp_wk'],disease_var['Total_slp_wd'],disease_var['BP1'],disease_var['BE3_33'],disease_var['bmi']]])
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 588, in predict_proba
+    X = self._validate_X_predict(X)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\ensemble\forest.py", line 359, in _validate_X_predict
+    return self.estimators_[0]._validate_X_predict(X, check_input=True)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\tree\tree.py", line 391, in _validate_X_predict
+    X = check_array(X, dtype=DTYPE, accept_sparse="csr")
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\sklearn\utils\validation.py", line 496, in check_array
+    array = np.asarray(array, dtype=dtype, order=order)
+  File "C:\Users\AnGeeWon\AppData\Local\Programs\Python\Python37\lib\site-packages\numpy\core\_asarray.py", line 85, in asarray
+    return array(a, dtype, copy=False, order=order)
+ValueError: could not convert string to float: '??'
+
+    at PythonShell.parseError (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:268:21)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:139:32)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+  executable: 'py',
+  options: [ '-u' ],
+  script: 'ml_diseases\\disease_result.py',
+  args:
+   [ '{"age":11,"gender":"남","HE_fh":0,"HE_HPfh":0,"HE_HLfh":0,"HE_IHDfh":0,"HE_STRfh":0,"HE_HBfh":0,"HE_DMfh":0,"BH2_61":0,"DI1_dg":0,"DI2_dg":0,"DI3_dg":0,"DJ4_dg":0,"DI4_dg":0,"DJ2_dg":0,"DE1_dg":0,"DE1_32":0,"DC1_dg":0,"DC2_dg":0,"DC6_dg":0,"DJ8_dg":0,"DJ6_dg":0,"DK8_dg":0,"DK9_dg":0,"DK4_dg":0,"BO1_1":1,"BP1":1,"D_1_1":1,"BE5_1":1,"BS3_1":1,"DI1_2":1,"DI2_2":1,"EC_wht_23":11,"HE_sput2":11,"BS3_2":11,"Total_slp_wk":11,"Total_slp_wd":11,"BD2_1":11,"bmi":11,"BE3_33":11}',
+     '{"b_hepatitis":1,"c_hepatitis":1,"cirrhosis":1,"diabetes":1,"Lung_cancer":1,"Myocardial_infarction":1,"stomach_cancer":1,"stroke":1}' ],
+  exitCode: 1 }
+undefined
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:264:29
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:217:24)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:29684) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e6f728aa34273f4c7e76f,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1211',
+  BE3_33: '13',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 11,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1211,
+  bmi: 1,
+  BE3_33: 13 }
+Save Resolved :  { _id: 5d5e6f728aa34273f4c7e76e,
+  id: 'aa',
+  pw: 'aa',
+  name: '11',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e6f728aa34273f4c7e76f,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1211',
+  BE3_33: '13',
+  bmi: '1',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.03, "diabetes": 0.5, "Lung_cancer": 0.0, "Myocardial_infarction": 0.11, "stomach_cancer": 0.15, "stroke": 0.15}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.03,
+  diabetes: 0.5,
+  Lung_cancer: 0,
+  Myocardial_infarction: 0.11,
+  stomach_cancer: 0.15,
+  stroke: 0.15 }
+this is log start
+Save Resolved :  { _id: 5d5e6f728aa34273f4c7e770,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:27436) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 11,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1211,
+  bmi: 1,
+  BE3_33: 13 }
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e7b8677c2c66b2cbee311,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1211',
+  BE3_33: '13',
+  bmi: '1' }
+Save Resolved :  { _id: 5d5e7b8677c2c66b2cbee310,
+  id: 'aa',
+  pw: 'aa',
+  name: '11',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e7b8677c2c66b2cbee311,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1211',
+  BE3_33: '13',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e7b8677c2c66b2cbee312,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.03, "diabetes": 0.5, "Lung_cancer": 0.0, "Myocardial_infarction": 0.11, "stomach_cancer": 0.15, "stroke": 0.15}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.03,
+  diabetes: 0.5,
+  Lung_cancer: 0,
+  Myocardial_infarction: 0.11,
+  stomach_cancer: 0.15,
+  stroke: 0.15 }
+this is log start
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.03,
+  diabetes: 0.5,
+  Lung_cancer: 0,
+  Myocardial_infarction: 0.11,
+  stomach_cancer: 0.15,
+  stroke: 0.15 }
+
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:30548) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e7bcdaf4a31775487d54f,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1211',
+  BE3_33: '13',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 11,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1211,
+  bmi: 1,
+  BE3_33: 13 }
+Save Resolved :  { _id: 5d5e7bcdaf4a31775487d54e,
+  id: 'aa',
+  pw: 'aa',
+  name: '11',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e7bcdaf4a31775487d54f,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1211',
+  BE3_33: '13',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e7bcdaf4a31775487d550,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.03, "diabetes": 0.5, "Lung_cancer": 0.0, "Myocardial_infarction": 0.11, "stomach_cancer": 0.15, "stroke": 0.15}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.03,
+  diabetes: 0.5,
+  Lung_cancer: 0,
+  Myocardial_infarction: 0.11,
+  stomach_cancer: 0.15,
+  stroke: 0.15 }
+this is log start
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:273
+            console.log(temp[b_hepatitis]);
+                             ^
+
+ReferenceError: b_hepatitis is not defined
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:273:30
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:218:20)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+
+web server on ... 1337
+(node:6252) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e7fc3b157f4186c6f4075,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1211',
+  BE3_33: '13',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 11,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1211,
+  bmi: 1,
+  BE3_33: 13 }
+Save Resolved :  { _id: 5d5e7fc3b157f4186c6f4075,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1211',
+  BE3_33: '13',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e7fc3b157f4186c6f4076,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e7fc3b157f4186c6f4074,
+  id: 'aa',
+  pw: 'aa',
+  name: '11',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.03, "diabetes": 0.5, "Lung_cancer": 0.0, "Myocardial_infarction": 0.11, "stomach_cancer": 0.15, "stroke": 0.15}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.03,
+  diabetes: 0.5,
+  Lung_cancer: 0,
+  Myocardial_infarction: 0.11,
+  stomach_cancer: 0.15,
+  stroke: 0.15 }
+this is log start
+0.14
+
+
+web server on ... 1337
+(node:28428) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e7ff96405676f0c3a2e67,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '13',
+  Total_slp_wd: '1',
+  BD2_1: '1211',
+  BE3_33: '13',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 11,
+  BS3_2: 1,
+  Total_slp_wk: 13,
+  Total_slp_wd: 1,
+  BD2_1: 1211,
+  bmi: 1,
+  BE3_33: 13 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.03, "diabetes": 0.52, "Lung_cancer": 0.0, "Myocardial_infarction": 0.11, "stomach_cancer": 0.15, "stroke": 0.15}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.03,
+  diabetes: 0.52,
+  Lung_cancer: 0,
+  Myocardial_infarction: 0.11,
+  stomach_cancer: 0.15,
+  stroke: 0.15 }
+this is log start
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.03,
+  diabetes: 0.52,
+  Lung_cancer: 0,
+  Myocardial_infarction: 0.11,
+  stomach_cancer: 0.15,
+  stroke: 0.15 }
+Save Resolved :  { _id: 5d5e7ff96405676f0c3a2e66,
+  id: 'aa',
+  pw: 'aa',
+  name: '11',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e7ff96405676f0c3a2e67,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '13',
+  Total_slp_wd: '1',
+  BD2_1: '1211',
+  BE3_33: '13',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e7ff96405676f0c3a2e68,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:21420) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 13,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+access for joining account
+id : gg  pw : gg
+{ _id: 5d5e81ce2e269c53acff84d3,
+  id: 'gg',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '13',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+Save Resolved :  { _id: 5d5e81ce2e269c53acff84d4,
+  id: 'gg',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e81ce2e269c53acff84d3,
+  id: 'gg',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '13',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e81ce2e269c53acff84d2,
+  id: 'gg',
+  pw: 'gg',
+  name: 'ggx',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.43, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.04,
+  diabetes: 0.43,
+  Lung_cancer: 0.02,
+  Myocardial_infarction: 0.14,
+  stomach_cancer: 0.03,
+  stroke: 0.14 }
+this is log start
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 13,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+access for joining account
+id : gg  pw : gg
+{ _id: 5d5e81e22e269c53acff84d6,
+  id: 'gg',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '13',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+Save Resolved :  { _id: 5d5e81e22e269c53acff84d6,
+  id: 'gg',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '13',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e81e22e269c53acff84d7,
+  id: 'gg',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e81e22e269c53acff84d5,
+  id: 'gg',
+  pw: 'gg',
+  name: 'ggx',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.43, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.04,
+  diabetes: 0.43,
+  Lung_cancer: 0.02,
+  Myocardial_infarction: 0.14,
+  stomach_cancer: 0.03,
+  stroke: 0.14 }
+this is log start
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e83b02e269c53acff84d9,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '13',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 11,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 13 }
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e83b02e269c53acff84dc,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '133',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 11,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 133 }
+Save Resolved :  { _id: 5d5e83b02e269c53acff84d8,
+  id: 'aa',
+  pw: 'aa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e83b02e269c53acff84da,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e83b02e269c53acff84d9,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '13',
+  bmi: '1',
+  __v: 0 }
+[ '{"b_hepatitis": 0.16, "c_hepatitis": 0.03, "cirrhosis": 0.08, "diabetes": 0.47, "Lung_cancer": 0.01, "Myocardial_infarction": 0.1, "stomach_cancer": 0.08, "stroke": 0.14}' ]
+{ b_hepatitis: 0.16,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.08,
+  diabetes: 0.47,
+  Lung_cancer: 0.01,
+  Myocardial_infarction: 0.1,
+  stomach_cancer: 0.08,
+  stroke: 0.14 }
+this is log start
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.47, "Lung_cancer": 0.0, "Myocardial_infarction": 0.1, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.04,
+  diabetes: 0.47,
+  Lung_cancer: 0,
+  Myocardial_infarction: 0.1,
+  stomach_cancer: 0.03,
+  stroke: 0.14 }
+this is log start
+Save Resolved :  { _id: 5d5e83b02e269c53acff84db,
+  id: 'aa',
+  pw: 'aa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e83b02e269c53acff84dd,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e83b02e269c53acff84dc,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '133',
+  bmi: '1',
+  __v: 0 }
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:27288) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 11,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 133 }
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e83e4809c716a98215035,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '133',
+  bmi: '1' }
+Save Resolved :  { _id: 5d5e83e4809c716a98215036,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e83e4809c716a98215035,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '11',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '133',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e83e4809c716a98215034,
+  id: 'aa',
+  pw: 'aa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+[ '{"b_hepatitis": 0.16, "c_hepatitis": 0.03, "cirrhosis": 0.08, "diabetes": 0.47, "Lung_cancer": 0.01, "Myocardial_infarction": 0.1, "stomach_cancer": 0.08, "stroke": 0.14}' ]
+{ b_hepatitis: 0.16,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.08,
+  diabetes: 0.47,
+  Lung_cancer: 0.01,
+  Myocardial_infarction: 0.1,
+  stomach_cancer: 0.08,
+  stroke: 0.14 }
+this is log start
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e8472809c716a98215038,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+Save Resolved :  { _id: 5d5e8472809c716a98215037,
+  id: 'aa',
+  pw: 'aa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e8472809c716a98215039,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e8472809c716a98215038,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+{ b_hepatitis: 0.14,
+  c_hepatitis: 0.03,
+  cirrhosis: 0.04,
+  diabetes: 0.45,
+  Lung_cancer: 0.02,
+  Myocardial_infarction: 0.14,
+  stomach_cancer: 0.03,
+  stroke: 0.14 }
+this is log start
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:24560) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : aa  pw : aa
+{ _id: 5d5e862c977b3e5ff0a7c23a,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '11',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 11,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+Save Resolved :  { _id: 5d5e862c977b3e5ff0a7c23a,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '11',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e862c977b3e5ff0a7c239,
+  id: 'aa',
+  pw: 'aa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e862c977b3e5ff0a7c23b,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.46, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:270
+            res.send(json(temp)); // 클라이언트에 return
+                ^
+
+ReferenceError: json is not defined
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:270:17
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:218:20)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+access for joining account
+id : aaa  pw : aaa
+{ _id: 5d5e89dab3d8ed2d783502e8,
+  id: 'aaa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+(node:11640) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:270
+            res.send(json(temp)); // 클라이언트에 return
+                ^
+
+ReferenceError: json is not defined
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:270:17
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:218:20)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:2320) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+access for joining account
+id : aaa  pw : aaa
+{ _id: 5d5e8a468f21400910989de0,
+  id: 'aaa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+Save Resolved :  { _id: 5d5e8a468f21400910989de0,
+  id: 'aaa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e8a468f21400910989de1,
+  id: 'aaa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e8a468f21400910989ddf,
+  id: 'aaa',
+  pw: 'aaa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+_http_outgoing.js:482
+    throw new ERR_HTTP_HEADERS_SENT('set');
+    ^
+
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:482:11)
+    at ServerResponse.header (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\response.js:771:10)
+    at ServerResponse.send (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\response.js:170:12)
+    at ServerResponse.json (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\response.js:267:15)
+    at ServerResponse.send (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\response.js:158:21)
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:276:17
+    at PythonShell._endCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:218:20)
+    at terminateIfNeeded (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:158:39)
+    at ChildProcess.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\node_modules\python-shell\index.js:131:13)
+    at ChildProcess.emit (events.js:197:13)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:254:12)
+
+C:\Users\AnGeeWon\Desktop\testjs>
+
+
+web server on ... 1337
+(node:26628) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+access for joining account
+id : aaa  pw : aaa
+{ _id: 5d5e8a6aecd6826804fdb27e,
+  id: 'aaa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+Save Resolved :  { _id: 5d5e8a6aecd6826804fdb27d,
+  id: 'aaa',
+  pw: 'aaa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e8a6aecd6826804fdb27f,
+  id: 'aaa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e8a6aecd6826804fdb27e,
+  id: 'aaa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+access for joining account
+id : aaa  pw : aaa
+{ _id: 5d5e8aa1ecd6826804fdb281,
+  id: 'aaa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+Save Resolved :  { _id: 5d5e8aa1ecd6826804fdb280,
+  id: 'aaa',
+  pw: 'aaa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e8aa1ecd6826804fdb281,
+  id: 'aaa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e8aa1ecd6826804fdb282,
+  id: 'aaa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 11,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.0, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+access for joining account
+id : aa  pw : a4
+{ _id: 5d5e948fecd6826804fdb284,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ age: 11,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+Save Resolved :  { _id: 5d5e948fecd6826804fdb283,
+  id: 'aa',
+  pw: 'a4',
+  name: 'a',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e948fecd6826804fdb284,
+  id: 'aa',
+  age: '11',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e948fecd6826804fdb285,
+  id: 'aa',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+access for joining account
+id : a  pw : a
+{ _id: 5d5e9558ecd6826804fdb287,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+this is machile
+{ age: 1,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+Save Resolved :  { _id: 5d5e9558ecd6826804fdb288,
+  id: 'a',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e9558ecd6826804fdb286,
+  id: 'a',
+  pw: 'a',
+  name: 'a',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e9558ecd6826804fdb287,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+this is machile
+{ age: 1,
+  gender: 1,
+  HE_fh: 0,
+  HE_HPfh: 0,
+  HE_HLfh: 0,
+  HE_IHDfh: 0,
+  HE_STRfh: 0,
+  HE_HBfh: 0,
+  HE_DMfh: 0,
+  BH2_61: 0,
+  DI1_dg: 0,
+  DI2_dg: 0,
+  DI3_dg: 0,
+  DJ4_dg: 0,
+  DI4_dg: 0,
+  DJ2_dg: 0,
+  DE1_dg: 0,
+  DE1_32: 0,
+  DC1_dg: 0,
+  DC2_dg: 0,
+  DC6_dg: 0,
+  DJ8_dg: 0,
+  DJ6_dg: 0,
+  DK8_dg: 0,
+  DK9_dg: 0,
+  DK4_dg: 0,
+  BO1_1: 1,
+  BP1: 1,
+  D_1_1: 1,
+  BE5_1: 1,
+  BS3_1: 1,
+  DI1_2: 1,
+  DI2_2: 1,
+  EC_wht_23: 1,
+  HE_sput2: 1,
+  BS3_2: 1,
+  Total_slp_wk: 1,
+  Total_slp_wd: 1,
+  BD2_1: 1,
+  bmi: 1,
+  BE3_33: 1 }
+access for joining account
+id : a  pw : aaa
+{ _id: 5d5e965decd6826804fdb28a,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1' }
+Save Resolved :  { _id: 5d5e965eecd6826804fdb28b,
+  id: 'a',
+  failcount: 0,
+  certcount: 0,
+  __v: 0 }
+Save Resolved :  { _id: 5d5e965decd6826804fdb28a,
+  id: 'a',
+  age: '1',
+  gender: '남',
+  HE_fh: '0',
+  HE_HPfh: '0',
+  HE_HLfh: '0',
+  HE_IHDfh: '0',
+  HE_STRfh: '0',
+  HE_HBfh: '0',
+  HE_DMfh: '0',
+  BH2_61: '0',
+  DI1_dg: '0',
+  DI2_dg: '0',
+  DI3_dg: '0',
+  DJ4_dg: '0',
+  DI4_dg: '0',
+  DJ2_dg: '0',
+  DE1_dg: '0',
+  DE1_32: '0',
+  DC1_dg: '0',
+  DC2_dg: '0',
+  DC6_dg: '0',
+  DJ8_dg: '0',
+  DJ6_dg: '0',
+  DK8_dg: '0',
+  DK9_dg: '0',
+  DK4_dg: '0',
+  exercise: '1',
+  BO1_1: '1',
+  BP1: '1',
+  D_1_1: '1',
+  BE5_1: '1',
+  BS3_1: '1',
+  DI1_2: '1',
+  DI2_2: '1',
+  HE_ht: '1',
+  HE_wt: '1',
+  EC_wht_23: '1',
+  HE_sput2: '1',
+  BS3_2: '1',
+  Total_slp_wk: '1',
+  Total_slp_wd: '1',
+  BD2_1: '1',
+  BE3_33: '1',
+  bmi: '1',
+  __v: 0 }
+Save Resolved :  { _id: 5d5e965decd6826804fdb289,
+  id: 'a',
+  pw: 'aaa',
+  name: 'a',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '1',
+  phone: '1',
+  check: '0',
+  __v: 0 }
+[ '{"b_hepatitis": 0.14, "c_hepatitis": 0.03, "cirrhosis": 0.04, "diabetes": 0.45, "Lung_cancer": 0.02, "Myocardial_infarction": 0.14, "stomach_cancer": 0.03, "stroke": 0.14}' ]
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>\
+'\'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>\
+'\'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+
+web server on ... 1337
+(node:17512) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+ReferenceError: id is not defined
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:289:31
+    at Layer.handle [as handle_request] (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\AnGeeWon\Desktop\testjs\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\AnGeeWon\Desktop\testjs\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\AnGeeWon\Desktop\testjs\node_modules\raw-body\index.js:273:7)
+    at IncomingMessage.emit (events.js:197:13)
+    at endReadableNT (_stream_readable.js:1129:12)
+    at processTicksAndRejections (internal/process/next_tick.js:76:17)
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:30420) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+ReferenceError: id is not defined
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:289:29
+    at Layer.handle [as handle_request] (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\AnGeeWon\Desktop\testjs\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\AnGeeWon\Desktop\testjs\node_modules\body-parser\lib\read.js:130:5
+    at invokeCallback (C:\Users\AnGeeWon\Desktop\testjs\node_modules\raw-body\index.js:224:16)
+    at done (C:\Users\AnGeeWon\Desktop\testjs\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\Users\AnGeeWon\Desktop\testjs\node_modules\raw-body\index.js:273:7)
+    at IncomingMessage.emit (events.js:197:13)
+    at endReadableNT (_stream_readable.js:1129:12)
+    at processTicksAndRejections (internal/process/next_tick.js:76:17)
+
+
+web server on ... 1337
+(node:29332) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+Account Exists...
+Account Exists...
+
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+C:\Users\AnGeeWon\Desktop\testjs>
+
+web server on ... 1337
+(node:22052) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+Account Exists...
+events.js:173
+      throw er; // Unhandled 'error' event
+      ^
+
+ReferenceError: logincount is not defined
+    at C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:293:29
+    at C:\Users\AnGeeWon\Desktop\testjs\node_modules\mongoose\lib\model.js:4568:16
+    at C:\Users\AnGeeWon\Desktop\testjs\node_modules\mongoose\lib\query.js:4315:12
+    at process.nextTick (C:\Users\AnGeeWon\Desktop\testjs\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+Emitted 'error' event at:
+    at C:\Users\AnGeeWon\Desktop\testjs\node_modules\mongoose\lib\model.js:4570:13
+    at C:\Users\AnGeeWon\Desktop\testjs\node_modules\mongoose\lib\query.js:4315:12
+    at process.nextTick (C:\Users\AnGeeWon\Desktop\testjs\node_modules\mongoose\lib\helpers\query\completeMany.js:35:39)
+    at processTicksAndRejections (internal/process/next_tick.js:74:9)
+
+
+web server on ... 1337
+(node:28784) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+Account Exists...
+{ _id: 5d5e26913403585d5c11e315,
+  id: 'aa',
+  pw: 'aa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Account modifies!
+(node:28784) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+
+
+web server on ... 1337
+(node:26508) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+Account Exists...
+{ _id: 5d5e26913403585d5c11e315,
+  id: 'aa',
+  pw: 'aa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+{ _id: 5d5e26913403585d5c11e315,
+  id: 'aa',
+  pw: 'aa',
+  name: 'aa',
+  gender: '남',
+  area: '강원도(영서)',
+  age: '11',
+  phone: '11',
+  check: '0',
+  __v: 0 }
+Account modifies!
+(node:26508) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+
+C:\Users\AnGeeWon\Desktop\testjs>
+
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:374
+                await LoginCount.update({'id':id, 'pw':account[0].pw, 'name':account[0].name, gender:account[0].gender, area:account[0]area, phone:account[0].phone, check:1});
+                                                                                                                                       ^^^^
+
+SyntaxError: Unexpected identifier
+    at new Script (vm.js:85:7)
+    at createScript (vm.js:266:10)
+    at Object.runInThisContext (vm.js:314:10)
+    at Module._compile (internal/modules/cjs/loader.js:698:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+    at Module.require (internal/modules/cjs/loader.js:667:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\index.js:14:1)
+    at Module._compile (internal/modules/cjs/loader.js:738:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+
+
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:607
+}
+^
+
+SyntaxError: missing ) after argument list
+    at new Script (vm.js:85:7)
+    at createScript (vm.js:266:10)
+    at Object.runInThisContext (vm.js:314:10)
+    at Module._compile (internal/modules/cjs/loader.js:698:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+    at Module.require (internal/modules/cjs/loader.js:667:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\index.js:14:1)
+    at Module._compile (internal/modules/cjs/loader.js:738:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+
+
+C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:608
+}
+^
+
+SyntaxError: missing ) after argument list
+    at new Script (vm.js:85:7)
+    at createScript (vm.js:266:10)
+    at Object.runInThisContext (vm.js:314:10)
+    at Module._compile (internal/modules/cjs/loader.js:698:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+    at Module.require (internal/modules/cjs/loader.js:667:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\index.js:14:1)
+    at Module._compile (internal/modules/cjs/loader.js:738:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+
+
+internal/modules/cjs/loader.js:615
+    throw err;
+    ^
+
+Error: Cannot find module '../models/diseaseAll'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:613:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:539:25)
+    at Module.require (internal/modules/cjs/loader.js:667:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\route\routes.js:4:18)
+    at Module._compile (internal/modules/cjs/loader.js:738:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+    at Module.require (internal/modules/cjs/loader.js:667:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (C:\Users\AnGeeWon\Desktop\testjs\index.js:14:1)
+    at Module._compile (internal/modules/cjs/loader.js:738:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+
+
+web server on ... 1337
+(node:9640) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+Connected to MongoDB Server , WebService running on port 1337
+
+C:\Users\AnGeeWon\Desktop\testjs>npm install winston
+npm WARN registry Using stale data from https://registry.npmjs.org/ because the host is inaccessible -- are you offline?
+npm WARN registry Using stale data from https://registry.npmjs.org/ due to a request error during revalidation.
+npm ERR! code ENOTFOUND
+npm ERR! errno ENOTFOUND
+npm ERR! network request to https://registry.npmjs.org/diagnostics failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+npm ERR! network This is a problem related to network connectivity.
+npm ERR! network In most cases you are behind a proxy or have bad network settings.
+npm ERR! network
+npm ERR! network If you are behind a proxy, please make sure that the
+npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\AnGeeWon\AppData\Roaming\npm-cache\_logs\2019-08-23T01_50_33_249Z-debug.log
+
+C:\Users\AnGeeWon\Desktop\testjs>
