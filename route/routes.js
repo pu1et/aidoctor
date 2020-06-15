@@ -619,6 +619,7 @@ router.post('/diseaseAll_r', async (req, res) => { // receive data
         
         var ret1 = await mysql_dbc.select_from_idnum(ret[1].id_num,'disease_all', ['id_num']);
         if(!ret1[0]) {
+            disease_all_params = [ret[1].id_num, diabetes, hepatitisA, hepatitisB, hepatitisC, cirrhosis, gastriculcer, lungcancer, lungdisease, myocardial, stroke, depression];
             var ret2 = await mysql_dbc.insert_join('disease_all', disease_all_params);
             if (!ret2[0]) throw err;
         }else{
