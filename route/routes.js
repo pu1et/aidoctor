@@ -281,10 +281,14 @@ router.post('/check_user', async (req, res) => {
 
     var id = req.body.id;
 
+    try{
     var ret = await mysql_dbc.select_from_id(id, ['id_num']);
     if (ret[0] == true) {
         res.status(200).send({ result: '1' });
-    } else res.status(200).send({ result: '1' });
+    } else res.status(200).send({ result: '0' });
+}catch(err) {
+    res.status(500).send({result: '0'});
+}
 });
 
 
