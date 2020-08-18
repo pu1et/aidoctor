@@ -2,10 +2,10 @@ module.exports = (
     function (){
         return{
            local:{ //localhost
-            host : 'localhost', //db ip address
+            host : '127.0.0.1', //db ip address
             port : 3306, //db port number
             user : 'root', //db id
-            password : 'wldnjs0923',
+            password : 'root00!!',
             database : 'aidoctor' //db schema name
            },
            real:{ //real server db info
