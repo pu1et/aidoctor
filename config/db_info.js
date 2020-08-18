@@ -16,7 +16,7 @@ module.exports = (
             database : ''
            },
            dev:{ //dev server db info
-            host : '10.0.0.1',
+            host : 'aidoctor-db.ckhpnljabh2s.us-west-2.rds.amazonaws.com',
             port : 3306,
             user : 'aidoctor',
             password : 'aidoctor00!!',
