@@ -12,7 +12,7 @@ let { PythonShell } = require('python-shell');
 //module.exports = function(router){
 
 
-router.post('/join', async (req, res, next) => {
+router.post('/join', async (req, res, next) => {  // 회원가입
     console.log('\n/join\n');
     console.log(req.body);
 
@@ -423,6 +423,117 @@ router.post('/ml_risk', async (req, res, callback) => {
     });
 });
 
+router.post('/diseaseAll_r', async (req, res) => { // receive data
+    console.log('\n/diseaseAll_r\n');
+    console.log(req.body);
+    var id = req.body.id;
+    var diabetes = req.body.diabetes;
+    var hepatitisA = req.body.hepatitisA;
+    var hepatitisB = req.body.hepatitisB;
+    var hepatitisC = req.body.hepatitisC;
+    var cirrhosis = req.body.cirrhosis;
+    var depression = req.body.depression;
+    var gastriculcer = req.body.gastriculcer;
+    var lungcancer = req.body.lungcancer;
+    var lungdisease = req.body.lungdisease;
+    var myocardial = req.body.myocardial;
+    var stroke = req.body.stroke;
+
+    if (diabetes > 100) diabetes = (diabetes / 10).toFixed(1);
+    if (hepatitisA > 100) hepatitisA = (hepatitisA / 10).toFixed(1);
+    if (hepatitisB > 100) hepatitisB = (hepatitisB / 10).toFixed(1);
+    if (hepatitisC > 100) hepatitisC = (hepatitisC / 10).toFixed(1);
+    if (cirrhosis > 100) cirrhosis = (cirrhosis / 10).toFixed(1);
+    if (gastriculcer > 100) gastriculcer = (gastriculcer / 10).toFixed(1);
+    if (lungcancer > 100) lungcancer = (lungcancer / 10).toFixed(1);
+    if (lungdisease > 100) lungdisease = (lungdisease / 10).toFixed(1);
+    if (myocardial > 100) myocardial = (myocardial / 10).toFixed(1);
+    if (stroke > 100) stroke = (stroke / 10).toFixed(1);
+
+    try {
+        var ret = await mysql_dbc.select_from_id(id, ['id_num']);
+        console.log(ret[1].id_num);
+        if (!ret[0]) throw err;
+        var disease_all_params = [diabetes, hepatitisA, hepatitisB, hepatitisC, cirrhosis, gastriculcer, lungcancer, lungdisease, myocardial, stroke, depression];
+        
+        var ret1 = await mysql_dbc.select_from_idnum(ret[1].id_num,'disease_all', ['id_num']);
+        if(!ret1[0]) {
+            disease_all_params = [ret[1].id_num, diabetes, hepatitisA, hepatitisB, hepatitisC, cirrhosis, gastriculcer, lungcancer, lungdisease, myocardial, stroke, depression];
+            var ret2 = await mysql_dbc.insert_join('disease_all', disease_all_params);
+            if (!ret2[0]) throw err;
+        }else{
+            var ret2 = await mysql_dbc.update_all(ret[1].id_num,'disease_all',disease_all_params);
+            if (!ret2[0]) throw err;
+        }
+        res.status(200).send({ result: '1' });
+    } catch{
+        res.status(500).send({ result: '0' });
+    }
+});
+
+
+router.post('/diseaseAll_s', async (req, res) => { //send data -> HLTCareFragment
+    console.log('\n/diseaseAll_s\n');
+    var id = req.body.id;
+
+    try {
+        var ret = await mysql_dbc.select_from_id(id, ['id_num']);
+        if (!ret[0]) throw err;
+        var ret = await mysql_dbc.select_from_idnum(ret[1].id_num, 'disease_all', ['*']);
+        if (!ret[0]) throw err;
+        console.log(ret[1]);
+        res.json({ result: '1', data: ret[1][0] });
+    } catch{
+        res.status(500).send({ result: '0' });
+    }
+});
+
+router.post('/alldata_s', async (req, res) => { //send data -> HLTCareFragment
+    console.log('\n/alldata_s\n');
+    var id = req.body.id;
+
+    try {
+        var ret = await mysql_dbc.select_from_id(id, ['id_num']);
+        if (!ret[0]) throw err;
+        var ret2 = await mysql_dbc.select_from_idnum(ret[1].id_num, 'user', ['*']);
+        if (!ret2[0]) throw err;
+        var ret3 = await mysql_dbc.select_from_idnum(ret[1].id_num, 'diseaseag', ['*']);
+        if (!ret3[0]) throw err;
+        var ret4 = await mysql_dbc.select_from_idnum(ret[1].id_num, 'diseaseml', ['*']);
+        if(!ret4[0]) throw err;
+        //ret.push(ret2);
+
+        ret2 = ret2[1][0];
+        delete ret2["id_num"];
+        ret3 = ret3[1][0];
+        delete ret3["id_num"];
+        ret4 = ret4[1][0];
+        delete ret4["id_num"];
+
+
+        var tmp = (JSON.stringify(ret2) +JSON.stringify(ret3)+ JSON.stringify(ret4));
+        tmp = tmp.replace("}{",",").replace("}{",",");
+        var ret10 = JSON.parse(tmp);
+
+        console.log(ret10);
+        res.json({ result: '1', data: ret10});
+    } catch{
+        res.status(500).send({ result: '0' });
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+// ========================================================수정 전==================================================================
+
 //before modifying
 router.post('/chmem', function (req, res) {
     var id = req.body.id;
@@ -583,71 +694,6 @@ router.post('/chservey_r', function (req, res) {
     });
 });
 
-
-router.post('/diseaseAll_r', async (req, res) => { // receive data
-    console.log('\n/diseaseAll_r\n');
-    console.log(req.body);
-    var id = req.body.id;
-    var diabetes = req.body.diabetes;
-    var hepatitisA = req.body.hepatitisA;
-    var hepatitisB = req.body.hepatitisB;
-    var hepatitisC = req.body.hepatitisC;
-    var cirrhosis = req.body.cirrhosis;
-    var depression = req.body.depression;
-    var gastriculcer = req.body.gastriculcer;
-    var lungcancer = req.body.lungcancer;
-    var lungdisease = req.body.lungdisease;
-    var myocardial = req.body.myocardial;
-    var stroke = req.body.stroke;
-
-    if (diabetes > 100) diabetes = (diabetes / 10).toFixed(1);
-    if (hepatitisA > 100) hepatitisA = (hepatitisA / 10).toFixed(1);
-    if (hepatitisB > 100) hepatitisB = (hepatitisB / 10).toFixed(1);
-    if (hepatitisC > 100) hepatitisC = (hepatitisC / 10).toFixed(1);
-    if (cirrhosis > 100) cirrhosis = (cirrhosis / 10).toFixed(1);
-    if (gastriculcer > 100) gastriculcer = (gastriculcer / 10).toFixed(1);
-    if (lungcancer > 100) lungcancer = (lungcancer / 10).toFixed(1);
-    if (lungdisease > 100) lungdisease = (lungdisease / 10).toFixed(1);
-    if (myocardial > 100) myocardial = (myocardial / 10).toFixed(1);
-    if (stroke > 100) stroke = (stroke / 10).toFixed(1);
-
-    try {
-        var ret = await mysql_dbc.select_from_id(id, ['id_num']);
-        console.log(ret[1].id_num);
-        if (!ret[0]) throw err;
-        var disease_all_params = [diabetes, hepatitisA, hepatitisB, hepatitisC, cirrhosis, gastriculcer, lungcancer, lungdisease, myocardial, stroke, depression];
-        
-        var ret1 = await mysql_dbc.select_from_idnum(ret[1].id_num,'disease_all', ['id_num']);
-        if(!ret1[0]) {
-            disease_all_params = [ret[1].id_num, diabetes, hepatitisA, hepatitisB, hepatitisC, cirrhosis, gastriculcer, lungcancer, lungdisease, myocardial, stroke, depression];
-            var ret2 = await mysql_dbc.insert_join('disease_all', disease_all_params);
-            if (!ret2[0]) throw err;
-        }else{
-            var ret2 = await mysql_dbc.update_all(ret[1].id_num,'disease_all',disease_all_params);
-            if (!ret2[0]) throw err;
-        }
-        res.status(200).send({ result: '1' });
-    } catch{
-        res.status(500).send({ result: '0' });
-    }
-});
-
-
-router.post('/diseaseAll_s', async (req, res) => { //send data
-    console.log('\n/diseaseAll_s\n');
-    var id = req.body.id;
-
-    try {
-        var ret = await mysql_dbc.select_from_id(id, ['id_num']);
-        if (!ret[0]) throw err;
-        var ret = await mysql_dbc.select_from_idnum(ret[1].id_num, 'disease_all', ['*']);
-        if (!ret[0]) throw err;
-        console.log(ret[1]);
-        res.json({ result: '1', data: ret[1][0] });
-    } catch{
-        res.status(500).send({ result: '0' });
-    }
-});
 
 //before modifying
 router.post('/shared_s', function (req, res) {
