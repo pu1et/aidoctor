@@ -72,7 +72,6 @@ router.post('/join', async (req, res, next) => {  // 회원가입
 
     var params = [id, pw, name, gender, area, age, phone, checked];
 
-
     try {
 
         var idnum = await mysql_dbc.insert_join('user', params);
@@ -127,12 +126,12 @@ router.post('/join', async (req, res, next) => {  // 회원가입
             var meal_reg = req.body.meal_reg;
             var salt_pref = req.body.salt_pref;
             var dr_5y = req.body.drinking_5y;
-            var alcohol = req.body.BD2_1;
-            var cur_smoking = req.body.BS3_1;
-            var smoking = req.body.BS3_2;
-            var PhA = req.body.exercise;
+            var BD2_1 = req.body.BD2_1; // drinking
+            var BS3_1 = req.body.BS3_1; // cur_smoking
+            var BS3_2 = req.body.BS3_2; // smoking
+            var exercise = req.body.exercise; // PhA
 
-            var diseaseAg_params = [idnum, carstairs, HE_DMfh, HE_IHDfh, DE1_dg, DI1_dg, DI3_dg, bmi, age, gender, is_obesity, alcohol, smoking, cur_smoking, PhA, area, FPG, TG, leukocyte, total_colesterol, HDL, LDL, HbA, SBP, DBP, is_atrialFibrillation, PT_INR, bilirubin, creatinine, ammonia, AFP, albumin, platelet, DLD_serve, is_hypercholesterolemia, is_chemicHeartDisease, history_cancer, meal_reg, salt_pref, dr_5y];
+            var diseaseAg_params = [idnum, carstairs, HE_DMfh, HE_IHDfh, DE1_dg, DI1_dg, DI3_dg, bmi, age, gender, is_obesity, BD2_1, BS3_2, BS3_1, exercise, area, FPG, TG, leukocyte, total_colesterol, HDL, LDL, HbA, SBP, DBP, is_atrialFibrillation, PT_INR, bilirubin, creatinine, ammonia, AFP, albumin, platelet, DLD_serve, is_hypercholesterolemia, is_chemicHeartDisease, history_cancer, meal_reg, salt_pref, dr_5y];
             console.log("diseaseAg_params : " + diseaseAg_params);
             var ret4 = await mysql_dbc.insert_join('diseaseag', diseaseAg_params);
             if (!ret4[0]) throw err;
@@ -247,13 +246,13 @@ router.post('/update_data', async (req, res) => {
             var meal_reg = req.body.meal_reg;
             var salt_pref = req.body.salt_pref;
             var dr_5y = req.body.drinking_5y;
-            var alcohol = req.body.BD2_1;
-            var cur_smoking = req.body.BS3_1;
-            var smoking = req.body.BS3_2;
-            var PhA = req.body.exercise;
+            var BD2_1 = req.body.BD2_1;
+            var BS3_1 = req.body.BS3_1;
+            var BS3_2 = req.body.BS3_2;
+            var exercise = req.body.exercise;
 
 
-            var diseaseAg_params = [carstairs, HE_DMfh, HE_IHDfh, DE1_dg, DI1_dg, DI3_dg, bmi, age, gender, is_obesity, alcohol, smoking, cur_smoking, PhA, area, FPG, TG, leukocyte, total_colesterol, HDL, LDL, HbA, SBP, DBP, is_atrialFibrillation, PT_INR, bilirubin, creatinine, ammonia, AFP, albumin, platelet, DLD_serve, is_hypercholesterolemia, is_chemicHeartDisease, history_cancer, meal_reg, salt_pref, dr_5y];
+            var diseaseAg_params = [carstairs, HE_DMfh, HE_IHDfh, DE1_dg, DI1_dg, DI3_dg, bmi, age, gender, is_obesity, BD2_1, BS3_2, BS3_1, exercise, area, FPG, TG, leukocyte, total_colesterol, HDL, LDL, HbA, SBP, DBP, is_atrialFibrillation, PT_INR, bilirubin, creatinine, ammonia, AFP, albumin, platelet, DLD_serve, is_hypercholesterolemia, is_chemicHeartDisease, history_cancer, meal_reg, salt_pref, dr_5y];
             console.log(diseaseAg_params);
 
             var ret2 = await mysql_dbc.update_all(idnum, 'diseaseag', diseaseAg_params);
@@ -602,7 +601,7 @@ router.post('/chhealthservey_r', function (req, res) {
             console.log("diseaseAG Exists...");
             console.log(diseaseAG[0]);
             (async () => {
-                await LoginCount.update({ id: id, carstairs: diseaseAG[0].carstairs, HE_DMfh: HE_DMfh, HE_IHDfh: HE_IHDfh, DE1_dg: DE1_dg, DI1_dg: DI1_dg, DI3_dg: DI3_dg, bmi: bmi, age: age, gender: gender, is_obesity: is_obesity, alcohol: alcohol, smoking: smoking, PhA: PhA, area: area, FPG: FPG, TG: TG, leukocyte: leukocyte, total_colesterol: total_colesterol, HDL: HDL, LDL: LDL, HbA: HbA, SBP: SBP, DBP: DBP, is_atrialFibrillation: is_atrialFibrillation, PT_INR: PT_INR, bilirubin: bilirubin, creatinine: creatinine, ammonia: ammonia, AFP: AFP, albumin: albumin, platelet: platelet, DLD_serve: DLD_serve, is_hypercholesterolemia: is_hypercholesterolemia, is_chemicHeartDisease: is_chemicHeartDisease, history_cancer: history_cancer, meal_reg: meal_reg, salt_pref: salt_pref });
+                await LoginCount.update({ id: id, carstairs: diseaseAG[0].carstairs, HE_DMfh: HE_DMfh, HE_IHDfh: HE_IHDfh, DE1_dg: DE1_dg, DI1_dg: DI1_dg, DI3_dg: DI3_dg, bmi: bmi, age: age, gender: gender, is_obesity: is_obesity, BD2_1: BD2_1, BS3_2: BS3_2, exercise: exercise, area: area, FPG: FPG, TG: TG, leukocyte: leukocyte, total_colesterol: total_colesterol, HDL: HDL, LDL: LDL, HbA: HbA, SBP: SBP, DBP: DBP, is_atrialFibrillation: is_atrialFibrillation, PT_INR: PT_INR, bilirubin: bilirubin, creatinine: creatinine, ammonia: ammonia, AFP: AFP, albumin: albumin, platelet: platelet, DLD_serve: DLD_serve, is_hypercholesterolemia: is_hypercholesterolemia, is_chemicHeartDisease: is_chemicHeartDisease, history_cancer: history_cancer, meal_reg: meal_reg, salt_pref: salt_pref });
             })();
             console.log("diseaseAG modifies!");
         }
