@@ -92,12 +92,6 @@ router.post('/join', async (req, res, next) => {  // 회원가입
             if (ret3[0] == false) throw err;
         }
 
-        // insert diseaseml table
-        var diseaseML_params = [idnum, age, gender, HE_fh, HE_HPfh, HE_HLfh, HE_IHDfh, HE_STRfh, HE_HBfh, HE_DMfh, BH2_61, DI1_dg, DI2_dg, DI3_dg, DJ4_dg, DI4_dg, DJ2_dg, DE1_dg, DE1_32, DC1_dg, DC2_dg, DC6_dg, DJ8_dg, DJ6_dg, DK8_dg, DK9_dg, DK4_dg, exercise, BO1_1, BP1, D_1_1, BE5_1, BS3_1, DI1_2, DI2_2, HE_ht, HE_wt, EC_wht_23, HE_sput2, BS3_2, Total_slp_wk, Total_slp_wd, BD2_1, BE3_33, bmi];
-        console.log("diseaseML_params : " + diseaseML_params);
-        var ret6 = await mysql_dbc.insert_join('diseaseml', diseaseML_params);
-        if (!ret6[0]) throw err;
-
         // insert diseaseal table
         if (checked == 1) {
             var carstairs = req.body.carstairs;
@@ -131,11 +125,13 @@ router.post('/join', async (req, res, next) => {  // 회원가입
             var BS3_2 = req.body.BS3_2; // smoking
             var exercise = req.body.exercise; // PhA
 
+            // insert diseaseag
             var diseaseAg_params = [idnum, carstairs, HE_DMfh, HE_IHDfh, DE1_dg, DI1_dg, DI3_dg, bmi, age, gender, is_obesity, BD2_1, BS3_2, BS3_1, exercise, area, FPG, TG, leukocyte, total_colesterol, HDL, LDL, HbA, SBP, DBP, is_atrialFibrillation, PT_INR, bilirubin, creatinine, ammonia, AFP, albumin, platelet, DLD_serve, is_hypercholesterolemia, is_chemicHeartDisease, history_cancer, meal_reg, salt_pref, dr_5y];
             console.log("diseaseAg_params : " + diseaseAg_params);
             var ret4 = await mysql_dbc.insert_join('diseaseag', diseaseAg_params);
             if (!ret4[0]) throw err;
 
+            // insert disease_data
             var diseaseData_params = [idnum, age, gender, area, HE_fh, HE_HPfh, HE_HLfh, HE_IHDfh, HE_STRfh, HE_HBfh, HE_DMfh, BH2_61, DI1_dg, DI2_dg, DI3_dg, DJ4_dg, DI4_dg, DJ2_dg, DE1_dg, DE1_32, DC1_dg, DC2_dg, DC6_dg, DJ8_dg, DJ6_dg, DK8_dg, DK9_dg, DK4_dg, exercise, BO1_1, BP1, D_1_1, BE5_1, BS3_1, DI1_2, DI2_2, HE_ht, HE_wt, EC_wht_23, HE_sput2, BS3_2, Total_slp_wk, Total_slp_wd, BD2_1, BE3_33, bmi,
                 depSum, is_obesity,carstairs,FPG, TG, leukocyte, total_colesterol, HDL, LDL, HbA, SBP, DBP, is_atrialFibrillation, PT_INR, bilirubin, creatinine, ammonia, AFP, albumin, platelet, DLD_serve, is_hypercholesterolemia, is_chemicHeartDisease, history_cancer, meal_reg, salt_pref, dr_5y];
             
@@ -144,9 +140,12 @@ router.post('/join', async (req, res, next) => {  // 회원가입
             if (!ret5[0]) throw err;
 
         }else{ // checked = 0
+            
+            // insert diseaseag
             var ret7 = await mysql_dbc.insert_join('diseaseag', [idnum, age, gender]);
             if (!ret7[0]) throw err;
 
+            // insert disease_data
             var diseaseData_params = [idnum, age, gender, area, HE_fh, HE_HPfh, HE_HLfh, HE_IHDfh, HE_STRfh, HE_HBfh, HE_DMfh, BH2_61, DI1_dg, DI2_dg, DI3_dg, DJ4_dg, DI4_dg, DJ2_dg, DE1_dg, DE1_32, DC1_dg, DC2_dg, DC6_dg, DJ8_dg, DJ6_dg, DK8_dg, DK9_dg, DK4_dg, exercise, BO1_1, BP1, D_1_1, BE5_1, BS3_1, DI1_2, DI2_2, HE_ht, HE_wt, EC_wht_23, HE_sput2, BS3_2, Total_slp_wk, Total_slp_wd, BD2_1, BE3_33, bmi,
                 depSum, null,null,null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
             
@@ -165,12 +164,10 @@ router.post('/update_data', async (req, res) => {
     console.log(req.body);
 
     var id = req.body.id;
-    var pw = req.body.pw;
-    var name = req.body.name;
-    var gender = req.body.gender;
-    var area = req.body.area;
-    var age = req.body.age;
-    var phone = req.body.phone;
+    var gender;
+    var area;
+    var age;
+    var checked;
     var HE_fh = req.body.HE_fh;
     var HE_HPfh = req.body.HE_HPfh;
     var HE_HLfh = req.body.HE_HLfh;
@@ -214,17 +211,32 @@ router.post('/update_data', async (req, res) => {
     var BE3_33 = req.body.BE3_33;
     var bmi = req.body.bmi;
     var depSum = req.body.depSum;
-    var checked = req.body.check;
 
     try { // update: async (id_num, table, wanted_column, new_params) 
 
         var ret = await mysql_dbc.select_from_id(id, ['id_num']);
         if (!ret[0]) throw err;
         var idnum = ret[1].id_num;
+
+        /*
+        // get depSum from disease_data
+        var depSum_ret = await mysql_dbc.select_from_idnum(idnum, 'disease_data', ['depSum']);
+        if (!depSum_ret[0]) throw err;
+        var depSum = depSum_ret[1].depSum ;
+        */
         
-            var diseaseML_params = [age, gender, HE_fh, HE_HPfh, HE_HLfh, HE_IHDfh, HE_STRfh, HE_HBfh, HE_DMfh, BH2_61, DI1_dg, DI2_dg, DI3_dg, DJ4_dg, DI4_dg, DJ2_dg, DE1_dg, DE1_32, DC1_dg, DC2_dg, DC6_dg, DJ8_dg, DJ6_dg, DK8_dg, DK9_dg, DK4_dg, exercise, BO1_1, BP1, D_1_1, BE5_1, BS3_1, DI1_2, DI2_2, HE_ht, HE_wt, EC_wht_23, HE_sput2, BS3_2, Total_slp_wk, Total_slp_wd, BD2_1, BE3_33, bmi];
-            var ret1 = await mysql_dbc.update_all(idnum, 'diseaseml', diseaseML_params);
-            if (!ret1[0]) throw err;
+        // get gender, area, age
+        var user_ret = await mysql_dbc.select_from_idnum(idnum, 'user', ['gender','area','age','checked']);
+        if (!user_ret[0]) throw err;
+        gender = user_ret[1][0].gender;
+        area = user_ret[1][0].area;
+        age = user_ret[1][0].age;
+        checked = user_ret[1][0].checked;
+
+        // insert diseaseml
+        var diseaseML_params = [age, gender, HE_fh, HE_HPfh, HE_HLfh, HE_IHDfh, HE_STRfh, HE_HBfh, HE_DMfh, BH2_61, DI1_dg, DI2_dg, DI3_dg, DJ4_dg, DI4_dg, DJ2_dg, DE1_dg, DE1_32, DC1_dg, DC2_dg, DC6_dg, DJ8_dg, DJ6_dg, DK8_dg, DK9_dg, DK4_dg, exercise, BO1_1, BP1, D_1_1, BE5_1, BS3_1, DI1_2, DI2_2, HE_ht, HE_wt, EC_wht_23, HE_sput2, BS3_2, Total_slp_wk, Total_slp_wd, BD2_1, BE3_33, bmi];
+        var ret1 = await mysql_dbc.update_all(idnum, 'diseaseml', diseaseML_params);
+        if (!ret1[0]) throw err;
         
         if (checked == 1) {
             var carstairs = req.body.carstairs;
@@ -264,6 +276,13 @@ router.post('/update_data', async (req, res) => {
 
             var ret2 = await mysql_dbc.update_all(idnum, 'diseaseag', diseaseAg_params);
             if (!ret2[0]) throw err;
+//47
+            var diseaseData_params = [idnum, age, gender, area, HE_fh, HE_HPfh, HE_HLfh, HE_IHDfh, HE_STRfh, HE_HBfh, HE_DMfh, BH2_61, DI1_dg, DI2_dg, DI3_dg, DJ4_dg, DI4_dg, DJ2_dg, DE1_dg, DE1_32, DC1_dg, DC2_dg, DC6_dg, DJ8_dg, DJ6_dg, DK8_dg, DK9_dg, DK4_dg, exercise, BO1_1, BP1, D_1_1, BE5_1, BS3_1, DI1_2, DI2_2, HE_ht, HE_wt, EC_wht_23, HE_sput2, BS3_2, Total_slp_wk, Total_slp_wd, BD2_1, BE3_33, bmi,
+                depSum, is_obesity,carstairs,FPG, TG, leukocyte, total_colesterol, HDL, LDL, HbA, SBP, DBP, is_atrialFibrillation, PT_INR, bilirubin, creatinine, ammonia, AFP, albumin, platelet, DLD_serve, is_hypercholesterolemia, is_chemicHeartDisease, history_cancer, meal_reg, salt_pref, dr_5y];
+            
+            console.log("diseaseData_params : " + diseaseData_params);
+            var ret5 = await mysql_dbc.update_all(idnum,'disease_data', diseaseData_params);
+            if (!ret5[0]) throw err;
 
             res.status(200).send({ result: '1' });
         }
@@ -494,10 +513,9 @@ router.post('/diseaseAll_s', async (req, res) => { //send data -> HLTCareFragmen
     }
 });
 
-router.get('/alldata_s', async (req, res) => { //send data -> HLTCareFragment
+router.post('/alldata_s', async (req, res) => { //send data -> HLTCareFragment
     console.log('\n/alldata_s\n');
     var id = req.body.id;
-   // var id = "1";
 
     try {
         var ret = await mysql_dbc.select_from_id(id, ['id_num']);

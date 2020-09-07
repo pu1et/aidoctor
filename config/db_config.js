@@ -87,7 +87,7 @@ module.exports = function () {
                 }
             } else if (table == "disease_data") {
                     tmp = '?';
-                    for(i=0;i<72;i++) tmp += ',?'
+                    for(i=0;i<71;i++) tmp += ',?'
                     sql += 'diseaseml (id_num,age,gender,area,HE_fh,HE_HPfh,HE_HLfh,HE_IHDfh,HE_STRfh,HE_HBfh,HE_DMfh,BH2_61,DI1_dg,DI2_dg,DI3_dg,DJ4_dg,DI4_dg,DJ2_dg,DE1_dg,DE1_32,DC1_dg,'
                     sql += 'DC2_dg,DC6_dg,DJ8_dg,DJ6_dg,DK8_dg,DK9_dg,DK4_dg,exercise,BO1_1,BP1,D_1_1,BE5_1,BS3_1,DI1_2,DI2_2,HE_ht,HE_wt,EC_wht_23,HE_sput2,BS3_2,Total_slp_wk,Total_slp_wd,BD2_1,BE3_33,bmi,'
                     sql += 'depSum, is_obesity, carstairs, FPG,TG,leukocyte,total_colesterol, HDL,LDL,HbA,SBP,DBP,is_atrialFibrillation,PT_INR,bilirubin,creatinine,ammonia,AFP,albumin,platelet,DLD_serve,'
