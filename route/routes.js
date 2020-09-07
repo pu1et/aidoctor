@@ -126,7 +126,7 @@ router.post('/join', async (req, res, next) => {  // 회원가입
             var meal_reg = req.body.meal_reg;
             var salt_pref = req.body.salt_pref;
             var dr_5y = req.body.drinking_5y;
-            var BD2_1 = req.body.BD2_1; // drinking
+            var BD2_1 = req.body.BD2_1; // drinking or alcohol
             var BS3_1 = req.body.BS3_1; // cur_smoking
             var BS3_2 = req.body.BS3_2; // smoking
             var exercise = req.body.exercise; // PhA
@@ -135,18 +135,25 @@ router.post('/join', async (req, res, next) => {  // 회원가입
             console.log("diseaseAg_params : " + diseaseAg_params);
             var ret4 = await mysql_dbc.insert_join('diseaseag', diseaseAg_params);
             if (!ret4[0]) throw err;
-            /*
-            var ret5 = await mysql_dbc.insert_join('diseaseml', [idnum, age, gender]);
+
+            var diseaseData_params = [idnum, age, gender, area, HE_fh, HE_HPfh, HE_HLfh, HE_IHDfh, HE_STRfh, HE_HBfh, HE_DMfh, BH2_61, DI1_dg, DI2_dg, DI3_dg, DJ4_dg, DI4_dg, DJ2_dg, DE1_dg, DE1_32, DC1_dg, DC2_dg, DC6_dg, DJ8_dg, DJ6_dg, DK8_dg, DK9_dg, DK4_dg, exercise, BO1_1, BP1, D_1_1, BE5_1, BS3_1, DI1_2, DI2_2, HE_ht, HE_wt, EC_wht_23, HE_sput2, BS3_2, Total_slp_wk, Total_slp_wd, BD2_1, BE3_33, bmi,
+                depSum, is_obesity,carstairs,FPG, TG, leukocyte, total_colesterol, HDL, LDL, HbA, SBP, DBP, is_atrialFibrillation, PT_INR, bilirubin, creatinine, ammonia, AFP, albumin, platelet, DLD_serve, is_hypercholesterolemia, is_chemicHeartDisease, history_cancer, meal_reg, salt_pref, dr_5y];
+            
+            console.log("diseaseData_params : " + diseaseData_params);
+            var ret5 = await mysql_dbc.insert_join('disease_data', diseaseData_params);
             if (!ret5[0]) throw err;
-            */
+
+        }else{ // checked = 0
+            var ret7 = await mysql_dbc.insert_join('diseaseag', [idnum, age, gender]);
+            if (!ret7[0]) throw err;
+
+            var diseaseData_params = [idnum, age, gender, area, HE_fh, HE_HPfh, HE_HLfh, HE_IHDfh, HE_STRfh, HE_HBfh, HE_DMfh, BH2_61, DI1_dg, DI2_dg, DI3_dg, DJ4_dg, DI4_dg, DJ2_dg, DE1_dg, DE1_32, DC1_dg, DC2_dg, DC6_dg, DJ8_dg, DJ6_dg, DK8_dg, DK9_dg, DK4_dg, exercise, BO1_1, BP1, D_1_1, BE5_1, BS3_1, DI1_2, DI2_2, HE_ht, HE_wt, EC_wht_23, HE_sput2, BS3_2, Total_slp_wk, Total_slp_wd, BD2_1, BE3_33, bmi,
+                depSum, null,null,null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+            
+            console.log("diseaseData_params : " + diseaseData_params);
+            var ret5 = await mysql_dbc.insert_join('disease_data', diseaseData_params);
+            if (!ret5[0]) throw err;
         }
-        /*
-        var diseaseML_params = [idnum, age, gender, HE_fh, HE_HPfh, HE_HLfh, HE_IHDfh, HE_STRfh, HE_HBfh, HE_DMfh, BH2_61, DI1_dg, DI2_dg, DI3_dg, DJ4_dg, DI4_dg, DJ2_dg, DE1_dg, DE1_32, DC1_dg, DC2_dg, DC6_dg, DJ8_dg, DJ6_dg, DK8_dg, DK9_dg, DK4_dg, exercise, BO1_1, BP1, D_1_1, BE5_1, BS3_1, DI1_2, DI2_2, HE_ht, HE_wt, EC_wht_23, HE_sput2, BS3_2, Total_slp_wk, Total_slp_wd, BD2_1, BE3_33, bmi];
-        var ret6 = await mysql_dbc.insert_join('diseaseml', diseaseML_params);
-        if (!ret6[0]) throw err;
-        var ret7 = await mysql_dbc.insert_join('diseaseag', [idnum, age, gender]);
-        if (!ret7[0]) throw err;
-        */
        res.status(200).send({ result: '1' });
     } catch (err) {
         res.status(500).send({ result: '0' });
@@ -214,11 +221,11 @@ router.post('/update_data', async (req, res) => {
         var ret = await mysql_dbc.select_from_id(id, ['id_num']);
         if (!ret[0]) throw err;
         var idnum = ret[1].id_num;
-        /*
+        
             var diseaseML_params = [age, gender, HE_fh, HE_HPfh, HE_HLfh, HE_IHDfh, HE_STRfh, HE_HBfh, HE_DMfh, BH2_61, DI1_dg, DI2_dg, DI3_dg, DJ4_dg, DI4_dg, DJ2_dg, DE1_dg, DE1_32, DC1_dg, DC2_dg, DC6_dg, DJ8_dg, DJ6_dg, DK8_dg, DK9_dg, DK4_dg, exercise, BO1_1, BP1, D_1_1, BE5_1, BS3_1, DI1_2, DI2_2, HE_ht, HE_wt, EC_wht_23, HE_sput2, BS3_2, Total_slp_wk, Total_slp_wd, BD2_1, BE3_33, bmi];
             var ret1 = await mysql_dbc.update_all(idnum, 'diseaseml', diseaseML_params);
             if (!ret1[0]) throw err;
-        */
+        
         if (checked == 1) {
             var carstairs = req.body.carstairs;
             var is_obesity = req.body.is_obesity;
@@ -487,31 +494,26 @@ router.post('/diseaseAll_s', async (req, res) => { //send data -> HLTCareFragmen
     }
 });
 
-router.post('/alldata_s', async (req, res) => { //send data -> HLTCareFragment
+router.get('/alldata_s', async (req, res) => { //send data -> HLTCareFragment
     console.log('\n/alldata_s\n');
     var id = req.body.id;
+   // var id = "1";
 
     try {
         var ret = await mysql_dbc.select_from_id(id, ['id_num']);
         if (!ret[0]) throw err;
         var ret2 = await mysql_dbc.select_from_idnum(ret[1].id_num, 'user', ['*']);
         if (!ret2[0]) throw err;
-        var ret3 = await mysql_dbc.select_from_idnum(ret[1].id_num, 'diseaseag', ['*']);
-        if (!ret3[0]) throw err;
-        var ret4 = await mysql_dbc.select_from_idnum(ret[1].id_num, 'diseaseml', ['*']);
-        if(!ret4[0]) throw err;
-        //ret.push(ret2);
+        var ret3 = await mysql_dbc.select_from_idnum(ret[1].id_num, 'disease_data', ['*']);
 
         ret2 = ret2[1][0];
         delete ret2["id_num"];
         ret3 = ret3[1][0];
         delete ret3["id_num"];
-        ret4 = ret4[1][0];
-        delete ret4["id_num"];
 
 
-        var tmp = (JSON.stringify(ret2) +JSON.stringify(ret3)+ JSON.stringify(ret4));
-        tmp = tmp.replace("}{",",").replace("}{",",");
+        var tmp = (JSON.stringify(ret2) +JSON.stringify(ret3));
+        tmp = tmp.replace("}{",",");
         var ret10 = JSON.parse(tmp);
 
         console.log(ret10);

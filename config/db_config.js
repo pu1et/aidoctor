@@ -70,11 +70,11 @@ module.exports = function () {
             } else if (table == "disease_prefer") {
                 sql += 'disease_prefer (id_num) VALUES (?)';
             } else if (table == "diseaseag") {
-                if (params.length != 39) sql += 'diseaseag (id_num, age, gender) VALUES (?,?,?)';
+                if (params.length != 40) sql += 'diseaseag (id_num, age, gender) VALUES (?,?,?)';
                 else {
                     tmp = '?';
-                    for(i=0;i<38;i++) tmp += ',?';
-                    sql += 'diseaseag (id_num, carstairs,HE_DMfh,HE_IHDfh,DE1_dg,DI1_dg,DI3_dg,bmi,age,gender,is_obesity,alcohol,smoking,PhA,area,FPG,TG,leukocyte,total_colesterol,'
+                    for(i=0;i<39;i++) tmp += ',?';
+                    sql += 'diseaseag (id_num, carstairs,HE_DMfh,HE_IHDfh,DE1_dg,DI1_dg,DI3_dg,bmi,age,gender,is_obesity,BD2_1,BS3_2,BS3_1,exercise,area,FPG,TG,leukocyte,total_colesterol,'
                     sql += 'HDL,LDL,HbA,SBP,DBP,is_atrialFibrillation,PT_INR,bilirubin,creatinine,ammonia,AFP,albumin,platelet,DLD_serve,is_hypercholesterolemia,is_chemicHeartDisease,history_cancer,meal_reg,salt_pref,dr_5y) VALUES (' + tmp + ')';
                 }
             } else if (table == "diseaseml") {
@@ -85,6 +85,13 @@ module.exports = function () {
                     sql += 'diseaseml (id_num,age,gender,HE_fh,HE_HPfh,HE_HLfh,HE_IHDfh,HE_STRfh,HE_HBfh,HE_DMfh,BH2_61,DI1_dg,DI2_dg,DI3_dg,DJ4_dg,DI4_dg,DJ2_dg,DE1_dg,DE1_32,DC1_dg,'
                     sql += 'DC2_dg,DC6_dg,DJ8_dg,DJ6_dg,DK8_dg,DK9_dg,DK4_dg,exercise,BO1_1,BP1,D_1_1,BE5_1,BS3_1,DI1_2,DI2_2,HE_ht,HE_wt,EC_wht_23,HE_sput2,BS3_2,Total_slp_wk,Total_slp_wd,BD2_1,BE3_33,bmi) VALUES (' + tmp + ')';
                 }
+            } else if (table == "disease_data") {
+                    tmp = '?';
+                    for(i=0;i<72;i++) tmp += ',?'
+                    sql += 'diseaseml (id_num,age,gender,area,HE_fh,HE_HPfh,HE_HLfh,HE_IHDfh,HE_STRfh,HE_HBfh,HE_DMfh,BH2_61,DI1_dg,DI2_dg,DI3_dg,DJ4_dg,DI4_dg,DJ2_dg,DE1_dg,DE1_32,DC1_dg,'
+                    sql += 'DC2_dg,DC6_dg,DJ8_dg,DJ6_dg,DK8_dg,DK9_dg,DK4_dg,exercise,BO1_1,BP1,D_1_1,BE5_1,BS3_1,DI1_2,DI2_2,HE_ht,HE_wt,EC_wht_23,HE_sput2,BS3_2,Total_slp_wk,Total_slp_wd,BD2_1,BE3_33,bmi,'
+                    sql += 'depSum, is_obesity, carstairs, FPG,TG,leukocyte,total_colesterol, HDL,LDL,HbA,SBP,DBP,is_atrialFibrillation,PT_INR,bilirubin,creatinine,ammonia,AFP,albumin,platelet,DLD_serve,'
+                    sql += 'is_hypercholesterolemia,is_chemicHeartDisease,history_cancer,meal_reg,salt_pref,dr_5y) VALUES (' + tmp + ')';
             } else if (table == "day_diabetes") {
                 sql += 'day_diabetes (id_num, day) VALUES (?,?)';
             } else if (table == "day_hepatitisa") {
@@ -279,9 +286,12 @@ module.exports = function () {
             } else if (table == "disease_prefer") {
                 old_params = []; 
             } else if (table == "diseaseag") {
-                old_params = ['carstairs','HE_DMfh','HE_IHDfh','DE1_dg','DI1_dg','DI3_dg','bmi','age','gender','is_obesity','alcohol','smoking','PhA','area','FPG','TG','leukocyte','total_colesterol','HDL','LDL','HbA','SBP','DBP','is_atrialFibrillation','PT_INR','bilirubin','creatinine','ammonia','AFP','albumin','platelet','DLD_serve','is_hypercholesterolemia','is_chemicHeartDisease','history_cancer','meal_reg','salt_pref','dr_5y'];
+                old_params = ['carstairs','HE_DMfh','HE_IHDfh','DE1_dg','DI1_dg','DI3_dg','bmi','age','gender','is_obesity','BD2_1','BS3_2','BS3_1','exercise','area','FPG','TG','leukocyte','total_colesterol','HDL','LDL','HbA','SBP','DBP','is_atrialFibrillation','PT_INR','bilirubin','creatinine','ammonia','AFP','albumin','platelet','DLD_serve','is_hypercholesterolemia','is_chemicHeartDisease','history_cancer','meal_reg','salt_pref','dr_5y'];
             } else if (table == "diseaseml") {
                 old_params = ['age','gender','HE_fh','HE_HPfh','HE_HLfh','HE_IHDfh','HE_STRfh','HE_HBfh','HE_DMfh','BH2_61','DI1_dg','DI2_dg','DI3_dg','DJ4_dg','DI4_dg','DJ2_dg','DE1_dg','DE1_32','DC1_dg','DC2_dg','DC6_dg','DJ8_dg','DJ6_dg','DK8_dg','DK9_dg','DK4_dg','exercise','BO1_1','BP1','D_1_1','BE5_1','BS3_1','DI1_2','DI2_2','HE_ht','HE_wt','EC_wht_23','HE_sput2','BS3_2','Total_slp_wk','Total_slp_wd','BD2_1','BE3_33','bmi'];
+            } else if (table == "disease_data") {
+                old_params = ['age','gender','area','HE_fh','HE_HPfh','HE_HLfh','HE_IHDfh','HE_STRfh','HE_HBfh','HE_DMfh','BH2_61','DI1_dg','DI2_dg','DI3_dg','DJ4_dg','DI4_dg','DJ2_dg','DE1_dg','DE1_32','DC1_dg','DC2_dg','DC6_dg','DJ8_dg','DJ6_dg','DK8_dg','DK9_dg','DK4_dg','exercise','BO1_1','BP1','D_1_1','BE5_1','BS3_1','DI1_2','DI2_2','HE_ht','HE_wt','EC_wht_23','HE_sput2','BS3_2','Total_slp_wk','Total_slp_wd','BD2_1','BE3_33','bmi',
+            'depSum','is_obesity','carstairs','FPG','TG','leukocyte','total_colesterol','HDL','LDL','HbA','SBP','DBP','is_atrialFibrillation','PT_INR','bilirubin','creatinine','ammonia','AFP','albumin','platelet','DLD_serve','is_hypercholesterolemia','is_chemicHeartDisease','history_cancer','meal_reg','salt_pref','dr_5y'];
             } else if (table == "day_diabetes") {
                 old_params = ['day'];
             } else if (table == "day_hepatitisa") {
