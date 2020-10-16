@@ -1,10 +1,13 @@
 var router = require('express').Router();
 var date = require('date-utils');
+const { mongo } = require('mongoose');
 //mysql test open
-var mysql_dbc = require('../config/db_config')();
+var mysql_dbc = require('../config/db_config_mysql')();
+var mongo_db =  require('../config/db_config_mongo')();
 
 mysql_dbc.init();
 mysql_dbc.test_open();
+mongo_db.test_open();
 
 const salt = '${Math.round(new Date().valueOf * NavigationPreloadManager * Math.random())}';
 
@@ -541,6 +544,39 @@ router.post('/alldata_s', async (req, res) => { //send data -> HLTCareFragment
     }
 });
 
+//헬스 데이터 저장 및 업데이트(MongoDB)
+router.post('/dayHealth_r', function (req, res) {
+    var id = req.body.id;
+    var flag = req.body.flag; // flag: -1(all), 2~7: DB위치
+    var table_id = req.body.table_id;
+    var date = req.body.date;
+    var result;
+    try {
+    if(flag == -1){ // 전체 데이터 저장
+        var water = req.body.water;
+        var sleep = req.body.sleep;
+        var food = req.body.food;
+        var drinking = req.body.drinking;
+        var smoking = req.body.smoking;
+        var exercise = req.body.exercise;
+    }else if(flag == 2){ // water
+        var water = req.body.water;
+    }else if(flag == 3){ // sleep
+        var sleep = req.body.sleep;
+    }else if(flag == 4){ //  food
+        var food = req.body.food;
+    }else if(flag == 5){ // drinking
+        var drinking = req.body.drinking;
+    }else if(flag == 6){ // smoking
+        var smoking = req.body.smoking;
+    }else if(flag == 7){ // exercise
+        var exercise = req.body.exercise;
+    }
+    res.json({result: '1'});
+} catch{
+    res.status(500).send({ result: '0' });
+}
+});
 
 
 
