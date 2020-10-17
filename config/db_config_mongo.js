@@ -54,7 +54,7 @@ module.exports = function () {
                 throw err;
             }
         },
-        mongo_insert: async (id, col_name, column_arr, value_arr) => {
+        mongo_insert: async (id, col_name, value_arr) => {
             client = MongoClient.connect(
                 'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                 {
@@ -64,18 +64,22 @@ module.exports = function () {
                 },
                 function (err, client) {
                     if (err) throw err;
-                    var tmp_json = "";
 
                     db = client.db(config.database);
                     col = db.collection(col_name);
 
-                    tmp_json += "{id : " + id + ",";
-                    for (i = 0; i < column_arr.length; i++) {
-                        tmp_json += column_arr[i] + ":" + value_arr[i];
-                        if (i == (column_arr.length - 1)) tmp_json += "}";
-                        else tmp_json += ",";
-                    }
-                    tmp_json = JSON.parse(JSON.stringify(tmp_json));
+                    var tmp_json = {
+                        "id":id, 
+                        date_id: value_arr[0], 
+                        date:value_arr[1], 
+                        water:value_arr[2],
+                        sleep:value_arr[3], 
+                        food:value_arr[4], 
+                        drinking:value_arr[5], 
+                        smoking:value_arr[6], 
+                        exercise:value_arr[7], 
+                        result:value_arr[8]
+                    };
                     console.log("insert_json : " + tmp_json);
                     col.insertOne(tmp_json,
                     function (err, result) {
