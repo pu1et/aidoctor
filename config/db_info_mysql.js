@@ -16,7 +16,7 @@ module.exports = (
             database : ''
            },
            dev:{ //dev server db info
-            host : 'aidoctor-db.ckhpnljabh2s.us-west-2.rds.amazonaws.com',
+            host : 'aidoctor-db.ckhpnljabh2s.us-west-2.rds.amazonaws.com', // sonseongil61@gmail.com 계정
             port : 3306,
             user : 'aidoctor',
             password : 'aidoctor00!!',
