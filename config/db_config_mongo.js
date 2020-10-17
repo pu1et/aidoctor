@@ -76,7 +76,7 @@ module.exports = function () {
                         else tmp_json += ",";
                     }
                     console.log("insert_json : " + tmp_json);
-                    col.insertOne(JSON.parse(tmp_json),
+                    col.insertOne(tmp_json,
                     function (err, result) {
                         assert.equal(err, null);
                         console.log("json_insert : "+ tmp_json);
