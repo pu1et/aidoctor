@@ -78,9 +78,8 @@ module.exports = function () {
                     console.log("insert_json : " + tmp_json);
                     col.insertOne(tmp_json,
                     function (err, result) {
-                        assert.equal(err, null);
                         console.log("json_insert : "+ tmp_json);
-                        console.log("[success_insert] MongoDB  -> " + col_name);
+                        console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", result);
                     });
                     client.close();
                 });
@@ -106,7 +105,7 @@ module.exports = function () {
                         if(doc != null) console.log(doc);
                         console.log("query_find : "+ query);
                         console.log("projection_find : "+ projection);
-                        console.log("[success_find] MongoDB  -> " + col_name);
+                        console.log("[success_find] MongoDB  -> " + col_name + ", result: "+doc);
                     });
 
                     client.close();
@@ -129,7 +128,7 @@ module.exports = function () {
                         if(err) throw err;
                         console.log("query_update : "+ query);
                         console.log("operator_update : "+ query);
-                        console.log("[success_update] MongoDB  -> " + col_name);
+                        console.log("[success_update] MongoDB  -> " + col_name + ', result: '+upserted);
                     })
                     client.close();
                 });
@@ -151,7 +150,7 @@ module.exports = function () {
                     col.remove(tmp_query, function(err, removed){
                         if(err) throw err;
                         console.log("query_delete : "+ query);
-                        console.log("[success_delete] MongoDB  -> " + col_name);
+                        console.log("[success_delete] MongoDB  -> " + col_name +", result: "+removed);
                     })
                     client.close();
                 });
