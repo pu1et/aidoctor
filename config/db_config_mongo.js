@@ -84,7 +84,7 @@ module.exports = function () {
                     col.insertOne(tmp_json,
                     function (err, result) {
                         console.log("json_insert : "+ tmp_json);
-                        console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", result);
+                        console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", result[0]);
                     });
                     client.close();
                 });

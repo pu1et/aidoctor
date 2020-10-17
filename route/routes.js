@@ -1,6 +1,5 @@
 var router = require('express').Router();
 var date = require('date-utils');
-const { mongo } = require('mongoose');
 //mysql test open
 var mysql_dbc = require('../config/db_config_mysql')();
 var mongo_db =  require('../config/db_config_mongo')();
@@ -568,38 +567,38 @@ router.post('/dayHealth_r', function (req, res) {
         var water = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"water":water, "result":result};
+        var operator = {$set:{"water":water, "result":result}};
         mongo_db.mongo_update("1","day_health",query, operator);
 
     }else if(flag == 3){ // sleep
         var sleep = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"sleep":sleep, "result":result};
+        var operator = {$set:{"sleep":sleep, "result":result}};
         mongo_db.mongo_update("1","day_health",query, operator);
     }else if(flag == 4){ //  food
         var food = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"food":food, "result":result};
+        var operator = {$set:{"food":food, "result":result}};
         mongo_db.mongo_update("1","day_health",query, operator);
     }else if(flag == 5){ // drinking
         var drinking = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"drinking":drinking, "result":result};
+        var operator = {$set: {"drinking":drinking, "result":result}};
         mongo_db.mongo_update("1","day_health",query, operator);
     }else if(flag == 6){ // smoking
         var smoking = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"smoking":smoking, "result":result};
+        var operator = {$set:{"smoking":smoking, "result":result}};
         mongo_db.mongo_update("1","day_health",query, operator);
     }else if(flag == 7){ // exercise
         var exercise = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"exercise":exercise, "result":result};
+        var operator = {$set:{"exercise":exercise, "result":result}};
         mongo_db.mongo_update("1","day_health",query, operator);
     }
     res.json({result: '1'});
