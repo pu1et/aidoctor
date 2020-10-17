@@ -550,68 +550,56 @@ router.post('/dayHealth_r', function (req, res) {
     var id = req.body.id;
     var flag = req.body.flag; // flag: -1(all), 2~7: DB위치
     var date_id = req.body.date_id;
-    var date = req.body.date;
-    var result = 0, count = 0;
+    var result = req.body.result;
+
     try {
     if(flag == -1){ // 전체 데이터 저장
+        var date = req.body.date;
         var water = req.body.water;
         var sleep = req.body.sleep;
         var food = req.body.food;
         var drinking = req.body.drinking;
         var smoking = req.body.smoking;
         var exercise = req.body.exercise;
-
-        if(water >= 8) count+=1;
-        if(sleep >=420 && sleep <= 540) count +=1;
-        if(food > -1) count += 1; // 수정필요
-        if(gender == 0){
-            if(drinking <= 1) count += 1;
-        }else{
-            if(drinking <= 2) count += 1;
-        }
-        if(smoking == 0) count += 1;
-        if(exercise >= 60) count += 1;
-
-        result = (int) (Math.round(16.0*count/10.0)*10);
 
         mongo_db.mongo_insert("1", "day_health",["date_id","date","water","sleep","food","drinking","smoking","exercise","result"], [date_id,date,water,sleep,food,drinking,smoking,exercise,result]);
 
     }else if(flag == 2){ // water
-        var water = req.body.water;
+        var water = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"water":water};
+        var operator = {"water":water, "result":result};
         mongo_db.mongo_update("1","day_health",query, operator);
 
     }else if(flag == 3){ // sleep
-        var sleep = req.body.sleep;
+        var sleep = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"sleep":sleep};
+        var operator = {"sleep":sleep, "result":result};
         mongo_db.mongo_update("1","day_health",query, operator);
     }else if(flag == 4){ //  food
-        var food = req.body.food;
+        var food = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"food":food};
+        var operator = {"food":food, "result":result};
         mongo_db.mongo_update("1","day_health",query, operator);
     }else if(flag == 5){ // drinking
-        var drinking = req.body.drinking;
+        var drinking = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"drinking":drinking};
+        var operator = {"drinking":drinking, "result":result};
         mongo_db.mongo_update("1","day_health",query, operator);
     }else if(flag == 6){ // smoking
-        var smoking = req.body.smoking;
+        var smoking = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"smoking":smoking};
+        var operator = {"smoking":smoking, "result":result};
         mongo_db.mongo_update("1","day_health",query, operator);
     }else if(flag == 7){ // exercise
-        var exercise = req.body.exercise;
+        var exercise = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
-        var operator = {"exercise":exercise};
+        var operator = {"exercise":exercise, "result":result};
         mongo_db.mongo_update("1","day_health",query, operator);
     }
     res.json({result: '1'});
