@@ -75,7 +75,7 @@ module.exports = function () {
                         if (i == (column_arr.length - 1)) tmp_json += "}";
                         else tmp_json += ",";
                     }
-                    tmp_json = JSON.parse(tmp_json);
+                    tmp_json = JSON.parse(JSON.stringify(tmp_json));
                     console.log("insert_json : " + tmp_json);
                     col.insertOne(tmp_json,
                     function (err, result) {
