@@ -148,17 +148,16 @@ module.exports = function () {
                 },
                 function (err, client) {
                     if (err) throw err;
-                    var tmp_query = JSON.parse(query);
                     db = client.db(config.database);
                     col = db.collection(col_name);
 
-                    col.remove(tmp_query, function(err, removed){
+                    col.remove(query, function(err, removed){
                         if(err) throw err;
                         console.log("query_delete : "+ query);
                         console.log("[success_delete] MongoDB  -> " + col_name +", result: "+removed);
                     })
                     client.close();
                 });
-        },
+        }
     }
 };

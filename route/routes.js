@@ -547,11 +547,13 @@ router.post('/alldata_s', async (req, res) => { //send data -> HLTCareFragment
 router.post('/dayHealth_r', function (req, res) {
     //해당 id가 있으면 업데이트
     var id = req.body.id;
-    var flag = req.body.flag; // flag: -1(all), 2~7: DB위치
+    var flag = req.body.flag; // flag: -1(all), 2~7: DB위치, -2: 삭제
     var date_id = req.body.date_id;
-    var result = req.body.result;
+    var result;
 
     try {
+    if(flag > -2) {
+        result = req.body.result;
     if(flag == -1){ // 전체 데이터 저장
         var date = req.body.date;
         var water = req.body.water;
@@ -601,7 +603,11 @@ router.post('/dayHealth_r', function (req, res) {
         var operator = {$set:{"exercise":exercise, "result":result}};
         mongo_db.mongo_update("1","day_health",query, operator);
     }
-    res.json({result: '1'});
+}else if(flag == -2){ // date_id에 해당하는 행 삭제
+    var query = {"id":id, "date_id":date_id};
+    mongo_db.mongo_delete("1","day_health",query);
+}
+res.json({result: '1'});
 } catch{
     res.status(500).send({ result: '0' });
 }
