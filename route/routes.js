@@ -562,7 +562,7 @@ router.post('/dayHealth_r', function (req, res) {
         var smoking = req.body.smoking;
         var exercise = req.body.exercise;
 
-        mongo_db.mongo_insert("1", "day_health",["date_id","date","water","sleep","food","drinking","smoking","exercise","result"], [date_id,date,water,sleep,food,drinking,smoking,exercise,result]);
+        mongo_db.mongo_insert("1", "day_health",[date_id,date,water,sleep,food,drinking,smoking,exercise,result]);
 
     }else if(flag == 2){ // water
         var water = req.body.new_value;
