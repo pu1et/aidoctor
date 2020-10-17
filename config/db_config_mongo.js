@@ -27,9 +27,11 @@ module.exports = function () {
                         col = db.collection('test');
                     
                         //Insert a single document
+                        /*
                         col.insertOne({'test':'1'}, function(err, result){
                             console.log(result);
                         });
+                        */
 
                         col.findOne({'test':'1'}, function(err, result){
                             console.log(result);
