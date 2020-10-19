@@ -117,7 +117,7 @@ module.exports = function () {
                         return [true, JSON.stringify(doc)];
                     });
                 }catch(err){
-                    console.log(err);
+                    console.log("+++=============++++++++++++++++++"+err);
                         return [false];
                 }finally{
                         client.close();

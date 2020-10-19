@@ -621,11 +621,13 @@ res.json({result: '1'});
 });
 
 router.get('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이터 보냄
-    //해당 id가 있으면 업데이트
+    console.log('\n/dayHealth_s\n');
+    console.log(req.query);
+    
     var id = req.query.id;
     var date_id = req.query.date_id;
     var projection = {_id:0};
-    console.log(req);
+   
     try{
         var query = {$and : [{date_id:{$lte: date_id}},{id:id}] };
         var ret = await mongo_db.mongo_find("day_health",query, projection, 7);
