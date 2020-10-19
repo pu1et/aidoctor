@@ -99,7 +99,7 @@ module.exports = function () {
                     sslCA: ca,
                     useNewUrlParser: true
                 },
-                function (err, client) {
+                async function (err, client) {
                     try{
                     if (err) throw err;
                     db = client.db(config.database);
@@ -108,7 +108,7 @@ module.exports = function () {
 
                     if(limit_num == 0) tmp = await col.find(query, projection);
                     else tmp = await col.find(query, projection).limit(limit_num);
-                    await tmp.toArray(function(err, doc){
+                    tmp.toArray(function(err, doc){
                         if(err) throw err;
                         if(doc != null) console.log(doc);
                         console.log("query_find : "+ JSON.stringify(query));
