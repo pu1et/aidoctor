@@ -1,4 +1,4 @@
-const { table, assert } = require('console');
+const { table, assert, exception } = require('console');
 const { tmpdir } = require('os');
 
 var config = require('../config/db_info_mongo').dev;
@@ -100,7 +100,8 @@ module.exports = function () {
                     useNewUrlParser: true
                 },
                 function (err, client) {
-                    if (err) return [false];
+                    try{
+                    if (err) throw err;
                     db = client.db(config.database);
                     col = db.collection(col_name);
                     var tmp;
@@ -108,15 +109,18 @@ module.exports = function () {
                     if(limit_num == 0) tmp = col.find(query, projection);
                     else tmp = col.find(query, projection).limit(limit_num);
                     tmp.toArray(function(err, doc){
-                        if(err) return [false];
+                        if(err) throw err;
                         if(doc != null) console.log(doc);
                         console.log("query_find : "+ JSON.stringify(query));
                         console.log("projection_find : "+ JSON.stringify(projection));
                         console.log("[success_find] MongoDB  -> " + col_name + ", result: "+JSON.stringify(doc));
                         return [true, doc];
                     });
-
-                    client.close();
+                }catch(err){
+                        return [false];
+                }finally{
+                        client.close();
+                }
                 });
         },
         mongo_update: async (id, col_name, query,operator) => { //operator : 데이터 수정 컬럼과 값
