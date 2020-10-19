@@ -106,9 +106,9 @@ module.exports = function () {
                     col = db.collection(col_name);
                     var tmp;
 
-                    if(limit_num == 0) tmp = col.find(query, projection);
-                    else tmp = col.find(query, projection).limit(limit_num);
-                    tmp.toArray(function(err, doc){
+                    if(limit_num == 0) tmp = await col.find(query, projection);
+                    else tmp = await col.find(query, projection).limit(limit_num);
+                    await tmp.toArray(function(err, doc){
                         if(err) throw err;
                         if(doc != null) console.log(doc);
                         console.log("query_find : "+ JSON.stringify(query));
