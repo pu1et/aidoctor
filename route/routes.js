@@ -625,7 +625,7 @@ router.get('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이�
     var id = req.params.id;
     var date_id = req.params.date_id;
     var projection = {};
-    console(req);
+    console.log(req);
     try{
         var query = {$and : [{"id":id},{"date_id":{$lte: date_id}}] };
         var ret = await mongo_db.mongo_find("day_health",query, projection, 7);
