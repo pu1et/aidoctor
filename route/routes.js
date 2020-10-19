@@ -623,7 +623,7 @@ res.json({result: '1'});
 router.get('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이터 보냄
     console.log('\n/dayHealth_s\n');
     console.log(req.query);
-
+    
     var id = req.query.id;
     var date_id = req.query.date_id;
     var projection = {_id:0};
@@ -631,7 +631,8 @@ router.get('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이�
     try{
         var query = {$and : [{date_id:{$lte: date_id}},{id:id}] };
         var ret = await mongo_db.mongo_find("day_health",query, projection, 7);
-        console.log(ret);
+        if (!ret[0]) throw err;
+        else console.log(ret[1]);
 
         res.json({result:'1', data: ret[1]});
     }catch(err){
