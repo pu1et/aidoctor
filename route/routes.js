@@ -636,7 +636,7 @@ router.get('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이�
     }catch{
         res.status(500).send({ result: '0' });
     }
-}
+});
 
 
 
