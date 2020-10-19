@@ -115,8 +115,7 @@ module.exports = function () {
                         console.log("projection_find : "+ JSON.stringify(projection));
                         console.log("[success_find] MongoDB  -> " + col_name + ", result: "+JSON.stringify(doc));
                         return [true, JSON.stringify(doc)];
-                    }.then);
-                    if(ret) return [true, JSON.stringify(doc)];
+                    })
                 }catch(err){
                     console.log("+++=============++++++++++++++++++"+err);
                         return [false];
