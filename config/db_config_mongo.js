@@ -1,10 +1,9 @@
 const { table, assert, exception } = require('console');
+const { Server } = require('http');
 const { tmpdir } = require('os');
 
 var config = require('../config/db_info_mongo').dev;
-var MongoClient = require('mongodb').MongoClient,
-    f = require('util').format,
-    fs = require('fs');
+var MongoServer = require("mongo-sync").Server;
 var client;
 
 //Specify the Amazon DocumentDB cert
@@ -92,32 +91,11 @@ module.exports = function () {
                 });
         },
         mongo_find: async (col_name, query, projection,limit_num=0) => { // id : 사용자 아이디, col_name : 컬렉션 네임, query : 문자열 쿼리, projection : 나올 컬럼
-            try{
-            client = MongoClient.connect(
-                'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
-                {
-                    sslValidate: true,
-                    sslCA: ca,
-                    useNewUrlParser: true
-                })
-            db = client.db(config.database);
-            col = await db.collection(col_name);
-            if(limit_num == 0) tmp = await col.find(query, projection);
-            else tmp = await col.find(query, projection).limit(limit_num);
-            var ret = await tmp.toArray(function(err, doc){
-                if(err) throw err;
-                if(doc != null) console.log(doc);
-                console.log("query_find : "+ JSON.stringify(query));
-                console.log("projection_find : "+ JSON.stringify(projection));
-                console.log("[success_find] MongoDB  -> " + col_name + ", result: "+JSON.stringify(doc));
-            })
-            if(ret) return [true, JSON.stringify(doc)];
-            }catch(err){
-                    console.log("+++=============++++++++++++++++++"+err);
-                        return [false];
-            }finally{
-                        client.close();
-            }
+        
+            var server = new Server('mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false');
+            var result = server.db("drkai").getCollection("day_health").find().toArray();
+            console.log(result);
+            server.close();
         },
         mongo_update: async (id, col_name, query,operator) => { //operator : 데이터 수정 컬럼과 값
             client = MongoClient.connect(
