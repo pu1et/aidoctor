@@ -98,7 +98,7 @@ module.exports = function () {
                     sslValidate: true,
                     sslCA: ca,
                     useNewUrlParser: true
-                }).then(db => {
+                }).then(() => {
                     db = client.db(config.database);
                     col = db.collection(col_name);
 
