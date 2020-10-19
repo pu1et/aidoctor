@@ -544,7 +544,7 @@ router.post('/alldata_s', async (req, res) => { //send data -> HLTCareFragment
 });
 
 //헬스 데이터 저장 및 업데이트(MongoDB)
-router.post('/dayHealth_r', function (req, res) {
+router.post('/dayHealth_r', async (req, res) => {
     //해당 id가 있으면 업데이트
     var id = req.body.id;
     var flag = req.body.flag; // flag: -1(all), 2~7: DB위치, -2: 삭제
@@ -563,55 +563,80 @@ router.post('/dayHealth_r', function (req, res) {
         var smoking = req.body.smoking;
         var exercise = req.body.exercise;
 
-        mongo_db.mongo_insert("1", "day_health",[date_id,date,water,sleep,food,drinking,smoking,exercise,result]);
-
+        if(mongo_db.mongo_find())
+        var ret = await mongo_db.mongo_insert("1", "day_health",[date_id,date,water,sleep,food,drinking,smoking,exercise,result]);
+        if (!ret[0]) throw err;
     }else if(flag == 2){ // water
         var water = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set:{"water":water, "result":result}};
-        mongo_db.mongo_update("1","day_health",query, operator);
-
+        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        if (!ret[0]) throw err;
     }else if(flag == 3){ // sleep
         var sleep = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set:{"sleep":sleep, "result":result}};
-        mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        if (!ret[0]) throw err;
     }else if(flag == 4){ //  food
         var food = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set:{"food":food, "result":result}};
-        mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        if (!ret[0]) throw err;
     }else if(flag == 5){ // drinking
         var drinking = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set: {"drinking":drinking, "result":result}};
-        mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        if (!ret[0]) throw err;
     }else if(flag == 6){ // smoking
         var smoking = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set:{"smoking":smoking, "result":result}};
-        mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        if (!ret[0]) throw err;
     }else if(flag == 7){ // exercise
         var exercise = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set:{"exercise":exercise, "result":result}};
-        mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        if (!ret[0]) throw err;
     }
 }else if(flag == -2){ // date_id에 해당하는 행 삭제
     var query = {"id":id, "date_id":date_id};
-    mongo_db.mongo_delete("1","day_health",query);
+    var ret = await mongo_db.mongo_delete("1","day_health",query);
+    if (!ret[0]) throw err;
 }
 res.json({result: '1'});
 } catch{
     res.status(500).send({ result: '0' });
 }
 });
+
+router.get('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이터 보냄
+    //해당 id가 있으면 업데이트
+    var id = req.body.id;
+    var date_id = req.body.date_id;
+    var projection = {};
+
+    try{
+        var query = {$and : [{"id":id},{"date_id":{$lte: date_id}}] };
+        var ret = await mongo_db.mongo_find("day_health",query, projection, 7);
+        if (!ret[0]) throw err;
+        else console.log(ret[1]);
+
+        res.send(200).send({result:'1'});
+    }catch{
+        res.status(500).send({ result: '0' });
+    }
+}
 
 
 

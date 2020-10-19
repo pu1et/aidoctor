@@ -63,7 +63,7 @@ module.exports = function () {
                     useNewUrlParser: true
                 },
                 function (err, client) {
-                    if (err) throw err;
+                    if (err) return [false];
 
                     db = client.db(config.database);
                     col = db.collection(col_name);
@@ -83,13 +83,15 @@ module.exports = function () {
                     console.log("insert_json : " + tmp_json);
                     col.insertOne(tmp_json,
                     function (err, result) {
+                        if(err) return [false];
                         console.log("json_insert : "+ tmp_json);
-                        console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", result[0]);
+                        console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", result);
+                        return [true];
                     });
                     client.close();
                 });
         },
-        mongo_find: async (col_name, projection, query) => { // id : 사용자 아이디, col_name : 컬렉션 네임, query : 문자열 쿼리, projection : 나올 컬럼
+        mongo_find: async (col_name, query, projection,limit_num=0) => { // id : 사용자 아이디, col_name : 컬렉션 네임, query : 문자열 쿼리, projection : 나올 컬럼
             client = MongoClient.connect(
                 'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                 {
@@ -98,19 +100,20 @@ module.exports = function () {
                     useNewUrlParser: true
                 },
                 function (err, client) {
-                    if (err) throw err;
-                    var tmp_query = JSON.parse(query);
-                    var tmp_proj = JSON.parse(projection);
+                    if (err) return [false];
                     db = client.db(config.database);
                     col = db.collection(col_name);
+                    var cursor;
 
-                    var cursor = col.find(tmp_query, tmp_proj);
+                    if(limit_num == 0) cursor = col.find(query, projection);
+                    else cursor = col.find(query, projection).limit(limit_num).toArray();
                     cursor.each(function(err, doc){
-                        if(err) throw err;
+                        if(err) return [false];
                         if(doc != null) console.log(doc);
-                        console.log("query_find : "+ query);
+                        console.log("query_find : "+ JSON.stringify(query));
                         console.log("projection_find : "+ projection);
                         console.log("[success_find] MongoDB  -> " + col_name + ", result: "+doc);
+                        return [true, doc];
                     });
 
                     client.close();
@@ -125,15 +128,16 @@ module.exports = function () {
                     useNewUrlParser: true
                 },
                 function (err, client) {
-                    if (err) throw err;
+                    if (err) return [false];
                     db = client.db(config.database);
                     col = db.collection(col_name);
 
                     col.update(query, operator, function(err, upserted){
-                        if(err) throw err;
+                        if(err) return [false];
                         console.log("query_update : "+ query);
                         console.log("operator_update : "+ query);
                         console.log("[success_update] MongoDB  -> " + col_name + ', result: '+upserted);
+                        return [true];
                     })
                     client.close();
                 });
@@ -147,14 +151,15 @@ module.exports = function () {
                     useNewUrlParser: true
                 },
                 function (err, client) {
-                    if (err) throw err;
+                    if (err) return [false];
                     db = client.db(config.database);
                     col = db.collection(col_name);
 
                     col.remove(query, function(err, removed){
-                        if(err) throw err;
+                        if(err) return [false];
                         console.log("query_delete : "+ query);
                         console.log("[success_delete] MongoDB  -> " + col_name +", result: "+removed);
+                        return [true];
                     })
                     client.close();
                 });
