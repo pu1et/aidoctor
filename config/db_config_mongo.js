@@ -106,8 +106,7 @@ module.exports = function () {
                     var cursor;
 
                     if(limit_num == 0) cursor = col.find(query, projection);
-                    else cursor = col.find(query, projection).limit(limit_num).toArray();
-                    cursor.each(function(err, doc){
+                    else cursor = col.find(query, projection).limit(limit_num).toArray(function(err, doc){
                         if(err) return [false];
                         if(doc != null) console.log(doc);
                         console.log("query_find : "+ JSON.stringify(query));
