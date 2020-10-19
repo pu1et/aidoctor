@@ -632,12 +632,12 @@ router.get('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이�
         var query = {$and : [{date_id:{$lte: date_id}},{id:id}] };
         var ret = await mongo_db.mongo_find("day_health",query, projection, 7);
         console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        if (!ret[0]) throw err;
+        if (!ret[0]) throw new Error();
         else console.log(ret[1]);
 
         res.json({result:'1', data: ret[1]});
     }catch(err){
-        if(err) console.log(err);
+        console.log(err);
         res.status(500).send({ result: '0' });
     }
 });
