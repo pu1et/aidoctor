@@ -106,15 +106,9 @@ module.exports = function () {
                     col = db.collection(col_name);
                     var tmp;
 
-                    if(limit_num == 0) tmp = await col.find(query, projection);
-                    else tmp = await col.find(query, projection).limit(limit_num);
-                    var ret = await tmp.toArray(function(err, doc){
-                        if(err) throw err;
-                        if(doc != null) console.log(doc);
-                        console.log("query_find : "+ JSON.stringify(query));
-                        console.log("projection_find : "+ JSON.stringify(projection));
-                        console.log("[success_find] MongoDB  -> " + col_name + ", result: "+JSON.stringify(doc));
-                    });
+                    if(limit_num == 0) tmp = col.find(query, projection).toArray();
+                    else tmp = col.find(query, projection).limit(limit_num).toArray();
+                    var ret = await tmp.exec();
                     if(ret) return [true, JSON.stringify(doc)];
                 }catch(err){
                     console.log("+++=============++++++++++++++++++"+err);
