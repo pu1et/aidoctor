@@ -99,9 +99,9 @@ module.exports = function () {
                     sslValidate: true,
                     sslCA: ca,
                     useNewUrlParser: true
-                })
-            db = client.db(config.database);
-            col = await db.collection(col_name);
+                });
+            var db = client.db(config.database);
+            var col = await db.collection(col_name);
             if(limit_num == 0) tmp = await col.find(query, projection);
             else tmp = await col.find(query, projection).limit(limit_num);
             var ret = await tmp.toArray(function(err, doc){
