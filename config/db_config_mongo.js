@@ -99,6 +99,7 @@ module.exports = function () {
                     sslCA: ca,
                     useNewUrlParser: true
                 }).then(() => {
+                    try{
                     db = client.db(config.database);
                     col = db.collection(col_name);
 
@@ -111,7 +112,12 @@ module.exports = function () {
                         return [true, JSON.stringify(doc)];
                     })
                     client.close();
-                })
+            }catch(err){
+                console.log(err);
+            }finally{
+            client.close();
+        }
+    })
         },
         mongo_update: async (id, col_name, query,operator) => { //operator : 데이터 수정 컬럼과 값
             client = MongoClient.connect(
