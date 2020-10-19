@@ -624,7 +624,7 @@ router.get('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이�
     //해당 id가 있으면 업데이트
     var id = req.body.id;
     var date_id = req.body.date_id;
-    var projection = null;
+    var projection = {};
 
     try{
         var query = {$and : [{"id":id},{"date_id":{$lte: date_id}}] };

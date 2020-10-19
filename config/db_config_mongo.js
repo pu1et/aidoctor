@@ -103,15 +103,10 @@ module.exports = function () {
                     if (err) return [false];
                     db = client.db(config.database);
                     col = db.collection(col_name);
-                    var cursor, tmp;
+                    var tmp;
 
-                    if(projection == null){
-                        if(limit_num == 0) tmp = col.find(query);
-                        else tmp = col.find(query).limit(limit_num);
-                    }else{
-                        if(limit_num == 0) tmp = col.find(query, projection);
-                        else tmp = col.find(query, projection).limit(limit_num);
-                    }
+                    if(limit_num == 0) tmp = col.find(query, projection);
+                    else tmp = col.find(query, projection).limit(limit_num);
                     tmp.toArray(function(err, doc){
                         if(err) return [false];
                         if(doc != null) console.log(doc);
@@ -120,8 +115,9 @@ module.exports = function () {
                         console.log("[success_find] MongoDB  -> " + col_name + ", result: "+doc);
                         return [true, doc];
                     });
+
                     client.close();
-                    });
+                });
         },
         mongo_update: async (id, col_name, query,operator) => { //operator : 데이터 수정 컬럼과 값
             client = MongoClient.connect(
