@@ -43,7 +43,7 @@ module.exports = function () {
         },
         mongo_insert: async (id, col_name, value_arr) => {
             try {
-                client = await MongoClient.connect(
+                var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
@@ -101,7 +101,7 @@ module.exports = function () {
         },
         mongo_update: async (id, col_name, query, operator) => { //operator : 데이터 수정 컬럼과 값
             try {
-                var client = MongoClient.connect(
+                var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
@@ -125,7 +125,7 @@ module.exports = function () {
         },
         mongo_delete: async (id, col_name, query) => {
             try {
-                var client = MongoClient.connect(
+                var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
