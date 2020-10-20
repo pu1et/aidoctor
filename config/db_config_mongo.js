@@ -113,7 +113,8 @@ module.exports = function () {
                 return [true, JSON.stringify(doc)];
             })
             }catch(err){
-                    return [false];
+                console.log(err);
+                return [false];
             }
         },
         mongo_update: async (id, col_name, query,operator) => { //operator : 데이터 수정 컬럼과 값
