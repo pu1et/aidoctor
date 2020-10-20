@@ -549,7 +549,7 @@ router.post('/dayHealth_r', async (req, res) => {
     //해당 id가 있으면 업데이트
     var id = req.body.id;
     var flag = req.body.flag; // flag: -1(all), 2~7: DB위치, -2: 삭제
-    var date_id = req.body.date_id;
+    var date_id = Number(req.body.date_id);
     var result;
 
     try {
@@ -625,7 +625,7 @@ router.post('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이
     console.log(req.body);
     
     var id = req.body.id;
-    var date_id = req.body.date_id;
+    var date_id = Number(req.body.date_id);
     var projection = {_id:0};
    
     try{
