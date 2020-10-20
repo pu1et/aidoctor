@@ -54,7 +54,7 @@ module.exports = function () {
                 var col = db.collection(""+col_name);
                 var tmp_json = {
                     "id": id,
-                    date_id: value_arr[0],
+                    date_id: Number(value_arr[0]),
                     date: value_arr[1],
                     water: value_arr[2],
                     sleep: value_arr[3],
