@@ -51,7 +51,7 @@ module.exports = function () {
                         useNewUrlParser: true
                     });
                 var db = client.db(config.database);
-                var col = db.collection(col_name);
+                var col = db.collection(""+col_name);
                 var tmp_json = {
                     "id": id,
                     date_id: value_arr[0],
@@ -86,7 +86,7 @@ module.exports = function () {
                         useNewUrlParser: true
                     });
                 var db = client.db(config.database);
-                var col = db.collection(col_name);
+                var col = db.collection(""+col_name);
                 var tmp = await col.find(query, projection).limit(limit_num).toArray();
                 if (tmp) {
                     console.log("query_find : " + JSON.stringify(query));
@@ -111,7 +111,7 @@ module.exports = function () {
                 var db = client.db(config.database);
                 var col = db.collection(col_name);
 
-                var tmp = await col.update(query, operator);
+                var tmp = await col.updateOne(query, operator);
                 if (tmp) {
                     console.log("query_update : " + JSON.stringify(query));
                     console.log("operator_update : " + JSON.stringify(operator));
