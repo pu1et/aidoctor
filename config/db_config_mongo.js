@@ -104,13 +104,13 @@ module.exports = function () {
             try{
             var db = client.db("drkai");
             var col = db.collection("day_health");
-            var tmp = await col.find(query, projection).limit(limit_num).toArray(function(err, doc){
-                if(err) throw err;
-                console.log("query_find : "+ JSON.stringify(query));
+            var tmp = await col.find(query, projection).limit(limit_num).toArray();
+            if (tmp){    
+            console.log("query_find : "+ JSON.stringify(query));
                 console.log("projection_find : "+ JSON.stringify(projection));
                 console.log("[success_find] MongoDB  -> " + col_name + ", result: "+JSON.stringify(doc));
-            })
-            if(tmp) return [true, JSON.stringify(doc)];
+                if(tmp) return [true, JSON.stringify(doc)];
+                }   
             }catch(err){
                 console.log(err);
                 return [false];
