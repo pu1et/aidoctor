@@ -68,7 +68,7 @@ module.exports = function () {
                 var tmp = await col.insertOne(tmp_json);
                 if (tmp) {
                     console.log("json_insert : " + tmp_json);
-                    console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", tmp);
+                    console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)[0]);
                     return [true];
                 }
             } catch (err) {
