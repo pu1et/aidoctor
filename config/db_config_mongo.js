@@ -7,7 +7,6 @@ var config = require('../config/db_info_mongo').dev;
 var MongoClient = require('mongodb').MongoClient,
     f = require('util').format,
     fs = require('fs');
-var client;
 
 //Specify the Amazon DocumentDB cert
 var ca = [fs.readFileSync("rds-combined-ca-bundle.pem")];
@@ -15,61 +14,44 @@ module.exports = function () {
     return {
         test_open: async () => {
             try {
-                client = MongoClient.connect(
+                var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
                         sslCA: ca,
                         useNewUrlParser: true
-                    },
-                    function (err, client) {
-                        if (err)
-                            throw err;
-
-                        //Specify the database to be used
-                        db = client.db(config.database);
-
-                        //Specify the collection to be used
-                        col = db.collection('test');
+                    });
+                var db = client.db(config.database);
+                        var col = db.collection('test');
 
                         //Insert a single document
 
-                        col.insertOne({ 'test': '1' }, function (err, result) {
-                            console.log("MongoDB insertOne test : " + result);
-                        });
+                        var tmp = await col.insertOne({ 'test': '1' });
+                        if(tmp) console.log("MongoDB insertOne test : " + result);
 
+                        tmp = await col.findOne({ 'test': '1' });
+                        if(tmp) console.log("MongoDB findOne test : " + result);
 
-                        col.findOne({ 'test': '1' }, function (err, result) {
-                            console.log("MongoDB findOne test : " + result);
-                        });
-
-                        col.deleteOne({ 'test': '1' }, function (err, result) {
-                            console.log("MongoDB deleteOne test : " + result);
-
-                        });
-
-                        client.close();
+                        tmp = await col.deleteOne({ 'test': '1' });
+                        if(tmp)  console.log("MongoDB deleteOne test : " + result);
                         console.log("mongodb connection success in port 27017 @@@===");
-                    });
+                        return true;
             } catch (err) {
                 console.log("[init] error : ", err);
-                throw err;
+                return false;
             }
         },
         mongo_insert: async (id, col_name, value_arr) => {
-            client = MongoClient.connect(
-                'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
-                {
-                    sslValidate: true,
-                    sslCA: ca,
-                    useNewUrlParser: true
-                },
-                function (err, client) {
-                    if (err) return [false];
-
-                    db = client.db(config.database);
-                    col = db.collection(col_name);
-
+                try{
+                    client = await MongoClient.connect(
+                        'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                        {
+                            sslValidate: true,
+                            sslCA: ca,
+                            useNewUrlParser: true
+                        });
+                        var db = client.db(config.database);
+                        var col = db.collection(col_name);
                     var tmp_json = {
                         "id":id, 
                         date_id: value_arr[0], 
@@ -83,27 +65,28 @@ module.exports = function () {
                         result:value_arr[8]
                     };
                     console.log("insert_json : " + tmp_json);
-                    col.insertOne(tmp_json,
-                    function (err, result) {
-                        if(err) return [false];
+                    var tmp = await col.insertOne(tmp_json);
+                    if (tmp){
                         console.log("json_insert : "+ tmp_json);
                         console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", result);
                         return [true];
-                    });
-                    client.close();
-                });
+                    }
+                }catch(err){
+                    console.log(err);
+                    return [false];
+                }
         },
         mongo_find: async (col_name, query, projection,limit_num=0) => { // id : 사용자 아이디, col_name : 컬렉션 네임, query : 문자열 쿼리, projection : 나올 컬럼
-            client = await MongoClient.connect(
-                'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
-                {
-                    sslValidate: true,
-                    sslCA: ca,
-                    useNewUrlParser: true
-                });
             try{
-            var db = client.db("drkai");
-            var col = db.collection("day_health");
+              var  client = await MongoClient.connect(
+                    'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                    {
+                        sslValidate: true,
+                        sslCA: ca,
+                        useNewUrlParser: true
+                    });
+            var db = client.db(config.database);
+            var col = db.collection(col_name);
             var tmp = await col.find(query, projection).limit(limit_num).toArray();
             if (tmp){    
             console.log("query_find : "+ JSON.stringify(query));
@@ -117,49 +100,51 @@ module.exports = function () {
             }
         },
         mongo_update: async (id, col_name, query,operator) => { //operator : 데이터 수정 컬럼과 값
-            client = MongoClient.connect(
-                'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
-                {
-                    sslValidate: true,
-                    sslCA: ca,
-                    useNewUrlParser: true
-                },
-                function (err, client) {
-                    if (err) return [false];
-                    db = client.db(config.database);
-                    col = db.collection(col_name);
+                try{
+                    var client = MongoClient.connect(
+                        'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                        {
+                            sslValidate: true,
+                            sslCA: ca,
+                            useNewUrlParser: true
+                        });
+                    var db = client.db(config.database);
+                    var col = db.collection(col_name);
 
-                    col.update(query, operator, function(err, upserted){
-                        if(err) return [false];
-                        console.log("query_update : "+ query);
-                        console.log("operator_update : "+ query);
+                    var tmp = await col.update(query, operator);
+                    if (tmp){
+                        console.log("query_update : "+ JSON.stringify(query));
+                        console.log("operator_update : "+ JSON.stringify(operator));
                         console.log("[success_update] MongoDB  -> " + col_name + ', result: '+upserted);
                         return [true];
-                    })
-                    client.close();
-                });
+                    }
+                }catch(err){
+                    console.log(err);
+                    return [false];
+                }
         },
         mongo_delete: async (id, col_name, query) => {
-            client = MongoClient.connect(
+            try{
+            var client = MongoClient.connect(
                 'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                 {
                     sslValidate: true,
                     sslCA: ca,
                     useNewUrlParser: true
-                },
-                function (err, client) {
-                    if (err) return [false];
-                    db = client.db(config.database);
-                    col = db.collection(col_name);
-
-                    col.remove(query, function(err, removed){
-                        if(err) return [false];
-                        console.log("query_delete : "+ query);
-                        console.log("[success_delete] MongoDB  -> " + col_name +", result: "+removed);
-                        return [true];
-                    })
-                    client.close();
                 });
+                    var db = client.db(config.database);
+                    var col = db.collection(col_name);
+
+                    var tmp = await col.remove(query);
+                    if(tmp){
+                        console.log("query_delete : "+ JSON.stringify(query));
+                        console.log("[success_delete] MongoDB  -> " + col_name +", result: "+removed);
+                        return true;
+                    }
+                }catch(err){
+                    console.log(err);
+                    return false;
+                }
+            }
         }
-    }
 };
