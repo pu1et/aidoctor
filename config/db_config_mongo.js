@@ -29,8 +29,8 @@ module.exports = function () {
                 var tmp = await col.insertOne({ 'test': '1' });
                 if (tmp) console.log("MongoDB insertOne test : " + tmp);
 
-                tmp = await col.findOne({ 'test': '1' }).toArray();
-                if (tmp) console.log("MongoDB findOne test : " + tmp);
+                tmp = await col.findOne({ 'test': '1' });
+                if (tmp) console.log("MongoDB findOne test : " + JSON.stringify(tmp));
 
                 tmp = await col.deleteOne({ 'test': '1' });
                 if (tmp) console.log("MongoDB deleteOne test : " + tmp);
