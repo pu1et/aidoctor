@@ -133,9 +133,9 @@ module.exports = function () {
                         useNewUrlParser: true
                     });
                 var db = client.db(config.database);
-                var col = db.collection(col_name);
+                var col = db.collection(""+col_name);
 
-                var tmp = await col.remove(query);
+                var tmp = await col.deleteOne(query);
                 if (tmp) {
                     console.log("query_delete : " + JSON.stringify(query));
                     console.log("[success_delete] MongoDB  -> " + col_name + ", result: " + tmp);
