@@ -68,7 +68,7 @@ module.exports = function () {
                 var tmp = await col.insertOne(tmp_json);
                 if (tmp) {
                     console.log("json_insert : " + tmp_json);
-                    console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)[0]);
+                    console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)+"\n");
                     return [true];
                 }
             } catch (err) {
@@ -91,7 +91,7 @@ module.exports = function () {
                 if (tmp) {
                     console.log("query_find : " + JSON.stringify(query));
                     console.log("projection_find : " + JSON.stringify(projection));
-                    console.log("[success_find] MongoDB  -> " + col_name + ", result: " + JSON.stringify(tmp));
+                    console.log("[success_find] MongoDB  -> " + col_name + ", result: " + JSON.stringify(tmp)+"\n");
                     return [true, JSON.stringify(tmp)];
                 }
             } catch (err) {
@@ -115,7 +115,7 @@ module.exports = function () {
                 if (tmp) {
                     console.log("query_update : " + JSON.stringify(query));
                     console.log("operator_update : " + JSON.stringify(operator));
-                    console.log("[success_update] MongoDB  -> " + col_name + ', result: ' + tmp);
+                    console.log("[success_update] MongoDB  -> " + col_name + ', result: ' + tmp+"\n");
                     return [true];
                 }
             } catch (err) {
@@ -138,7 +138,7 @@ module.exports = function () {
                 var tmp = await col.deleteOne(query);
                 if (tmp) {
                     console.log("query_delete : " + JSON.stringify(query));
-                    console.log("[success_delete] MongoDB  -> " + col_name + ", result: " + tmp);
+                    console.log("[success_delete] MongoDB  -> " + col_name + ", result: " + tmp+"\n");
                     return true;
                 }
             } catch (err) {

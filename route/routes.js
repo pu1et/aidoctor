@@ -564,7 +564,6 @@ router.post('/dayHealth_r', async (req, res) => {
         var smoking = req.body.smoking;
         var exercise = req.body.exercise;
 
-        if(mongo_db.mongo_find())
         var ret = await mongo_db.mongo_insert("1", "day_health",[date_id,date,water,sleep,food,drinking,smoking,exercise,result]);
         if (!ret[0]) throw err;
     }else if(flag == 2){ // water
