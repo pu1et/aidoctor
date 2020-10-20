@@ -94,14 +94,15 @@ module.exports = function () {
                 });
         },
         mongo_find: async (col_name, query, projection,limit_num=0) => { // id : 사용자 아이디, col_name : 컬렉션 네임, query : 문자열 쿼리, projection : 나올 컬럼
-            var db = await MongoClient.connect(
-                'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/drkai?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+            client = await MongoClient.connect(
+                'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                 {
                     sslValidate: true,
                     sslCA: ca,
                     useNewUrlParser: true
                 });
             try{
+            var db = client.db("drkai");
             var col = db.collection("day_health");
             if(limit_num == 0) tmp = await col.find(query, projection);
             else tmp = await col.find(query, projection).limit(limit_num);
