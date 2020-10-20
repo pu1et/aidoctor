@@ -100,9 +100,9 @@ module.exports = function () {
                     sslValidate: true,
                     sslCA: ca,
                     useNewUrlParser: true
-                })
+                });
             try{
-            var col = db.collection(col_name);
+            var col = db.collection("day_health");
             if(limit_num == 0) tmp = await col.find(query, projection);
             else tmp = await col.find(query, projection).limit(limit_num);
             await tmp.toArray(function(err, doc){
