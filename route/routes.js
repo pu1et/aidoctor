@@ -621,12 +621,12 @@ res.json({result: '1'});
 }
 });
 
-router.get('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이터 보냄
+router.post('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이터 보냄
     console.log('\n/dayHealth_s\n');
-    console.log(req.query);
+    console.log(req.body);
     
-    var id = req.query.id;
-    var date_id = req.query.date_id;
+    var id = req.body.id;
+    var date_id = req.body.date_id;
     var projection = {_id:0};
    
     try{
