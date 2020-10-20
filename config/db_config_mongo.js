@@ -109,7 +109,7 @@ module.exports = function () {
             console.log("query_find : "+ JSON.stringify(query));
                 console.log("projection_find : "+ JSON.stringify(projection));
                 console.log("[success_find] MongoDB  -> " + col_name + ", result: "+JSON.stringify(tmp));
-                if(tmp) return [true, JSON.stringify(tmp)];
+                return [true, JSON.stringify(tmp)];
                 }   
             }catch(err){
                 console.log(err);
