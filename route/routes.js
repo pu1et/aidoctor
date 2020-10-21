@@ -614,7 +614,7 @@ router.post('/dayHealth_r', async (req, res) => {
     var ret = await mongo_db.mongo_delete("1","day_health",query);
     if (!ret[0]) throw err;
 }
-res.json({result: '1'});
+res.status(200).send({result: '1'});
 } catch{
     res.status(500).send({ result: '0' });
 }
@@ -632,7 +632,7 @@ router.post('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이
         var query = {$and : [{date_id:{$lte: date_id}},{id:id}] };
         var ret = await mongo_db.mongo_find("day_health",query, projection, 7);
         if (!ret[0]) throw err;
-        res.json({result:'1', data: ret[1]});
+        res.status(200).send({result:'1', data: ret[1]});
     }catch(err){
         console.log(err);
         res.status(500).send({ result: '0' });
