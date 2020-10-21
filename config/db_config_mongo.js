@@ -87,7 +87,7 @@ module.exports = function () {
                     });
                 var db = client.db(config.database);
                 var col = db.collection(""+col_name);
-                var tmp = await col.find(query, projection).limit(limit_num).toArray();
+                var tmp = await col.find(query, projection).sort({date_id:-1}).limit(limit_num).toArray();
                 if (tmp) {
                     console.log("query_find : " + JSON.stringify(query));
                     console.log("projection_find : " + JSON.stringify(projection));
