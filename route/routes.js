@@ -142,7 +142,7 @@ router.post('/join', async (req, res, next) => {  // 회원가입
             var ret5 = await mysql_dbc.insert_join('disease_data', diseaseData_params);
             if (!ret5[0]) throw err;
 
-        }else{ // checked = 0
+        }else{ // checked = 0 (No checkup)
             
             // insert diseaseag
             var ret7 = await mysql_dbc.insert_join('diseaseag', [idnum, age, gender]);
@@ -162,10 +162,11 @@ router.post('/join', async (req, res, next) => {  // 회원가입
     }
 });
 
-router.post('/update_data', async (req, res) => {
+router.post('/update_all_data', async (req, res) => {
     console.log('\n/update_data\n');
     console.log(req.body);
 
+    var flag = req.body.flag;
     var id = req.body.id;
     var gender;
     var area;
@@ -289,6 +290,40 @@ router.post('/update_data', async (req, res) => {
 
             res.status(200).send({ result: '1' });
         }
+    } catch (err) {
+        res.status(500).send({ result: '0' });
+    }
+});
+
+router.post('/update_data', async (req, res) => {
+    console.log('\n/update_data\n');
+    console.log(req.body);
+
+    var id = req.body.id;
+    var table = req.body.table;
+    var column_arr = req.body.column_arr;
+    var value_arr = req.body.value_arr;
+    var wanted_column = [];
+    var new_params = [];
+
+    try { // update: async (id_num, table, wanted_column, new_params) 
+
+        var ret = await mysql_dbc.select_from_id(id, ['id_num']);
+        if (!ret[0]) throw err;
+        var idnum = ret[1].id_num;
+
+        var tmp_column = column_arr.split(',');
+        var tmp_value = value_arr.split(',');
+
+        for(var i=0;i<tmp_column.length;i++){
+            wanted_column.push(tmp_column[i]);
+            new_params.push(tmp_value[i]);
+        }
+        var ret = await mysql_dbc.update(idnum, table, wanted_column, new_params);
+        if (!ret[0]) throw err;
+
+        res.status(200).send({ result: '1' });
+        
     } catch (err) {
         res.status(500).send({ result: '0' });
     }
