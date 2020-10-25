@@ -163,8 +163,8 @@ router.post('/join', async (req, res, next) => {  // 회원가입
 });
 
 router.post('/update_all_data', async (req, res) => {
-    console.log('\n/update_data\n');
-    console.log(req.body);
+    console.log('\n/update_all_data\n');
+    console.log("req.body [\n" +req.body + "\n]");
 
     var flag = req.body.flag;
     var id = req.body.id;
@@ -319,7 +319,7 @@ router.post('/update_data', async (req, res) => {
             wanted_column.push(tmp_column[i]);
             new_params.push(tmp_value[i]);
         }
-        var ret = await mysql_dbc.update(idnum, table, wanted_column, new_params);
+        var ret = await mysql_dbc.updateOne(idnum, table, wanted_column, new_params);
         if (!ret[0]) throw err;
 
         res.status(200).send({ result: '1' });
@@ -363,14 +363,14 @@ router.post('/login', async (req, res) => {
     if (ret[0] == true) {
         if (ret[1].pw == pw) {
             var last_login = new Date().toFormat('YYYY-MM-DD');
-            var ret2 = await mysql_dbc.update(ret[1].id_num, 'logincount', ['failcount', 'last_login'], ['0', last_login]);
+            var ret2 = await mysql_dbc.updateOne(ret[1].id_num, 'logincount', ['failcount', 'last_login'], ['0', last_login]);
         } else {
             var login_ret = await mysql_dbc.select_from_idnum(ret[1].id_num, 'logincount', ['failcount']);
             if (login_ret[0] == false) {
                 console.log('This id_num doesn\'t exist in logincount : ', ret[1].id_num);
                 res.status(500).send({ error: '[/login] database failure : No id_num in logincount' });
             } else if (login_ret[1] < 5) {
-                var ret3 = await mysql_dbc.update(ret[1].id_num, 'logincount', ['failcount'], [Number(login_ret[1]) + 1]);
+                var ret3 = await mysql_dbc.updateOne(ret[1].id_num, 'logincount', ['failcount'], [Number(login_ret[1]) + 1]);
             } else {
                 console.log('failcount 5 more :', login_ret[1]);
                 res.status(500).send({ error: '[/login] Do not login this user : failcount 5 more!' });
@@ -606,42 +606,42 @@ router.post('/dayHealth_r', async (req, res) => {
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set:{"water":water, "result":result}};
-        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
         if (!ret[0]) throw err;
     }else if(flag == 3){ // sleep
         var sleep = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set:{"sleep":sleep, "result":result}};
-        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
         if (!ret[0]) throw err;
     }else if(flag == 4){ //  food
         var food = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set:{"food":food, "result":result}};
-        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
         if (!ret[0]) throw err;
     }else if(flag == 5){ // drinking
         var drinking = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set: {"drinking":drinking, "result":result}};
-        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
         if (!ret[0]) throw err;
     }else if(flag == 6){ // smoking
         var smoking = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set:{"smoking":smoking, "result":result}};
-        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
         if (!ret[0]) throw err;
     }else if(flag == 7){ // exercise
         var exercise = req.body.new_value;
 
         var query = {"id":id, "date_id":date_id};
         var operator = {$set:{"exercise":exercise, "result":result}};
-        var ret = await mongo_db.mongo_update("1","day_health",query, operator);
+        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
         if (!ret[0]) throw err;
     }
 }else if(flag == -2){ // date_id에 해당하는 행 삭제

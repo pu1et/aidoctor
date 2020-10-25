@@ -249,7 +249,7 @@ module.exports = function () {
             }
         }, 
         // ex) mysql_dbc.update(connection, ret[1].id_num, 'logincount', ['failcount'], [login_ret[1]+1]);
-        update: async (id_num, table, wanted_column, new_params) => {
+        updateOne: async (id_num, table, wanted_column, new_params) => {
             var con = await pool.getConnection(async conn => conn);
 
             var sql = 'UPDATE ' + table + ' SET ';

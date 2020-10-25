@@ -99,7 +99,7 @@ module.exports = function () {
                 return [false];
             }
         },
-        mongo_update: async (id, col_name, query, operator) => { //operator : 데이터 수정 컬럼과 값
+        mongo_updateOne: async (id, col_name, query, operator) => { //operator : 데이터 수정 컬럼과 값
             try {
                 var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
