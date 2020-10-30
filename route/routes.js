@@ -308,7 +308,7 @@ router.post('/update_data', async (req, res) => {
 
     try { // update: async (id_num, table, wanted_column, new_params) 
 
-        var ret = await mysql_dbc.select_from_id(id, ['id_num']);
+        var ret = await mysql_dbc.select_from_id(id, ['id_num']); 
         if (!ret[0]) throw err;
         var idnum = ret[1].id_num;
 
