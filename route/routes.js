@@ -586,11 +586,20 @@ router.get('/getIndex', async (req, res) => {
 
     var http = require('http');
     var options = {
-        host : ' http://apis.data.go.kr/1360000/HealthWthrIdxService/getColdIdx?ServiceKey=yli51XHsdqgKRA7JW9qYvwBP0CKUbxbvMSYX0ylJ3vBoiMEURfJYLNcMzDiqaHBGyltEUqTbaE6msFv04Jj%2FLg%3D%3D&pageNo=1&numOfRows=70&areaNo=1100000000&dataType=JSON&time=202011038',
-        port : '80'
+        host : 'apis.data.go.kr',
+        port : '80',
+        path: '/1360000/HealthWthrIdxService/getColdIdx?ServiceKey=yli51XHsdqgKRA7JW9qYvwBP0CKUbxbvMSYX0ylJ3vBoiMEURfJYLNcMzDiqaHBGyltEUqTbaE6msFv04Jj%2FLg%3D%3D&pageNo=1&numOfRows=70&areaNo=1100000000&dataType=JSON&time=202011038',
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        }
     }
 
     var req = http.get(options, function (res){
+        res.setEncoding('utf8');
+        console.log('STATUS: ' +res.statusCode);
+        console.log('HEADERS: '+ JSON.stringify(res.headers));
+
         var resData = ' '
         res.on('data', function(chunk){
             resData += chunk;
