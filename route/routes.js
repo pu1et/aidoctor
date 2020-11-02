@@ -580,79 +580,29 @@ router.post('/alldata_s', async (req, res) => { //send data -> HLTCareFragment
 });
 
 //헬스 데이터 저장 및 업데이트(MongoDB)
-router.post('/dayHealth_r', async (req, res) => {
+router.get('/getIndex', async (req, res) => {
     //해당 id가 있으면 업데이트
-    var id = req.body.id;
-    var flag = req.body.flag; // flag: -1(all), 2~7: DB위치, -2: 삭제
-    var date_id = Number(req.body.date_id);
-    var result;
+    var today = req.body.today;
 
-    try {
-    if(flag > -2) {
-        result = req.body.result;
-    if(flag == -1){ // 전체 데이터 저장
-        var date = req.body.date;
-        var water = req.body.water;
-        var sleep = req.body.sleep;
-        var food = req.body.food;
-        var drinking = req.body.drinking;
-        var smoking = req.body.smoking;
-        var exercise = req.body.exercise;
-
-        var ret = await mongo_db.mongo_insert("1", "day_health",[date_id,date,water,sleep,food,drinking,smoking,exercise,result]);
-        if (!ret[0]) throw err;
-    }else if(flag == 2){ // water
-        var water = req.body.new_value;
-
-        var query = {"id":id, "date_id":date_id};
-        var operator = {$set:{"water":water, "result":result}};
-        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
-        if (!ret[0]) throw err;
-    }else if(flag == 3){ // sleep
-        var sleep = req.body.new_value;
-
-        var query = {"id":id, "date_id":date_id};
-        var operator = {$set:{"sleep":sleep, "result":result}};
-        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
-        if (!ret[0]) throw err;
-    }else if(flag == 4){ //  food
-        var food = req.body.new_value;
-
-        var query = {"id":id, "date_id":date_id};
-        var operator = {$set:{"food":food, "result":result}};
-        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
-        if (!ret[0]) throw err;
-    }else if(flag == 5){ // drinking
-        var drinking = req.body.new_value;
-
-        var query = {"id":id, "date_id":date_id};
-        var operator = {$set: {"drinking":drinking, "result":result}};
-        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
-        if (!ret[0]) throw err;
-    }else if(flag == 6){ // smoking
-        var smoking = req.body.new_value;
-
-        var query = {"id":id, "date_id":date_id};
-        var operator = {$set:{"smoking":smoking, "result":result}};
-        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
-        if (!ret[0]) throw err;
-    }else if(flag == 7){ // exercise
-        var exercise = req.body.new_value;
-
-        var query = {"id":id, "date_id":date_id};
-        var operator = {$set:{"exercise":exercise, "result":result}};
-        var ret = await mongo_db.mongo_updateOne("1","day_health",query, operator);
-        if (!ret[0]) throw err;
+    var http = require('http');
+    var options = {
+        host : ' http://apis.data.go.kr/1360000/HealthWthrIdxService/getColdIdx?ServiceKey=yli51XHsdqgKRA7JW9qYvwBP0CKUbxbvMSYX0ylJ3vBoiMEURfJYLNcMzDiqaHBGyltEUqTbaE6msFv04Jj%2FLg%3D%3D&pageNo=1&numOfRows=70&areaNo=1100000000&dataType=JSON&time=202011038',
+        port : '80'
     }
-}else if(flag == -2){ // date_id에 해당하는 행 삭제
-    var query = {"id":id, "date_id":date_id};
-    var ret = await mongo_db.mongo_delete("1","day_health",query);
-    if (!ret[0]) throw err;
-}
-res.status(200).send({result: '1'});
-} catch{
-    res.status(500).send({ result: '0' });
-}
+
+    var req = http.get(options, function (res){
+        var resData = ' '
+        res.on('data', function(chunk){
+            resData += chunk;
+        });
+
+        res.on('end', function(){
+            console.log(resData)
+        });
+    });
+    req.on('error', function(err){
+        console.log("index 정보 오류 발생 + err.message")
+    })
 });
 
 router.post('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이터 보냄
