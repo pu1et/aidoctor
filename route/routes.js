@@ -601,7 +601,7 @@ router.get('/getIndex', async (req, res) => {
         });
     });
     req.on('error', function(err){
-        console.log("index 정보 오류 발생 + err.message")
+        console.log("index 정보 오류 발생" + err.message)
     })
 });
 
