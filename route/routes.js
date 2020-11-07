@@ -585,7 +585,7 @@ router.get('/getIndex', async (req, res) => {
     var today = req.body.today;
 
     var http = require('http');
-    var options = {
+    var options = { 
         host : 'apis.data.go.kr',
         port : '80',
         path: '/1360000/HealthWthrIdxService/getColdIdx?ServiceKey=yli51XHsdqgKRA7JW9qYvwBP0CKUbxbvMSYX0ylJ3vBoiMEURfJYLNcMzDiqaHBGyltEUqTbaE6msFv04Jj%2FLg%3D%3D&pageNo=1&numOfRows=70&areaNo=1100000000&dataType=JSON&time=202011038',
