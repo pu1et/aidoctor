@@ -134,10 +134,11 @@ module.exports = function () {
                 var db = client.db(config.database);
                 var col = db.collection(col_name);
 
-                var tmp = await col.updateOne(query, operator, upsert);
+                var tmp = col.updateOne(query, operator, upsert);
                 if (tmp) {
                     console.log("query_update : " + JSON.stringify(query));
                     console.log("operator_update : " + JSON.stringify(operator));
+                    console.log("operator_update : " + JSON.stringify(upsert));
                     console.log("[success_update] MongoDB  -> " + col_name + ', result: ' + tmp+"\n\n");
                     return [true];
                 }
