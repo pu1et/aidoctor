@@ -52,11 +52,11 @@ module.exports = function () {
                     });
                 var db = client.db(config.database);
                 var col = db.collection(""+col_name);
-                console.log("insert_json : " + new_doc);
+                console.log("insert_json : " + JSON.stringify(new_doc));
                 var tmp = await col.insertOne(new_doc);
                 if (tmp) {
-                    console.log("json_insert : " + new_doc);
-                    console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)+"\n\n");
+                    console.log("json_insert : " + JSON.stringify(new_doc));
+                    console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", JSON.stringify(tmp)+"\n\n");
                     return [true];
                 }
             } catch (err) {
