@@ -27,8 +27,7 @@ module.exports = function () {
                 });
 
                 // 매 6시 지수 업데이트 - 
-                schedule.scheduleJob('0 41 * * * *', function(){
-                    day_caIdx.check();
+                schedule.scheduleJob('0 1 6 * * *', function(){
                     day_caIdx.update();
                 });
 
@@ -38,9 +37,11 @@ module.exports = function () {
                 });
 
                 // 매주 월요일 0시 db 삭제
+                /*
                 schedule.scheduleJob('0 0 0 * * 1', function(){
             
                 });
+                */
             } catch (err) {
                 console.log("[ERROR] api_config_caIdx init : ", err +"\n");
                 throw err;
