@@ -64,6 +64,7 @@ module.exports = function () {
                     }else throw err;
                 })
 
+                if(res.stat)
 
                 console.log("[caIdx_asthma_url] : "+asthma_url + "\n");
                 
@@ -98,7 +99,7 @@ module.exports = function () {
                     operator = { $set: {cold_index: tDAT_cold_index, asthma_index: tDAT_asthma_index}};
                     ret = mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
                     console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-                    
+
                     return [true];
                 });
             } catch (err) {
