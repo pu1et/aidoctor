@@ -637,11 +637,11 @@ router.post('/dayHealth_s', async (req, res) => { // 로그인 후 최근 데이
 
 router.post('/get_caIdx', async (req, res) => {
 
-    var date_id = Number(req.body.date_id);
+    var today = Number(req.body.today);
     var projection = {_id:0};
    
     try{
-        var query = {date_id: date_id};
+        var query = {today: today};
         var ret = await mongo_db.mongo_findOne("caIdx",query, projection, 1);
         if (!ret[0]) throw err;
         res.status(200).send({result:'1', data: ret[1]});
