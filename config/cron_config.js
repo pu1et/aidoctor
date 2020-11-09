@@ -28,12 +28,14 @@ module.exports = function () {
 
                 // 매 6시 지수 업데이트 - 
                 schedule.scheduleJob('* * * * * *', function(){
-                    day_caIdx.update();
+                    var ret = await day_caIdx.update();
+                    if(!ret[0]) throw err;
                 });
 
                 // 매 18시 지수 업데이트
                 schedule.scheduleJob('0 1 18 * * *', function(){
-                    day_caIdx.update();
+                    var ret = await day_caIdx.update();
+                    if(!ret[0]) throw err;
                 });
 
                 // 매주 월요일 0시 db 삭제
