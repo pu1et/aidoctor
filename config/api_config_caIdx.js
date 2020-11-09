@@ -8,7 +8,7 @@ module.exports = function () {
         check: async () => { // 오늘 지수 있는지 체크 
                 var newDate = new Date();
                 var today = newDate.toFormat('YYYYMMDD');
-                console.log("today is [ " + today + "] ");
+                console.log("today is [" + today + "] ");
 
                 var projection = {_id:0};
    
@@ -32,7 +32,7 @@ module.exports = function () {
                 var today_cold_index, tomorrow_cold_index, tDAT_cold_index;
                 var today_asthma_index, tomorrow_asthma_index, tDAT_asthma_index;
 
-                console.log("today is [ " + today_b1 + "] ");
+                console.log("today is [" + today_b1 + "] ");
 
                 var url_block = "?ServiceKey=" + config.serviceKey;
                 url_block += "&pageNo=" + config.pageNo;
@@ -60,7 +60,7 @@ module.exports = function () {
                         if (tomorrow_cold_index == "") tomorrow_cold_index = "0";
                         tDAT_cold_index = body.response.body.items.item[0].theDayAfterTomorrow;
                         if (tDAT_cold_index == "") tDAT_cold_index = "0";
-                        console.log("today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
+                        console.log("caIdx_cold_url: today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
                     }else throw err;
                 })
 
@@ -80,7 +80,7 @@ module.exports = function () {
                         if (tomorrow_asthma_index == "") tomorrow_asthma_index = "0";
                         tDAT_asthma_index = body.response.body.items.item[0].theDayAfterTomorrow;
                         if (tDAT_asthma_index == "") tDAT_asthma_index = "0";
-                        console.log("today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
+                        console.log("caIdx_asthma_url: today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
                     }else throw err;
 
 
@@ -90,11 +90,11 @@ module.exports = function () {
                     mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
 
                     query = {today: int_today_b2+1};
-                    operator = { $set: {cold_index: today_cold_index, asthma_index: today_asthma_index}};
+                    operator = { $set: {cold_index: tomorrow_cold_index, asthma_index: tomorrow_asthma_index}};
                     mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
 
                     query = {today: int_today_b2+2};
-                    operator = { $set: {cold_index: today_cold_index, asthma_index: today_asthma_index}};
+                    operator = { $set: {cold_index: tDAT_cold_index, asthma_index: tDAT_asthma_index}};
                     mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
                 })
             } catch (err) {
