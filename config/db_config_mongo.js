@@ -134,7 +134,7 @@ module.exports = function () {
                 var db = client.db(config.database);
                 var col = db.collection(col_name);
 
-                var tmp = col.updateOne(query, operator, upsert);
+                var tmp = await col.updateOne(query, operator, upsert);
                 if (tmp) {
                     console.log("query_update : " + JSON.stringify(query));
                     console.log("operator_update : " + JSON.stringify(operator));
