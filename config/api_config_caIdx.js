@@ -99,10 +99,11 @@ module.exports = function () {
                     operator = { $set: {cold_index: tDAT_cold_index, asthma_index: tDAT_asthma_index}};
                     ret = await mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
                     if(!ret[0]) throw err;
+                    return [true];
                 })
             } catch (err) {
                 console.log("[ERROR] api_config_caIdx update : ", err +"\n");
-                throw err;
+                return [false];
             }
         }
     }
