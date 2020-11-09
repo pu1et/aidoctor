@@ -16,7 +16,7 @@ module.exports = function () {
                     var query = {today: Number(today)};
                     var ret = await mongo_db.mongo_find("caIdx",query, projection, 1);
                     if (!ret[0]) throw err;
-                    console.log("api_config_check : "+JSON.stringify(ret[1][1]) + "\n");
+                    console.log("api_config_check : "+JSON.parse(ret[1]) + "\n");
                 }catch(err){
                     console.log(err);
                     return false;
