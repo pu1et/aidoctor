@@ -580,7 +580,7 @@ router.post('/alldata_s', async (req, res) => { //send data -> HLTCareFragment
 });
 
 //헬스 데이터 저장 및 업데이트(MongoDB)
-router.get('/getIndex', async (req, res) => { 
+router.get('/getIndex', async (req, res) => {
     //해당 id가 있으면 업데이트
     var today = req.body.today;
 
