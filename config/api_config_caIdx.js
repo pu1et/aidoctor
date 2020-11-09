@@ -83,6 +83,7 @@ module.exports = function () {
                         console.log("caIdx_asthma_url: today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
                     }else throw err;
 
+                    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
                     var query = {today: int_today_b2};
                     var operator = { $set: {cold_index: today_cold_index, asthma_index: today_asthma_index}};
@@ -100,6 +101,8 @@ module.exports = function () {
                     ret = mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
                     if(!ret[0]) throw err;
                     return [true];
+                    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
                 })
             } catch (err) {
                 console.log("[ERROR] api_config_caIdx update : ", err +"\n");
