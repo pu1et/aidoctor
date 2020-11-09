@@ -24,12 +24,11 @@ module.exports = function () {
                         ret = await mongo_db.insert_dayhealth("1", "day_health",[Number(ch_date_id), ch_date, 0, 0, 0, 0, 0, 0, 0]);
                         if (!ret[0]) throw err;
                     }
-
-                    day_caIdx.check();
                 });
 
                 // 매 6시 지수 업데이트 - 
-                schedule.scheduleJob('0 40 * * * *', function(){
+                schedule.scheduleJob('0 41 * * * *', function(){
+                    day_caIdx.check();
                     day_caIdx.update();
                 });
 
