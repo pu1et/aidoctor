@@ -30,7 +30,7 @@ module.exports = function () {
                 var today_b2 = newDate.toFormat('YYYYMMDD');
                 var int_today_b2 = Number(today_b2);
 
-                console.log("today is [ " + today + "] ");
+                console.log("today is [ " + today_b1 + "] ");
 
                 var url_block = "?ServiceKey=" + config.serviceKey;
                 url_block += "&pageNo=" + config.pageNo;
