@@ -1,10 +1,10 @@
 var router = require('express').Router();
-var date = require('date-utils');
-const { mongo } = require('mongoose');
 //mysql test open
 var mysql_dbc = require('../config/db_config_mysql')();
 var mongo_db =  require('../config/db_config_mongo')();
+var cron = require('../config/cron_config')();
 
+cron.init();
 mysql_dbc.init();
 mysql_dbc.test_open();
 mongo_db.test_open();

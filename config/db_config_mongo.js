@@ -41,7 +41,30 @@ module.exports = function () {
                 return false;
             }
         },
-        mongo_insert: async (id, col_name, value_arr) => {
+        insert: async (col_name, new_doc) => {
+            try {
+                var client = await MongoClient.connect(
+                    'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                    {
+                        sslValidate: true,
+                        sslCA: ca,
+                        useNewUrlParser: true
+                    });
+                var db = client.db(config.database);
+                var col = db.collection(""+col_name);
+                console.log("insert_json : " + tmp_json);
+                var tmp = await col.insertOne(tmp_json);
+                if (tmp) {
+                    console.log("json_insert : " + tmp_json);
+                    console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)+"\n");
+                    return [true];
+                }
+            } catch (err) {
+                console.log(err);
+                return [false];
+            }
+        },
+        insert_dayhealth: async (id, col_name, value_arr) => {
             try {
                 var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
@@ -53,7 +76,7 @@ module.exports = function () {
                 var db = client.db(config.database);
                 var col = db.collection(""+col_name);
                 var tmp_json = {
-                    "id": id,
+                    id: id,
                     date_id: Number(value_arr[0]),
                     date: value_arr[1],
                     water: value_arr[2],
@@ -64,11 +87,11 @@ module.exports = function () {
                     exercise: value_arr[7],
                     result: value_arr[8]
                 };
-                console.log("insert_json : " + tmp_json);
+                console.log("insert_dayhealth_json : " + tmp_json);
                 var tmp = await col.insertOne(tmp_json);
                 if (tmp) {
-                    console.log("json_insert : " + tmp_json);
-                    console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)+"\n");
+                    console.log("json_insert_dayhealth : " + tmp_json);
+                    console.log("[success_insert_dayhealth] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)+"\n");
                     return [true];
                 }
             } catch (err) {
@@ -99,7 +122,7 @@ module.exports = function () {
                 return [false];
             }
         },
-        mongo_updateOne: async (id, col_name, query, operator) => { //operator : 데이터 수정 컬럼과 값
+        mongo_updateOne: async (col_name, query, operator) => { //operator : 데이터 수정 컬럼과 값
             try {
                 var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
@@ -123,7 +146,7 @@ module.exports = function () {
                 return [false];
             }
         },
-        mongo_delete: async (id, col_name, query) => {
+        mongo_deleteMany: async (col_name, query) => {
             try {
                 var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
