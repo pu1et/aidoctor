@@ -35,6 +35,8 @@ module.exports = function () {
                     ret = await mongo_db.insert("caIdx",{today:ch_date_id, cold_index:"-1", asthma_index:"-1"})
                     if(!ret[0]) throw err;
                     }
+
+                    day_caIdx.check();
                 });
 
                 // 매 6시 지수 업데이트 - 
