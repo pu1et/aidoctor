@@ -5,7 +5,7 @@ var mongo_db =  require('../config/db_config_mongo')();
 
 module.exports = function () {
     return {
-        check: async () => {
+        check: async () => { // 오늘 지수 있는지 체크 
                 var newDate = new Date();
                 var today = newDate.toFormat('YYYYMMDD');
                 console.log("today is [ " + today + "] ");
@@ -13,10 +13,10 @@ module.exports = function () {
                 var projection = {_id:0};
    
                 try{
-                    var query = {today: today};
+                    var query = {today: Number(today)};
                     var ret = await mongo_db.mongo_find("caIdx",query, projection, 1);
                     if (!ret[0]) throw err;
-                    console.log(ret[1]);
+                    console.log("api_config_check : "+ret[1] + "\n");
                 }catch(err){
                     console.log(err);
                     return false;
@@ -86,15 +86,15 @@ module.exports = function () {
                     }else throw err;
 
 
-                    var query = {today: today_b2};
+                    var query = {today: int_today_b2};
                     var operator = {cold_index: today_cold_index, asthma_index: today_asthma_index};
                     mongo_db.mongo_updateOne("caIdx", query, operator);
 
-                    query = {today: String(int_today_b2+1)};
+                    query = {today: int_today_b2+1};
                     operator = {cold_index: tomorrow_cold_index, asthma_index: tomorrow_asthma_index};
                     mongo_db.mongo_updateOne("caIdx", query, operator);
 
-                    query = {today: String(int_today_b2+2)};
+                    query = {today: int_today_b2+2};
                     operator = {cold_index: tDAT_cold_index, asthma_index: tDAT_asthma_index};
                     mongo_db.mongo_updateOne("caIdx", query, operator);
                 })

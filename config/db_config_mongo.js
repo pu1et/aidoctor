@@ -27,13 +27,13 @@ module.exports = function () {
                 //Insert a single document
 
                 var tmp = await col.insertOne({ 'test': '1' });
-                if (tmp) console.log("MongoDB insertOne test : " + tmp);
+                if (tmp) console.log("MongoDB insertOne test : " + tmp+"\n");
 
                 tmp = await col.findOne({ 'test': '1' });
-                if (tmp) console.log("MongoDB findOne test : " + JSON.stringify(tmp));
+                if (tmp) console.log("MongoDB findOne test : " + JSON.stringify(tmp)+"\n");
 
                 tmp = await col.deleteOne({ 'test': '1' });
-                if (tmp) console.log("MongoDB deleteOne test : " + tmp);
+                if (tmp) console.log("MongoDB deleteOne test : " + tmp+"\n\n");
                 console.log("mongodb connection success in port 27017 @@@===");
                 return true;
             } catch (err) {
@@ -52,11 +52,11 @@ module.exports = function () {
                     });
                 var db = client.db(config.database);
                 var col = db.collection(""+col_name);
-                console.log("insert_json : " + tmp_json);
-                var tmp = await col.insertOne(tmp_json);
+                console.log("insert_json : " + new_doc);
+                var tmp = await col.insertOne(new_doc);
                 if (tmp) {
-                    console.log("json_insert : " + tmp_json);
-                    console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)+"\n");
+                    console.log("json_insert : " + new_doc);
+                    console.log("[success_insert] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)+"\n\n");
                     return [true];
                 }
             } catch (err) {
@@ -91,7 +91,7 @@ module.exports = function () {
                 var tmp = await col.insertOne(tmp_json);
                 if (tmp) {
                     console.log("json_insert_dayhealth : " + tmp_json);
-                    console.log("[success_insert_dayhealth] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)+"\n");
+                    console.log("[success_insert_dayhealth] MongoDB  -> " + col_name + ", result : ", JSON.parse(tmp)+"\n\n");
                     return [true];
                 }
             } catch (err) {
@@ -114,7 +114,7 @@ module.exports = function () {
                 if (tmp) {
                     console.log("query_find : " + JSON.stringify(query));
                     console.log("projection_find : " + JSON.stringify(projection));
-                    console.log("[success_find] MongoDB  -> " + col_name + ", result: " + JSON.stringify(tmp)+"\n");
+                    console.log("[success_find] MongoDB  -> " + col_name + ", result: " + JSON.stringify(tmp)+"\n\n");
                     return [true, JSON.stringify(tmp)];
                 }
             } catch (err) {
@@ -138,7 +138,7 @@ module.exports = function () {
                 if (tmp) {
                     console.log("query_update : " + JSON.stringify(query));
                     console.log("operator_update : " + JSON.stringify(operator));
-                    console.log("[success_update] MongoDB  -> " + col_name + ', result: ' + tmp+"\n");
+                    console.log("[success_update] MongoDB  -> " + col_name + ', result: ' + tmp+"\n\n");
                     return [true];
                 }
             } catch (err) {
@@ -161,7 +161,7 @@ module.exports = function () {
                 var tmp = await col.deleteMany(query);
                 if (tmp) {
                     console.log("query_delete : " + JSON.stringify(query));
-                    console.log("[success_delete] MongoDB  -> " + col_name + ", result: " + tmp+"\n");
+                    console.log("[success_delete] MongoDB  -> " + col_name + ", result: " + tmp+"\n\n");
                     return true;
                 }
             } catch (err) {

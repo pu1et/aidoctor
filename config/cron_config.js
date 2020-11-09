@@ -12,22 +12,22 @@ module.exports = function () {
                 schedule.scheduleJob('* * * * * *', async () => {
                     var newDate = new Date();
                     var today = newDate.toFormat('YYYYMMDD');
-                    var ch_date_id = String(Number(today)+1) 
+                    var ch_date_id = String(Number(today)+1) // date_id는 Number 
                     var ch_date = ch_date_id.substr(0,4) + "-" + ch_date_id.substr(4,2) + "-" + ch_date_id.substr(6,2);
 
 
                     // day_health+1일 doc
-                    var query = {$and : [{date_id:{$lte: ch_date_id}},{id:"1"}] };
+                    var query = {$and : [{date_id:Number(ch_date_id)},{id:"1"}] };
                     var projection = {_id:0};
                     var ret = await mongo_db.mongo_find("day_health",query, projection, 1);
                     if (!ret[0]) {
-                        ret = await mongo_db.insert_dayhealth("1", "day_health",[ch_date_id, ch_date, 0, 0, 0, 0, 0, 0, 0]);
+                        ret = await mongo_db.insert_dayhealth("1", "day_health",[Number(ch_date_id), ch_date, 0, 0, 0, 0, 0, 0, 0]);
                         if (!ret[0]) throw err;
                     }
 
                     // caIdx 오늘+3일 doc 추가
 
-                    ch_date_id = String(Number(today)+3) 
+                    ch_date_id = Number(today)+3
                     
                     ret = await mongo_db.insert("caIdx",{today:ch_date_id, cold_index:"-1", asthma_index:"-1"})
                     if(!ret[0]) throw err;
