@@ -27,7 +27,9 @@ module.exports = function () {
 
                     // caIdx 오늘+3일 doc 추가
 
-                    ch_date_id = Number(today)+3
+                    console.log("today: "+today);
+                    ch_date_id = Number(today)+3;
+                    console.log("ch_date_id: "+ch_date_id+", "+Number(today)+3)
                     
                     ret = await mongo_db.insert("caIdx",{today:ch_date_id, cold_index:"-1", asthma_index:"-1"})
                     if(!ret[0]) throw err;
