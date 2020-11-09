@@ -9,7 +9,7 @@ module.exports = function () {
             try {
 
                 // 매 0시 지수 체크 - day_health+1일 doc  // caIdx 오늘+3일 doc 추가(update로 완료)
-                schedule.scheduleJob('* * * * * *', async () => {
+                schedule.scheduleJob('0 0 0 * * *', async () => {
                     var newDate = new Date();
                     var today = newDate.toFormat('YYYYMMDD');
                     var ch_date_id = String(Number(today)+1) // date_id는 Number 
@@ -27,7 +27,7 @@ module.exports = function () {
                 });
 
                 // 매 6시 지수 업데이트 - 
-                schedule.scheduleJob('0 1 6 * * *', function(){
+                schedule.scheduleJob('* * * * * *', function(){
                     day_caIdx.update();
                 });
 
