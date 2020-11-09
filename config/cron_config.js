@@ -8,7 +8,7 @@ module.exports = function () {
         init: function () {
             try {
 
-                // 매 0시 지수 체크 - day_health+1일 doc, caIdx 오늘+3일 doc 추가
+                // 매 0시 지수 체크 - day_health+1일 doc  // caIdx 오늘+3일 doc 추가(update로 완료)
                 schedule.scheduleJob('0 0 0 * * *', async () => {
                     var newDate = new Date();
                     var today = newDate.toFormat('YYYYMMDD');
@@ -23,17 +23,6 @@ module.exports = function () {
                     if (!ret[0]) {
                         ret = await mongo_db.insert_dayhealth("1", "day_health",[Number(ch_date_id), ch_date, 0, 0, 0, 0, 0, 0, 0]);
                         if (!ret[0]) throw err;
-                    }
-
-                    // caIdx 오늘+3일 doc 추가
-
-                    ch_date_id = Number(today)+3;
-                    
-                    query = {today:ch_date_id};
-                    var ret = await mongo_db.mongo_find("caIdx",query, projection, 1);
-                    if (!ret[0]) {
-                    ret = await mongo_db.insert("caIdx",{today:ch_date_id, cold_index:"-1", asthma_index:"-1"})
-                    if(!ret[0]) throw err;
                     }
 
                     day_caIdx.check();

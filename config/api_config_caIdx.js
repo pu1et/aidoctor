@@ -83,16 +83,17 @@ module.exports = function () {
 
 
                     var query = {today: int_today_b2};
-                    var operator = {cold_index: today_cold_index, asthma_index: today_asthma_index};
-                    mongo_db.mongo_updateOne("caIdx", query, operator);
+                    var operator = { $set: {cold_index: today_cold_index, asthma_index: today_asthma_index}};
+                    var upsert = { upsert: true };
+                    mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
 
                     query = {today: int_today_b2+1};
                     operator = {cold_index: tomorrow_cold_index, asthma_index: tomorrow_asthma_index};
-                    mongo_db.mongo_updateOne("caIdx", query, operator);
+                    mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
 
                     query = {today: int_today_b2+2};
                     operator = {cold_index: tDAT_cold_index, asthma_index: tDAT_asthma_index};
-                    mongo_db.mongo_updateOne("caIdx", query, operator);
+                    mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
                 })
             } catch (err) {
                 console.log("[ERROR] api_config_caIdx update : ", err +"\n");
