@@ -60,6 +60,7 @@ module.exports = function () {
                         if (tomorrow_cold_index == "") tomorrow_cold_index = "0";
                         tDAT_cold_index = body.response.body.items.item[0].theDayAfterTomorrow;
                         if (tDAT_cold_index == "") tDAT_cold_index = "0";
+                        console.log("today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
                     }else throw err;
                 })
 
@@ -79,6 +80,7 @@ module.exports = function () {
                         if (tomorrow_asthma_index == "") tomorrow_asthma_index = "0";
                         tDAT_asthma_index = body.response.body.items.item[0].theDayAfterTomorrow;
                         if (tDAT_asthma_index == "") tDAT_asthma_index = "0";
+                        console.log("today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
                     }else throw err;
 
 
