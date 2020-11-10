@@ -68,7 +68,7 @@ module.exports = function () {
 
                 console.log("[caIdx_asthma_url] : "+asthma_url + "\n");
                 
-                request.get(asthma_url, (err, res)=>{
+                request.get (asthma_url, async (err, res)=>{
                     if(err) throw err;
                     console.log("[caIdx_asthma_url res.body] "+res.body+ "\n");
                     var body = JSON.parse(res.body);
@@ -89,15 +89,15 @@ module.exports = function () {
                     var query = {today: int_today_b2};
                     var operator = { $set: {cold_index: today_cold_index, asthma_index: today_asthma_index}};
                     var upsert = { upsert: true };
-                    var ret = mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
+                    var ret = await mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
 
                     query = {today: int_today_b2+1};
                     operator = { $set: {cold_index: tomorrow_cold_index, asthma_index: tomorrow_asthma_index}};
-                    ret = mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
+                    ret = await mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
 
                     query = {today: int_today_b2+2};
                     operator = { $set: {cold_index: tDAT_cold_index, asthma_index: tDAT_asthma_index}};
-                    ret = mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
+                    ret = await mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
                     console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
                     return [true];
