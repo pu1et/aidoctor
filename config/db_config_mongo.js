@@ -110,7 +110,7 @@ module.exports = function () {
                     });
                 var db = client.db(config.database);
                 var col = db.collection(""+col_name);
-                var tmp = await col.findOne(query, projection);
+                var tmp = await col.find(query, projection);
                 if (tmp) {
                     console.log("query_find : " + JSON.stringify(query));
                     console.log("projection_find : " + JSON.stringify(projection));

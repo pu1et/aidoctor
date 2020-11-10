@@ -642,7 +642,7 @@ router.post('/get_caIdx', async (req, res) => {
    
     try{
         var query = {today: today};
-        var ret = await mongo_db.mongo_findOne("caIdx",query, projection, 1);
+        var ret = await mongo_db.mongo_findOne("caIdx",query, projection);
         if (!ret[0]) throw err;
         res.status(200).send({result:'1', data: ret[1]});
     }catch(err){
