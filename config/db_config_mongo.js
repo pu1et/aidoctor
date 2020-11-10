@@ -113,7 +113,7 @@ module.exports = function () {
                 var tmp = await col.findOne(query);
                 if (tmp) {
                     console.log("query_find : " + JSON.stringify(query));
-                    console.log("projection_find : " + JSON.stringify(projection));
+                    //console.log("projection_find : " + JSON.stringify(projection));
                     console.log("[success_find] MongoDB  -> " + col_name + ", result: " + JSON.stringify(tmp)+"\n\n");
                     return [true, JSON.stringify(tmp)];
                 }
@@ -136,7 +136,7 @@ module.exports = function () {
                 var tmp = await col.find(query, projection).sort({date_id:-1}).limit(limit_num).toArray();
                 if (tmp) {
                     console.log("query_find : " + JSON.stringify(query));
-                    //console.log("projection_find : " + JSON.stringify(projection));
+                    console.log("projection_find : " + JSON.stringify(projection));
                     console.log("[success_find] MongoDB  -> " + col_name + ", result: " + JSON.stringify(tmp)+"\n\n");
                     return [true, JSON.stringify(tmp)];
                 }
