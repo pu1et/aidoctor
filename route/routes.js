@@ -645,6 +645,7 @@ router.post('/get_caIdx', async (req, res) => {
         var query = {today: today};
         var ret = await mongo_db.mongo_findOne("caIdx",query);
         if (!ret[0]) throw err;
+        console.log("send",ret[1]);
         res.send({result:'1', data: ret[1]});
     }catch(err){
         console.log(err);
