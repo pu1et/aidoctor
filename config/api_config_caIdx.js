@@ -25,8 +25,6 @@ module.exports = function () {
         },
         update: async () => {
             try {
-                console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
-
                 var newDate = new Date();
                 var today_b1 = newDate.toFormat('YYYYMMDDHH24');
                 var today_b2 = newDate.toFormat('YYYYMMDD');
