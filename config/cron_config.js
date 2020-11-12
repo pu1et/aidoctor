@@ -29,11 +29,13 @@ module.exports = function () {
                 // 매 6시 지수 업데이트 - 
                 schedule.scheduleJob('0 0 7 * * *', function(){
                     day_caIdx.update();
+                    day_caIdx.check();
                 });
 
                 // 매 18시 지수 업데이트
                 schedule.scheduleJob('0 0 19 * * *', function(){
                     day_caIdx.update();
+                    day_caIdx.check();
                 });
 
                 // 매주 월요일 0시 db 삭제

@@ -49,10 +49,9 @@ module.exports = function () {
                 
                 request.get(cold_url, async (err, res)=>{
                     if(err) throw err;
-                    console.log("[caIdx_url res.body] "+res.body+ "\n");
                     var body = JSON.parse(res.body);
                     if(body.response.header.resultCode == "00"){
-                        console.log("[data]\n last_store: "+body.response.body.items.item[0].date);
+                        console.log("[data]\nlast_update: "+body.response.body.items.item[0].date);
                         console.log("[caIdx_cold_url res.body] "+res.body+ "\n");
                         today_cold_index = body.response.body.items.item[0].today;
                         if (today_cold_index == "") today_cold_index = "0";
@@ -63,8 +62,6 @@ module.exports = function () {
                         console.log("caIdx_cold_url: today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
                     }else throw err;
                 })
-
-                if(res.stat)
 
                 console.log("[caIdx_asthma_url] : "+asthma_url + "\n");
                 
