@@ -82,7 +82,9 @@ module.exports = function () {
                         tDAT_asthma_index = body.response.body.items.item[0].theDayAfterTomorrow;
                         if (tDAT_asthma_index == "") tDAT_asthma_index = "0";
                         console.log("caIdx_asthma_url: today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
-                    }else throw err;
+                    }else {
+                        
+                    }
 
                     console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 

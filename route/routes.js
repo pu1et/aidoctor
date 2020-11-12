@@ -5,7 +5,7 @@ var mongo_db =  require('../config/db_config_mongo')();
 var cron = require('../config/cron_config')();
 var day_caIdx = require('../config/api_config_caIdx')();
 
-day_caIdx.check();
+day_caIdx.update();
 cron.init();
 mysql_dbc.init();
 mysql_dbc.test_open();
@@ -646,7 +646,7 @@ router.post('/get_caIdx', async (req, res) => {
         var ret = await mongo_db.mongo_findOne("caIdx",query);
         if (!ret[0]) throw err;
         console.log("send",ret[1]);
-        res.send({result:'1', data: ret[1]});
+        res.status(200).send({result:'1', data: ret[1]});
     }catch(err){
         console.log(err);
         res.status(500).send({ result: '0' });

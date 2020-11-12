@@ -27,12 +27,12 @@ module.exports = function () {
                 });
 
                 // 매 6시 지수 업데이트 - 
-                schedule.scheduleJob('0 1 6 * * *', function(){
+                schedule.scheduleJob('0 0 7 * * *', function(){
                     day_caIdx.update();
                 });
 
                 // 매 18시 지수 업데이트
-                schedule.scheduleJob('0 1 18 * * *', function(){
+                schedule.scheduleJob('0 0 19 * * *', function(){
                     day_caIdx.update();
                 });
 
