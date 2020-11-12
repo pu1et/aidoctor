@@ -14,8 +14,6 @@ module.exports = function () {
     return {
         test_open: async () => {
             try {
-                console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
-
                 var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
