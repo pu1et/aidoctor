@@ -1,5 +1,4 @@
 var router = require('express').Router();
-//mysql test open
 var mysql_dbc = require('../config/db_config_mysql')();
 var mongo_db =  require('../config/db_config_mongo')();
 var cron = require('../config/cron_config')();
@@ -75,7 +74,8 @@ router.post('/join', async (req, res, next) => {  // 회원가입
 
     console.log('id : ' + id + '  pw : ' + pw);
 
-    var params = [id, pw, name, gender, area, age, phone, checked];
+    var last_login = new Date().toFormat('YYYY-MM-DD');
+    var params = [id, pw, name, gender, area, age, phone, checked, 0, last_login];
 
     try {
 
@@ -83,11 +83,7 @@ router.post('/join', async (req, res, next) => {  // 회원가입
         if (idnum[0] == false) throw err;
         else idnum = idnum[1];
 
-        var last_login = new Date().toFormat('YYYY-MM-DD');
-
-        // insert logincount, disease_prefer, day_% tables
-        var ret1 = await mysql_dbc.insert_join('logincount', [idnum, 0, last_login]);
-        if (ret1[0] == false) throw err;
+        // insert disease_prefer, day_% tables
         var ret2 = await mysql_dbc.insert_join('disease_prefer', [idnum]);
         if (ret2[0] == false) throw err;
 
@@ -348,7 +344,7 @@ router.post('/check_user', async (req, res) => {
 
     try{
     var ret = await mysql_dbc.select_from_id(id, ['id_num']);
-    if (ret[0] == true) {
+    if (ret[0]) {
         res.status(200).send({ result: '1' });
     } else res.status(200).send({ result: '0' });
 }catch(err) {
@@ -357,30 +353,36 @@ router.post('/check_user', async (req, res) => {
 });
 
 
-router.post('/login', async (req, res) => {
+router.post('/login', async (req, res) => { // return : 1(success), 0(server err), -1 (login fail), -2(failcount 5 more) 
+    console.log('\n/login\n');
+    console.log(req.body);
     var id = req.body.id;
     var pw = req.body.pw;
 
-    var ret = await mysql_dbc.select_from_id(id, ['id_num', 'pw']);
-    if (ret[0] == true) {
-        if (ret[1].pw == pw) {
+    try{
+    var ret = await mysql_dbc.select_from_id(id, ['id_num', 'pw', 'failcount']);
+    var idnum = ret[1].id_num;
+    var failcount = ret[1].failcount;
+    if (ret[0]) { // if user exists
+        if (ret[1].pw == pw) { // if match pw
             var last_login = new Date().toFormat('YYYY-MM-DD');
-            var ret2 = await mysql_dbc.updateOne(ret[1].id_num, 'logincount', ['failcount', 'last_login'], ['0', last_login]);
-        } else {
-            var login_ret = await mysql_dbc.select_from_idnum(ret[1].id_num, 'logincount', ['failcount']);
-            if (login_ret[0] == false) {
-                console.log('This id_num doesn\'t exist in logincount : ', ret[1].id_num);
-                res.status(500).send({ error: '[/login] database failure : No id_num in logincount' });
-            } else if (login_ret[1] < 5) {
-                var ret3 = await mysql_dbc.updateOne(ret[1].id_num, 'logincount', ['failcount'], [Number(login_ret[1]) + 1]);
-            } else {
-                console.log('failcount 5 more :', login_ret[1]);
-                res.status(500).send({ error: '[/login] Do not login this user : failcount 5 more!' });
-            }
+            ret = await mysql_dbc.updateOne(idnum, 'user', ['failcount', 'last_login'], [0,last_login]);
+            if(!ret[0]) throw err;
+            ret = await mysql_dbc.select_from_idnum(idnum, 'user', ['id','name','gender','area','age','phone','checked'])
+            if (!ret[0]) throw err;
+            res.status(200).send({ result: '1', data: ret[1][0] }); // login success
+        } else {// if not match pw
+            ret= await mysql_dbc.updateOne(idnum, 'user', ['failcount'], [Number(failcount) + 1]);
+            console.log('failcount : ', failcount);
+            if(!ret[0]) throw err;
+            if (failcount >= 5) {
+                res.status(200).send({ result: '-2' }); // failcount 5 more
+            }else res.status(200).send({ result: '-1' }); // login fail 
         }
-    } else {
-        console.log("This id doesn\'t exist in user : ", id);
-    }
+    } else throw err;
+}catch (err){
+    res.status(500).send({ result: '0' }); // server err
+}
 });
 
 router.get('/favicon.ico', function (req, res, next) {

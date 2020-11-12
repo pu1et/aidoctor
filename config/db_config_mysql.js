@@ -59,8 +59,6 @@ module.exports = function () {
             var sql = 'INSERT INTO ';
             if (table == "user") {
                 sql += 'user (id, pw, name, gender, area, age, phone, checked) VALUES (?,?,?,?,?,?,?,?)';
-            } else if (table == "logincount") {
-                sql += 'logincount (id_num, failcount, last_login) VALUES (?,?,?)';
             } else if (table == "disease_all") {
                 if (params.length != 12) sql += 'disease_all (id_num) VALUES (?)';
                 else {
@@ -280,8 +278,6 @@ module.exports = function () {
             var old_params;
             if (table == "user") {
                 old_params = ['pw', 'name', 'gender', 'area', 'age', 'phone', 'checked'];
-            } else if (table == "logincount") {
-                old_params = ['failcount', 'last_login']; 
             } else if (table == "disease_all") {
                 old_params = ['diabetes', 'hepatitisA', 'hepatitisB', 'hepatitisC', 'cirrhosis', 'gastriculcer', 'lungcancer', 'lungdisease', 'myocardial', 'stroke', 'depression'];
             } else if (table == "disease_prefer") {
