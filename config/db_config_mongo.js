@@ -14,6 +14,8 @@ module.exports = function () {
     return {
         test_open: async () => {
             try {
+                console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
                 var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
@@ -34,7 +36,9 @@ module.exports = function () {
 
                 tmp = await col.deleteOne({ 'test': '1' });
                 if (tmp) console.log("MongoDB deleteOne test : " + tmp+"\n\n");
-                console.log("mongodb connection success in port 27017 @@@===");
+                console.log("mongodb connection success in port 27017 @@@===\n");
+                console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
                 return true;
             } catch (err) {
                 console.log("[init] error : ", err);

@@ -21,6 +21,8 @@ module.exports = function () {
         },
         test_open: async () => {
             try {
+                console.log("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
                 var con = await pool.getConnection(async conn => conn);
 
                 var sql = 'INSERT INTO test(test_id) values (1)';
@@ -40,6 +42,8 @@ module.exports = function () {
                     }
                 })             
                 console.log("mysql database connection success in port 3306 @@@===");
+                console.log("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
             } catch (err) {
                 console.error('mysql connection error : ', err);
                 throw err;

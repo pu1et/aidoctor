@@ -25,6 +25,8 @@ module.exports = function () {
         },
         update: async () => {
             try {
+                console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+
                 var newDate = new Date();
                 var today_b1 = newDate.toFormat('YYYYMMDDHH24');
                 var today_b2 = newDate.toFormat('YYYYMMDD');
@@ -83,7 +85,7 @@ module.exports = function () {
                         
                     }
 
-                    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
                     var query = {today: int_today_b2};
                     var operator = { $set: {cold_index: today_cold_index, asthma_index: today_asthma_index}};
@@ -97,7 +99,7 @@ module.exports = function () {
                     query = {today: int_today_b2+2};
                     operator = { $set: {cold_index: tDAT_cold_index, asthma_index: tDAT_asthma_index}};
                     ret = await mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
-                    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+                    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
                     return [true];
                 });
