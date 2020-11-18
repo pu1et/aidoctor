@@ -161,9 +161,9 @@ module.exports = function () {
 
                 var tmp = await col.updateOne(query, operator, options);
                 if (tmp) {
-                    console.log("query_update : " + JSON.stringify(query));
-                    console.log("operator_update : " + JSON.stringify(operator));
-                    //console.log("operator_update : " + JSON.stringify(upsert));
+                    console.log("query of update : " + JSON.stringify(query));
+                    console.log("operator of update : " + JSON.stringify(operator));
+                    console.log("options of update : " + JSON.stringify(options));
                     console.log("[success_update] MongoDB  -> " + col_name + ', result: ' + tmp+"\n\n");
                     return [true];
                 }
