@@ -80,23 +80,27 @@ module.exports = function () {
                         if (tDAT_asthma_index == "") tDAT_asthma_index = "0";
                         console.log("caIdx_asthma_url: today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
                     }else {
-                        
+                        console.log("caIdx server connection error\n");
+                        throw err;
                     }
 
                     console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
                     var query = {today: int_today_b2};
                     var operator = { $set: {cold_index: today_cold_index, asthma_index: today_asthma_index}};
-                    var upsert = { upsert: true };
-                    var ret = await mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
+                    var options = { upsert: true };
+                    var ret = await mongo_db.mongo_updateOne("caIdx", query, operator, options);
+                    if(!ret[0]) throw err;
 
                     query = {today: int_today_b2+1};
                     operator = { $set: {cold_index: tomorrow_cold_index, asthma_index: tomorrow_asthma_index}};
-                    ret = await mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
+                    ret = await mongo_db.mongo_updateOne("caIdx", query, operator, options);
+                    if(!ret[0]) throw err;
 
                     query = {today: int_today_b2+2};
                     operator = { $set: {cold_index: tDAT_cold_index, asthma_index: tDAT_asthma_index}};
-                    ret = await mongo_db.mongo_updateOne("caIdx", query, operator, upsert);
+                    ret = await mongo_db.mongo_updateOne("caIdx", query, operator, options);
+                    if(!ret[0]) throw err;
                     console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
                     return [true];

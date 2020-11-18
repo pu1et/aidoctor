@@ -147,7 +147,7 @@ module.exports = function () {
                 return [false];
             }
         },
-        mongo_updateOne: async (col_name, query, operator, upsert) => { //operator : 데이터 수정 컬럼과 값
+        mongo_updateOne: async (col_name, query, operator, options) => { //operator : 데이터 수정 컬럼과 값
             try {
                 var client = await MongoClient.connect(
                     'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
@@ -159,7 +159,7 @@ module.exports = function () {
                 var db = client.db(config.database);
                 var col = db.collection(col_name);
 
-                var tmp = await col.updateOne(query, operator);
+                var tmp = await col.updateOne(query, operator, options);
                 if (tmp) {
                     console.log("query_update : " + JSON.stringify(query));
                     console.log("operator_update : " + JSON.stringify(operator));
