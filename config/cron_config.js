@@ -27,7 +27,7 @@ module.exports = function () {
                 });
 
                 // 매 6시 지수 업데이트 - 
-                schedule.scheduleJob('0 0 7 * * *', function(){
+                schedule.scheduleJob('0 18 10 * * *', function(){
                     day_caIdx.update();
                     day_caIdx.check();
                 });
