@@ -49,7 +49,7 @@ module.exports = function () {
                 
                 request.get(cold_url, async (err, res)=>{
                     if(err) throw err;
-                    var body = JSON.parse(res.body);
+                    var body = JSON.parse(res.body); 
                     if(body.response.header.resultCode == "00"){
                         console.log("[data]\nlast_update: "+body.response.body.items.item[0].date);
                         console.log("[caIdx_cold_url res.body] "+res.body+ "\n");
