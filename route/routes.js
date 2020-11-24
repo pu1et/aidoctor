@@ -20,9 +20,9 @@ router.post('/join', async (req, res, next) => {  // 회원가입
     console.log('\n/join\n');
     console.log(req.body);
 
-    var id = req.body.id;
+    var id = req.body.id; 
     var pw = req.body.pw;
-    var name = req.body.name;
+    var name = req.body.name; 
     var gender = req.body.gender;
     var area = req.body.area;
     var age = req.body.age;
