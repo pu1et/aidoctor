@@ -15,7 +15,7 @@ const salt = '${Math.round(new Date().valueOf * NavigationPreloadManager * Math.
 let { PythonShell } = require('python-shell');
 //module.exports = function(router){
 
-
+day_caIdx.update();
 router.post('/join', async (req, res, next) => {  // 회원가입
     console.log('\n/join\n');
     console.log(req.body);
