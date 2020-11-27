@@ -4,7 +4,7 @@ var mongo_db =  require('../config/db_config_mongo')();
 var cron = require('../config/cron_config')();
 var day_caIdx = require('../config/api_config_caIdx')();
 
-day_caIdx.check();
+day_caIdx.update();
 cron.init();
 mysql_dbc.init();
 mysql_dbc.test_open();

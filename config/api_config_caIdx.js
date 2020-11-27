@@ -1,6 +1,6 @@
-var request = require('request');
 var date = require('date-utils');
 var config = require('./api_info_caIdx').caIdx;
+var request = require('sync-request');
 var mongo_db =  require('../config/db_config_mongo')();
 
 module.exports = function () {
@@ -47,44 +47,37 @@ module.exports = function () {
 
                 console.log("[caIdx_cold_url] : "+cold_url + "\n");
                 
-                request.get(cold_url, async (err, res)=>{
-                    if(err) throw err;
-                    var body = JSON.parse(res.body); 
-                    if(body.response.header.resultCode == "00"){
-                        console.log("[data]\nlast_update: "+body.response.body.items.item[0].date);
-                        console.log("[caIdx_cold_url res.body] "+res.body+ "\n");
-                        today_cold_index = body.response.body.items.item[0].today;
-                        if (today_cold_index == "") today_cold_index = "0";
-                        tomorrow_cold_index = body.response.body.items.item[0].tomorrow;
-                        if (tomorrow_cold_index == "") tomorrow_cold_index = "0";
-                        tDAT_cold_index = body.response.body.items.item[0].theDayAfterTomorrow;
-                        if (tDAT_cold_index == "") tDAT_cold_index = "0";
-                        console.log("caIdx_cold_url: today, tomorrow, tDAT : "+ today_cold_index+", "+ tomorrow_cold_index+", "+tDAT_cold_index);
-                    }else throw err;
-                })
-
+                var res = request('GET', cold_url);
+                var res_body = res.getBody('utf-8');
+                var body = JSON.parse(res_body); 
+                if(body.response.header.resultCode == "00"){
+                    console.log("[data]\nlast_update: "+body.response.body.items.item[0].date);
+                    console.log("[caIdx_cold_url res.body] "+res_body+ "\n");
+                    today_cold_index = body.response.body.items.item[0].today;
+                    if (today_cold_index == "") today_cold_index = "0";
+                    tomorrow_cold_index = body.response.body.items.item[0].tomorrow;
+                    if (tomorrow_cold_index == "") tomorrow_cold_index = "0";
+                    tDAT_cold_index = body.response.body.items.item[0].theDayAfterTomorrow;
+                    if (tDAT_cold_index == "") tDAT_cold_index = "0";
+                    console.log("caIdx_cold_url today, tomorrow, tDAT : "+ today_cold_index+", "+ tomorrow_cold_index+", "+tDAT_cold_index);
+                }
+                    
                 console.log("[caIdx_asthma_url] : "+asthma_url + "\n");
                 
-                request.get (asthma_url, async (err, res)=>{
-                    if(err) throw err;
+                res = request('GET', cold_url);
+                res_body = res.getBody('utf-8');
+                body = JSON.parse(res_body); 
+                if(body.response.header.resultCode == "00"){
+                    console.log("[data]\n last_store: "+body.response.body.items.item[0].date);
                     console.log("[caIdx_asthma_url res.body] "+res.body+ "\n");
-                    var body = JSON.parse(res.body);
-                    if(body.response.header.resultCode == "00"){
-                        console.log("[data]\n last_store: "+body.response.body.items.item[0].date);
-                        console.log("[caIdx_asthma_url res.body] "+res.body+ "\n");
-                        today_asthma_index = body.response.body.items.item[0].today;
-                        if (today_asthma_index == "") today_asthma_index = "0";
-                        tomorrow_asthma_index = body.response.body.items.item[0].tomorrow;
-                        if (tomorrow_asthma_index == "") tomorrow_asthma_index = "0";
-                        tDAT_asthma_index = body.response.body.items.item[0].theDayAfterTomorrow;
-                        if (tDAT_asthma_index == "") tDAT_asthma_index = "0";
-                        console.log("caIdx_asthma_url: today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
-                    }else {
-                        console.log("caIdx server connection error\n");
-                        throw err;
-                    }
-
-                    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
+                    today_asthma_index = body.response.body.items.item[0].today;
+                    if (today_asthma_index == "") today_asthma_index = "0";
+                    tomorrow_asthma_index = body.response.body.items.item[0].tomorrow;
+                    if (tomorrow_asthma_index == "") tomorrow_asthma_index = "0";
+                    tDAT_asthma_index = body.response.body.items.item[0].theDayAfterTomorrow;
+                    if (tDAT_asthma_index == "") tDAT_asthma_index = "0";
+                    console.log("caIdx_asthma_url: today, tomorrow, tDAT : "+ today_asthma_index+", "+ tomorrow_asthma_index+", "+tDAT_asthma_index);
+                }
 
                     var query = {today: int_today_b2};
                     var operator = { $set: {cold_index: today_cold_index, asthma_index: today_asthma_index}};
@@ -101,10 +94,11 @@ module.exports = function () {
                     operator = { $set: {cold_index: tDAT_cold_index, asthma_index: tDAT_asthma_index}};
                     ret = await mongo_db.mongo_updateOne("caIdx", query, operator, options);
                     if(!ret[0]) throw err;
-                    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
+                    console.log("api_config_update complete.")
+                
                     return [true];
-                });
+
             } catch (err) {
                 console.log("[ERROR] api_config_caIdx update : ", err +"\n");
                 return [false];
