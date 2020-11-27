@@ -95,7 +95,7 @@ module.exports = function () {
                     ret = await mongo_db.mongo_updateOne("caIdx", query, operator, options);
                     if(!ret[0]) throw err;
 
-                    console.log("api_config_update complete.")
+                    console.log("=============== api_config_update complete. ===============");
                 
                     return [true];
 
