@@ -4,7 +4,6 @@ const bodyParser= require('body-parser');
 const app = express();
 
 route = require('./route/routes.js');
-  
 app.set('port',process.env.PORT || 1337);
 
 app.use(express.static('public'));
