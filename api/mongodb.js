@@ -15,7 +15,7 @@ module.exports = function () {
         test_open: async () => {
             try {
                 var client = await MongoClient.connect(
-                    'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                    'mongodb://'+user+':'+password+'@'+host+'/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
                         sslCA: ca,
@@ -46,7 +46,7 @@ module.exports = function () {
         insert: async (col_name, new_doc) => {
             try {
                 var client = await MongoClient.connect(
-                    'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                    'mongodb://'+user+':'+password+'@'+host+'/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
                         sslCA: ca,
@@ -69,7 +69,7 @@ module.exports = function () {
         insert_dayhealth: async (id, col_name, value_arr) => {
             try {
                 var client = await MongoClient.connect(
-                    'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                    'mongodb://'+user+':'+password+'@'+host+'/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
                         sslCA: ca,
@@ -104,7 +104,7 @@ module.exports = function () {
         mongo_findOne: async (col_name, query) => { // id : 사용자 아이디, col_name : 컬렉션 네임, query : 문자열 쿼리, projection : findOne에선 안씀
             try {
                 var client = await MongoClient.connect(
-                    'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                    'mongodb://'+user+':'+password+'@'+host+'/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
                         sslCA: ca,
@@ -127,7 +127,7 @@ module.exports = function () {
         mongo_find: async (col_name, query, projection, limit_num = 0) => { // id : 사용자 아이디, col_name : 컬렉션 네임, query : 문자열 쿼리, projection : 나올 컬럼
             try {
                 var client = await MongoClient.connect(
-                    'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                    'mongodb://'+user+':'+password+'@'+host+'/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
                         sslCA: ca,
@@ -150,7 +150,7 @@ module.exports = function () {
         mongo_updateOne: async (col_name, query, operator, options) => { //operator : 데이터 수정 컬럼과 값
             try {
                 var client = await MongoClient.connect(
-                    'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                    'mongodb://'+user+':'+password+'@'+host+'/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
                         sslCA: ca,
@@ -175,7 +175,7 @@ module.exports = function () {
         mongo_deleteMany: async (col_name, query) => {
             try {
                 var client = await MongoClient.connect(
-                    'mongodb://admin0:admin00!!@aidoctor-docdb.cluster-ckhpnljabh2s.us-west-2.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
+                    'mongodb://'+user+':'+password+'@'+host+'/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false',
                     {
                         sslValidate: true,
                         sslCA: ca,

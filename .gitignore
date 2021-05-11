@@ -2,3 +2,4 @@
 /log
 /web.config
 /rds-combined-ca-bundle.pem
+/node_modules
