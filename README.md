@@ -3,7 +3,7 @@ To get the Node server running locally:
   - Clone this repo
   - ```npm install``` to install all required dependencies
   -  MySQL : AWS RDS, MongoDB : AWS DynamoDB
-  -  ```node web.js``` or ```pm2 start web.js``` 
+  -  ```node web.js```  or  ```pm2 start web.js``` 
 # Code Overview
 ## Project Structure
 ```
