@@ -3,7 +3,7 @@ const { table, assert, exception } = require('console');
 const { tmpdir } = require('os');
 const { resolve } = require('path');
 
-var config = require('../config/db_info_mongo').dev;
+var config = require('../config/mongodb').dev;
 var MongoClient = require('mongodb').MongoClient,
     f = require('util').format,
     fs = require('fs');

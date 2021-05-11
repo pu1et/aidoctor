@@ -1,5 +1,5 @@
 var mysql = require('mysql2/promise');
-var config = require('../config/db_info_mysql').dev;
+var config = require('../config/mysql').dev;
 var pool;
 
 module.exports = function () {

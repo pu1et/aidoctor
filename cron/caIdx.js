@@ -1,6 +1,6 @@
 var schedule = require('node-schedule');
-var day_caIdx = require('../config/api_config_caIdx')();
-var mongo_db =  require('../config/db_config_mongo')();
+var day_caIdx = require('../api/caIdx')();
+var mongo_db =  require('../config/mongodb')();
 var date = require('date-utils');
 
 module.exports = function () {
