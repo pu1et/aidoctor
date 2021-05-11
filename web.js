@@ -2,10 +2,10 @@ const express = require('express');
 const http = require('http');
 const bodyParser= require('body-parser');
 
-const mysql_dbc = require('../config/mysql')();
-const mongo_db =  require('../config/mongodb')();
-const cron = require('../cron/caIdx')();
-const day_caIdx = require('../api/caIdx')();
+const day_caIdx = require('./api/caIdx')();
+const mysql_dbc = require('./api/mysql')();
+const mongo_db =  require('./api/mongodb')();
+const cron = require('./cron/caIdx')();
 
 // 크론 작업 실행
 day_caIdx.update();

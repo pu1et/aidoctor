@@ -1,7 +1,7 @@
 var date = require('date-utils');
 var config = require('../config/caIdx').caIdx;
 var request = require('sync-request');
-var mongo_db =  require('../config/mongodb')();
+var mongo_db =  require('../api/mongodb')();
 
 module.exports = function () {
     return {

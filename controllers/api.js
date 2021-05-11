@@ -1,6 +1,6 @@
 var mongo_db =  require('../api/mongodb')();
 
-exports.postCold = (req, res, next) => {
+exports.postCold = async (req, res, next) => {
     console.log('\n/api/cold\n'+req.body);
 
     var today = Number(req.body.today);

@@ -3,7 +3,7 @@ var mongo_db =  require('../api/mongodb')();
 
 let { PythonShell } = require('python-shell');
 
-exports.postLogin = (req, res, next) => {
+exports.postLogin = async (req, res, next) => {
     // return : 1(success), 0(server err), -1 (login fail), -2(failcount 5 more) 
     console.log('\n/user/login\n'+req.body);
 
@@ -36,7 +36,7 @@ exports.postLogin = (req, res, next) => {
 }
 };
 
-exports.postJoin = (req, res, next) => {
+exports.postJoin = async (req, res, next) => {
     console.log('\n/user/join\n'+req.body);
 
     var id = req.body.id; 
@@ -179,7 +179,7 @@ exports.postJoin = (req, res, next) => {
     }
 };
 
-exports.postAllData = (req, res, next) => {
+exports.postAllData = async (req, res, next) => {
     console.log('\n/user/all-data\n'+req.body);
 
     var flag = req.body.flag;
@@ -311,7 +311,7 @@ exports.postAllData = (req, res, next) => {
     }
 };
 
-exports.postData = (req, res, next) => {
+exports.postData = async (req, res, next) => {
     console.log('\n/user/data\n'+req.body);
 
     var id = req.body.id;
@@ -344,7 +344,7 @@ exports.postData = (req, res, next) => {
     }
 };
 
-exports.postMLRisk = (req, res, next) => {
+exports.postMLRisk = async (req, res, next) => {
     console.log("\n/user/ml-risk\n"+req.body);
 
     var id = req.body.id;
@@ -444,7 +444,7 @@ exports.postMLRisk = (req, res, next) => {
     });
 };
 
-exports.postReceiveAllDisease = (req, res, next) => {
+exports.postReceiveAllDisease = async (req, res, next) => {
     console.log('\n/user/receive-all-disease\n'+req.body);
 
     var id = req.body.id;
@@ -492,7 +492,7 @@ exports.postReceiveAllDisease = (req, res, next) => {
     }
 };
 
-exports.postSendAllDisease = (req, res, next) => {
+exports.postSendAllDisease = async (req, res, next) => {
     console.log('\n/user/send-all-disease\n'+req.body);
 
     var id = req.body.id;
@@ -509,7 +509,7 @@ exports.postSendAllDisease = (req, res, next) => {
     }
 };
 
-exports.postSendAllData = (req, res, next) => {
+exports.postSendAllData = async (req, res, next) => {
     console.log('\n/user/send-all-data\n'+req.body);
     var id = req.body.id;
 
@@ -537,7 +537,7 @@ exports.postSendAllData = (req, res, next) => {
     }
 };
 
-exports.postSendDayHealth = (req, res, next) => {
+exports.postSendDayHealth = async (req, res, next) => {
     console.log('\n/user/send-day-health\n'+req.body);
     
     var id = req.body.id;
@@ -555,7 +555,7 @@ exports.postSendDayHealth = (req, res, next) => {
     }
 }
 
-exports.postCheckId = (req, res, next) => {
+exports.postCheckId = async (req, res, next) => {
     console.log('\n/user/check-id\n'+req.body);
 
     var id = req.body.id;
